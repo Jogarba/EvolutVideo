@@ -1,0 +1,803 @@
+{
+  "version": 1,
+  "historyId": "796d6632-796f-4eee-992c-fc525e2ecbf2",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/1a/1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3"
+    },
+    "CLAUDE.md": {
+      "hash": "1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/1a/1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3"
+    },
+    "README.md": {
+      "hash": "13a616c83d58e5ef20bd6dffe5e876e7242b1d02cd4e867d6fcddd007922b474",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/13/13a616c83d58e5ef20bd6dffe5e876e7242b1d02cd4e867d6fcddd007922b474"
+    },
+    "REVIEW.md": {
+      "hash": "ad705be9d8e5014eb6d55bc6a7595c49164c28c4da96038b607449af9db49117",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ad/ad705be9d8e5014eb6d55bc6a7595c49164c28c4da96038b607449af9db49117"
+    },
+    "SPEC.md": {
+      "hash": "cbb96c019464bdf396a744586ffeb77cdc276864c4b50427cb6a65d180dc0cd6",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/cb/cbb96c019464bdf396a744586ffeb77cdc276864c4b50427cb6a65d180dc0cd6"
+    },
+    "assets/evolut-ambient.mp3": {
+      "hash": "385e661a88d84c9f94687e4f529c58024a6488b3d2f6c23af6b8f9ed8d805f2b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/38/385e661a88d84c9f94687e4f529c58024a6488b3d2f6c23af6b8f9ed8d805f2b"
+    },
+    "assets/evolut-commercial-bed.mp3": {
+      "hash": "6c6f579560be8ee7d8b21120eefd9fae25d85959cacd5d0cc71b22d732150ccb",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/6c/6c6f579560be8ee7d8b21120eefd9fae25d85959cacd5d0cc71b22d732150ccb"
+    },
+    "assets/evolut-isologo-on-dark.svg": {
+      "hash": "a1f62846819b0698e658281687e4890c4898d9e28917fcdc7c6cd0643754a108",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/a1/a1f62846819b0698e658281687e4890c4898d9e28917fcdc7c6cd0643754a108"
+    },
+    "assets/evolut-isotipo-on-dark.svg": {
+      "hash": "f5c2f8ee665a34378a15f0ca0e418ccc5b74f372ddf3116f18164f9173836eff",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f5/f5c2f8ee665a34378a15f0ca0e418ccc5b74f372ddf3116f18164f9173836eff"
+    },
+    "assets/evolut-nucleo-on-dark.svg": {
+      "hash": "2f8a2adf93333c5d78ed9f04e5c869e98908959eab799a4b3f90d727acf11eda",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2f/2f8a2adf93333c5d78ed9f04e5c869e98908959eab799a4b3f90d727acf11eda"
+    },
+    "assets/evolut-stage.js": {
+      "hash": "5aa55a64c64d40f49ec2a6472e224b3ba49c12b701a2aae2753bf082737f3d4d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/5a/5aa55a64c64d40f49ec2a6472e224b3ba49c12b701a2aae2753bf082737f3d4d"
+    },
+    "assets/evolut-tokens.css": {
+      "hash": "e39d00cb36bd557fe18c2175ac2b6983f13f8a6db6b9bd0a07801aa854ddd116",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e3/e39d00cb36bd557fe18c2175ac2b6983f13f8a6db6b9bd0a07801aa854ddd116"
+    },
+    "assets/fonts/HankenGrotesk-Variable.ttf": {
+      "hash": "813b3f8fa0965405669a89b38e51bbefd95eef6b8e20d1cb2d8c10cce062662f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/81/813b3f8fa0965405669a89b38e51bbefd95eef6b8e20d1cb2d8c10cce062662f"
+    },
+    "assets/fonts/JetBrainsMono-Variable.ttf": {
+      "hash": "48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/48/48715a42ec242c21e9f02692891e147d022299a52e48d5e413e1a942193ffeda"
+    },
+    "assets/fonts/Michroma-Regular.ttf": {
+      "hash": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b6/b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87"
+    },
+    "assets/sfx/breath-short.mp3": {
+      "hash": "50f3a136328c7d6964dfb1d905f484470c6e4b6da39fb04947f100b7521d7f26",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/50/50f3a136328c7d6964dfb1d905f484470c6e4b6da39fb04947f100b7521d7f26"
+    },
+    "assets/sfx/cinema-alert.wav": {
+      "hash": "ebba5fec79c30b8c2a3088811ffbbc2e3ac15512088364765eb392858156c0ef",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/eb/ebba5fec79c30b8c2a3088811ffbbc2e3ac15512088364765eb392858156c0ef"
+    },
+    "assets/sfx/cinema-confirm.wav": {
+      "hash": "8b028256e5e1348a2cf4d940a866f56b02929234b9329f9d376effaea05425df",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8b/8b028256e5e1348a2cf4d940a866f56b02929234b9329f9d376effaea05425df"
+    },
+    "assets/sfx/cinema-latch.wav": {
+      "hash": "6e97ba2b5bb6bb2146e10e2700972f8a0fb702e1349fb29e4c3dec2839a7d914",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/6e/6e97ba2b5bb6bb2146e10e2700972f8a0fb702e1349fb29e4c3dec2839a7d914"
+    },
+    "assets/sfx/cinema-sweep.wav": {
+      "hash": "29e31761a16a2808c4dee61124ca1f10de5e0fc8f79d3fe9bbec42215cc865f5",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/29/29e31761a16a2808c4dee61124ca1f10de5e0fc8f79d3fe9bbec42215cc865f5"
+    },
+    "assets/sfx/click-soft.mp3": {
+      "hash": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/07/075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    "assets/sfx/impact-bass-1.mp3": {
+      "hash": "634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/63/634d5eda5eb7b501aca98393a64f3815eccf24157cd1d95df55aaec1b5000bd7"
+    },
+    "assets/sfx/pop.mp3": {
+      "hash": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/19/19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    "assets/sfx/sfx_001.mp3": {
+      "hash": "3d889ca2011181a932477408b46ded66549a3179a7183d7735af55b819ee4640",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/3d/3d889ca2011181a932477408b46ded66549a3179a7183d7735af55b819ee4640"
+    },
+    "assets/sfx/sfx_002.mp3": {
+      "hash": "ef3cde85b737d301833ce9aa250afc60d1336a81d4db9cf15ead5cf2a2270ece",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ef/ef3cde85b737d301833ce9aa250afc60d1336a81d4db9cf15ead5cf2a2270ece"
+    },
+    "assets/sfx/sfx_003.mp3": {
+      "hash": "962b606078efd65880bae823bcefb2b8db08fe84378766b2cbc9ed48637c5811",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/96/962b606078efd65880bae823bcefb2b8db08fe84378766b2cbc9ed48637c5811"
+    },
+    "assets/sfx/sfx_004.mp3": {
+      "hash": "d7df56357b7525b74830daebc235b2ff32d2f18d6a5baa8a91f1e2ec84ae563b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d7/d7df56357b7525b74830daebc235b2ff32d2f18d6a5baa8a91f1e2ec84ae563b"
+    },
+    "assets/sfx/whoosh-short.mp3": {
+      "hash": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c2/c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    "assets/vo/always.mp3": {
+      "hash": "c43b63b163a41a70994fc56377180937884535463737d5ff0da5e086a7d6e263",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c4/c43b63b163a41a70994fc56377180937884535463737d5ff0da5e086a7d6e263"
+    },
+    "assets/vo/always.transcript.json": {
+      "hash": "d41cc7748b665528af7aa8a1a21bfec79b3c78bc8fffe729ff364e0c9413cd15",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d4/d41cc7748b665528af7aa8a1a21bfec79b3c78bc8fffe729ff364e0c9413cd15"
+    },
+    "assets/vo/always.wav": {
+      "hash": "5810d2adec3bad63ae6cee65c3f54d4ad2b776eabb5eb8463a35dad9b94b6a73",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/58/5810d2adec3bad63ae6cee65c3f54d4ad2b776eabb5eb8463a35dad9b94b6a73"
+    },
+    "assets/vo/always.words.json": {
+      "hash": "5595255e53bcd5f83fa9f83f4623ae05eddffeefe1e3fae614ef4bb0cc2b26ba",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/55/5595255e53bcd5f83fa9f83f4623ae05eddffeefe1e3fae614ef4bb0cc2b26ba"
+    },
+    "assets/vo/cta.mp3": {
+      "hash": "d8300642464f0ff9a7706b3296c4ac12f42d92aaf0b69f7c25f12fb6798fffb5",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d8/d8300642464f0ff9a7706b3296c4ac12f42d92aaf0b69f7c25f12fb6798fffb5"
+    },
+    "assets/vo/cta.transcript.json": {
+      "hash": "c5bf54bf002185fc3e15de5d9ec1e8a60ade7d35da91428bf2cb04965f3bf3d0",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c5/c5bf54bf002185fc3e15de5d9ec1e8a60ade7d35da91428bf2cb04965f3bf3d0"
+    },
+    "assets/vo/cta.wav": {
+      "hash": "5914f89266f419f7aa40e5c76e3e86084acf0abba4ae376ba11ae0bb25e738f3",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/59/5914f89266f419f7aa40e5c76e3e86084acf0abba4ae376ba11ae0bb25e738f3"
+    },
+    "assets/vo/cta.words.json": {
+      "hash": "f1a8830e92311cd5906c00aa64c18e3886c66465cd5c9facdff7c976a26fca5f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f1/f1a8830e92311cd5906c00aa64c18e3886c66465cd5c9facdff7c976a26fca5f"
+    },
+    "assets/vo/fast.mp3": {
+      "hash": "69c4efba45863bcc62f0f4e30d66d3d44255f1a9453ee438b09841cce29dc4e9",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/69/69c4efba45863bcc62f0f4e30d66d3d44255f1a9453ee438b09841cce29dc4e9"
+    },
+    "assets/vo/fast.transcript.json": {
+      "hash": "1d8210520366af3446dfd4f6dfd4399f6df14fc69402f25e96c22b41f8180688",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/1d/1d8210520366af3446dfd4f6dfd4399f6df14fc69402f25e96c22b41f8180688"
+    },
+    "assets/vo/fast.wav": {
+      "hash": "22efe0ea78d0c34243270d364d26ce3d28f76de6a5becbe826a1bc72e4e4069e",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/22/22efe0ea78d0c34243270d364d26ce3d28f76de6a5becbe826a1bc72e4e4069e"
+    },
+    "assets/vo/fast.words.json": {
+      "hash": "e279e0a0d4babb17e0dad1a12dc1924c7b58b97eedf37365b94366ca3108aeef",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e2/e279e0a0d4babb17e0dad1a12dc1924c7b58b97eedf37365b94366ca3108aeef"
+    },
+    "assets/vo/grows.mp3": {
+      "hash": "3ed618b7443d89d863425448861a5925b8f9f31152f971eab442c35fe923b5e4",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/3e/3ed618b7443d89d863425448861a5925b8f9f31152f971eab442c35fe923b5e4"
+    },
+    "assets/vo/grows.transcript.json": {
+      "hash": "a5b3361aeafc9f082a3c59890521ad7aa6773e7ce5dd4a433c49b91e67720bf0",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/a5/a5b3361aeafc9f082a3c59890521ad7aa6773e7ce5dd4a433c49b91e67720bf0"
+    },
+    "assets/vo/grows.wav": {
+      "hash": "b3df21d1f7a2fb6e6546298039a6798f67adae00b5c5df908cc3012b83e883d6",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b3/b3df21d1f7a2fb6e6546298039a6798f67adae00b5c5df908cc3012b83e883d6"
+    },
+    "assets/vo/grows.words.json": {
+      "hash": "1c57d3c9d0c253581288744d5f611824f61b7746a01740103fe61c76d78f7087",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/1c/1c57d3c9d0c253581288744d5f611824f61b7746a01740103fe61c76d78f7087"
+    },
+    "assets/vo/hook.mp3": {
+      "hash": "5f534e9d53f019f6f97b572eb4ec1123cef2e8993d147be28d04ea9f36bcc2da",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/5f/5f534e9d53f019f6f97b572eb4ec1123cef2e8993d147be28d04ea9f36bcc2da"
+    },
+    "assets/vo/hook.transcript.json": {
+      "hash": "7bc5c0038c53f2d85911e5e5bd3dba8a1e0491d88b342018439b5ae24980c674",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/7b/7bc5c0038c53f2d85911e5e5bd3dba8a1e0491d88b342018439b5ae24980c674"
+    },
+    "assets/vo/hook.wav": {
+      "hash": "e68fdf61e4ad835f5b737723a6b01609101a980b757138bfdbf630b774d4166c",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e6/e68fdf61e4ad835f5b737723a6b01609101a980b757138bfdbf630b774d4166c"
+    },
+    "assets/vo/hook.words.json": {
+      "hash": "8379bba9901960fa23c302898d559c61e8911905ad8e148a2b97d7dadf70329b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/83/8379bba9901960fa23c302898d559c61e8911905ad8e148a2b97d7dadf70329b"
+    },
+    "assets/vo/outcome.mp3": {
+      "hash": "49dec69dd198ddb40408025e5c9c4d750ca2021fe6e45b93d804f22a600d4432",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/49/49dec69dd198ddb40408025e5c9c4d750ca2021fe6e45b93d804f22a600d4432"
+    },
+    "assets/vo/outcome.transcript.json": {
+      "hash": "5e5819459193f65ec8c711f122788e5e502c4ccf92c4325a4c21cceb8f958c3e",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/5e/5e5819459193f65ec8c711f122788e5e502c4ccf92c4325a4c21cceb8f958c3e"
+    },
+    "assets/vo/outcome.wav": {
+      "hash": "9a8bd17d01410238467eac6fcf9587d2c9b87d2ada6dbe0955241e63e4496eb5",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/9a/9a8bd17d01410238467eac6fcf9587d2c9b87d2ada6dbe0955241e63e4496eb5"
+    },
+    "assets/vo/outcome.words.json": {
+      "hash": "05e83db19aa9f84014b8f17e9130b99ef0da614437d19d88bc3076ecad02cb90",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/05/05e83db19aa9f84014b8f17e9130b99ef0da614437d19d88bc3076ecad02cb90"
+    },
+    "assets/vo/problem.mp3": {
+      "hash": "d3391ccb8f477ab332316317c868875daef240e1eb3ec06d431d567819653fa7",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d3/d3391ccb8f477ab332316317c868875daef240e1eb3ec06d431d567819653fa7"
+    },
+    "assets/vo/problem.transcript.json": {
+      "hash": "af6477742ce943735508850e38b2ea38265506a19747849e5ef250e7a916ca48",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/af/af6477742ce943735508850e38b2ea38265506a19747849e5ef250e7a916ca48"
+    },
+    "assets/vo/problem.wav": {
+      "hash": "50b9589d3d8e6c4f1dffbf7514f5d7c96094311e5d1161e57974670a5fd77181",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/50/50b9589d3d8e6c4f1dffbf7514f5d7c96094311e5d1161e57974670a5fd77181"
+    },
+    "assets/vo/problem.words.json": {
+      "hash": "e99948d2d47b277d4c9e6735c94027660e96182f671dc7a37312409d19f3205f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e9/e99948d2d47b277d4c9e6735c94027660e96182f671dc7a37312409d19f3205f"
+    },
+    "assets/vo/reveal.mp3": {
+      "hash": "1230b2ad533259c6cf27f2cfdccbc61f91625e5bf5cccafe5f1fda8216bda403",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/12/1230b2ad533259c6cf27f2cfdccbc61f91625e5bf5cccafe5f1fda8216bda403"
+    },
+    "assets/vo/reveal.transcript.json": {
+      "hash": "d7b90ef52b24d758440d4d7fe962e011722f100f3fa1b688419e6667fcd04b7f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d7/d7b90ef52b24d758440d4d7fe962e011722f100f3fa1b688419e6667fcd04b7f"
+    },
+    "assets/vo/reveal.wav": {
+      "hash": "842116ae9602766540c31c1cc96f0f5f272cd886b1faae5e4f56ebe72175268c",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/84/842116ae9602766540c31c1cc96f0f5f272cd886b1faae5e4f56ebe72175268c"
+    },
+    "assets/vo/reveal.words.json": {
+      "hash": "e3f05124106ec767364175c6b478544d205151c6c4498b467acb604835ab5a4d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e3/e3f05124106ec767364175c6b478544d205151c6c4498b467acb604835ab5a4d"
+    },
+    "assets/vo/secure.mp3": {
+      "hash": "8a928454f5c538584807696c2c1fcffb1c40e107334cf11bbacd47de828e0f98",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8a/8a928454f5c538584807696c2c1fcffb1c40e107334cf11bbacd47de828e0f98"
+    },
+    "assets/vo/secure.transcript.json": {
+      "hash": "8d0e41abd80b7ca67783fd9dd32d5c1f4b0aac3365045108d4b5e536574186ad",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8d/8d0e41abd80b7ca67783fd9dd32d5c1f4b0aac3365045108d4b5e536574186ad"
+    },
+    "assets/vo/secure.wav": {
+      "hash": "7bb7426411111f8eccfec876988cd6d540483ba10b43184b1060e3022f752b08",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/7b/7bb7426411111f8eccfec876988cd6d540483ba10b43184b1060e3022f752b08"
+    },
+    "assets/vo/secure.words.json": {
+      "hash": "7173dd492b201cdb9b42a67703fdf016396d25d13bba9a703d456c1e46644982",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/71/7173dd492b201cdb9b42a67703fdf016396d25d13bba9a703d456c1e46644982"
+    },
+    "assets/vo/source-word-times.json": {
+      "hash": "e75e59ad165336bf744b7d101493b6304c55915cd8e82018306a8df6fbd79509",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e7/e75e59ad165336bf744b7d101493b6304c55915cd8e82018306a8df6fbd79509"
+    },
+    "assets/vo-01.mp3": {
+      "hash": "ba9d73b7edbce747fe641c0a53f2a6700d8d58bb2d60699f7a5fd8913e9cb85b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ba/ba9d73b7edbce747fe641c0a53f2a6700d8d58bb2d60699f7a5fd8913e9cb85b"
+    },
+    "assets/vo-01.transcript.json": {
+      "hash": "42397afecebf09a2b724d203bc573775bdb4575c9970e73b088a3427a3a0b7e2",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/42/42397afecebf09a2b724d203bc573775bdb4575c9970e73b088a3427a3a0b7e2"
+    },
+    "assets/vo-02.mp3": {
+      "hash": "ea5df14107bc654282be50603eaf9f29cd1a88a065acdaa2364e6cd728babb50",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ea/ea5df14107bc654282be50603eaf9f29cd1a88a065acdaa2364e6cd728babb50"
+    },
+    "assets/vo-02.transcript.json": {
+      "hash": "ad408aa3e24ededb3527fd16068b71c0e59f8823db80e9bcb7b13fe7b689eb23",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ad/ad408aa3e24ededb3527fd16068b71c0e59f8823db80e9bcb7b13fe7b689eb23"
+    },
+    "assets/vo-03.mp3": {
+      "hash": "815c27452f3ccf33d347d90bfdc0ac4771e67d8c2d9202b63f3d34b6dd98a4f0",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/81/815c27452f3ccf33d347d90bfdc0ac4771e67d8c2d9202b63f3d34b6dd98a4f0"
+    },
+    "assets/vo-03.transcript.json": {
+      "hash": "d5e2397894560637e35e8e836bcdb3187ea9790f395bdffbcaec412d2ba13cd3",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d5/d5e2397894560637e35e8e836bcdb3187ea9790f395bdffbcaec412d2ba13cd3"
+    },
+    "assets/vo-04.mp3": {
+      "hash": "fac5ea3ca5a8faccb8f338c60f38b76d409da2bef29baaebc9c346897e3abac7",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/fa/fac5ea3ca5a8faccb8f338c60f38b76d409da2bef29baaebc9c346897e3abac7"
+    },
+    "assets/vo-04.transcript.json": {
+      "hash": "5e1e4d801f794b486c6ed629f130dd629cd0fb1c164cd8eaf4ddc1a57521fbfd",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/5e/5e1e4d801f794b486c6ed629f130dd629cd0fb1c164cd8eaf4ddc1a57521fbfd"
+    },
+    "assets/vo-05.mp3": {
+      "hash": "dc98f878b6176a357b7a30e656d9b678f7c85c2a21803fc5df285a8ac5c61aab",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/dc/dc98f878b6176a357b7a30e656d9b678f7c85c2a21803fc5df285a8ac5c61aab"
+    },
+    "assets/vo-05.transcript.json": {
+      "hash": "e274a495e2136f145d2442d39868104f5c000679666e1fae19d49d5480eeba99",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e2/e274a495e2136f145d2442d39868104f5c000679666e1fae19d49d5480eeba99"
+    },
+    "assets/vo-06.mp3": {
+      "hash": "7579fc6a09814c8ee5351b650a9063575f6428d820d24519fe9702a51701a9ec",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/75/7579fc6a09814c8ee5351b650a9063575f6428d820d24519fe9702a51701a9ec"
+    },
+    "assets/vo-06.transcript.json": {
+      "hash": "0681863650cc2994636f39c7b2a54b2e01858fccb0ea51ec7a5c1d2984bba594",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/06/0681863650cc2994636f39c7b2a54b2e01858fccb0ea51ec7a5c1d2984bba594"
+    },
+    "assets/vo-07.mp3": {
+      "hash": "cf37d9b1e54c315c681be71e18c003e450217f735b22f56da9db79791ea74747",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/cf/cf37d9b1e54c315c681be71e18c003e450217f735b22f56da9db79791ea74747"
+    },
+    "assets/vo-07.transcript.json": {
+      "hash": "b75f3b3a22ab1d6e80fc21d1967b37b61963d7e5a5d55b6e93a7b8d0fc2fb8e6",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b7/b75f3b3a22ab1d6e80fc21d1967b37b61963d7e5a5d55b6e93a7b8d0fc2fb8e6"
+    },
+    "assets/voice/always.transcript.json": {
+      "hash": "976a3c7f8249a5f1f3ec466e7615b29ac942cf9de0b907ce782b39802f549406",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/97/976a3c7f8249a5f1f3ec466e7615b29ac942cf9de0b907ce782b39802f549406"
+    },
+    "assets/voice/always.wav": {
+      "hash": "49710aa1043689612a7b068de951d52879e35514ff3387f35a5377875263f1ea",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/49/49710aa1043689612a7b068de951d52879e35514ff3387f35a5377875263f1ea"
+    },
+    "assets/voice/always_v2.wav": {
+      "hash": "8b16520b303c155081f85843baa7d301b450329733c95a45d27af6c84d7e94d7",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8b/8b16520b303c155081f85843baa7d301b450329733c95a45d27af6c84d7e94d7"
+    },
+    "assets/voice/cta.transcript.json": {
+      "hash": "e1b8a00b25f57dd1e1e55cfb2dd7f88561e993cee62f041470d3c1868c9d1bab",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e1/e1b8a00b25f57dd1e1e55cfb2dd7f88561e993cee62f041470d3c1868c9d1bab"
+    },
+    "assets/voice/cta.wav": {
+      "hash": "d769e6a1596654dd1f662e6c428b515605bd6c25bf0afc1b8d92a3e3351f295d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d7/d769e6a1596654dd1f662e6c428b515605bd6c25bf0afc1b8d92a3e3351f295d"
+    },
+    "assets/voice/cta_v2.wav": {
+      "hash": "2b05dba9bd23eeb12a4563dea6448fdddcac22d134b88812439e7a44473c942a",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2b/2b05dba9bd23eeb12a4563dea6448fdddcac22d134b88812439e7a44473c942a"
+    },
+    "assets/voice/fast.transcript.json": {
+      "hash": "f40c134656c99b834df6bf8d6feb69ff6e01843eac317d28f186f862cf5b661d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f4/f40c134656c99b834df6bf8d6feb69ff6e01843eac317d28f186f862cf5b661d"
+    },
+    "assets/voice/fast.wav": {
+      "hash": "c141bff3a8c6ea355ed59f4b44bc7850bbd4ddb0e5db91c44f1ffb8505b1f37e",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c1/c141bff3a8c6ea355ed59f4b44bc7850bbd4ddb0e5db91c44f1ffb8505b1f37e"
+    },
+    "assets/voice/fast_v2.wav": {
+      "hash": "5bc0c31dbf821ebc31ac80a45d477380a02e4e4f960effb351f82fdc94027bde",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/5b/5bc0c31dbf821ebc31ac80a45d477380a02e4e4f960effb351f82fdc94027bde"
+    },
+    "assets/voice/grows.transcript.json": {
+      "hash": "cb561f632217338db2b6e9be2a401d33abe580dc65f15b8c916edce1666fd34d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/cb/cb561f632217338db2b6e9be2a401d33abe580dc65f15b8c916edce1666fd34d"
+    },
+    "assets/voice/grows.wav": {
+      "hash": "cae3c8f4d81bf80e292feb507e039bcb4f6cb68b1dd90858b0d896a6407a7c31",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ca/cae3c8f4d81bf80e292feb507e039bcb4f6cb68b1dd90858b0d896a6407a7c31"
+    },
+    "assets/voice/grows_v2.wav": {
+      "hash": "3bc979dbe0e5869c7d9cb6ff4bcac2a126b9cf9a49e3b9154ff61bab44fb5c09",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/3b/3bc979dbe0e5869c7d9cb6ff4bcac2a126b9cf9a49e3b9154ff61bab44fb5c09"
+    },
+    "assets/voice/hook.transcript.json": {
+      "hash": "147323e009487a56ce4e2cb57621e4ab580ec7158f601acad170770b5dfa8653",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/14/147323e009487a56ce4e2cb57621e4ab580ec7158f601acad170770b5dfa8653"
+    },
+    "assets/voice/hook.wav": {
+      "hash": "685407c5a9ca31c87f25f814bb40a9091fe3530509c80557b6da2824571b153d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/68/685407c5a9ca31c87f25f814bb40a9091fe3530509c80557b6da2824571b153d"
+    },
+    "assets/voice/hook_v2.wav": {
+      "hash": "a0a8e82e8a2a652180ac8d11bf165ab860e7a18391a9bcb40388086f362cefaa",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/a0/a0a8e82e8a2a652180ac8d11bf165ab860e7a18391a9bcb40388086f362cefaa"
+    },
+    "assets/voice/infra-always.wav": {
+      "hash": "3c678923d418707f40add8b9ffa0cc35a29ab2901c4f68d757ac7bb9ec5547f2",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/3c/3c678923d418707f40add8b9ffa0cc35a29ab2901c4f68d757ac7bb9ec5547f2"
+    },
+    "assets/voice/infra-cta.wav": {
+      "hash": "6b7c9d6dbb17278ceab694906f440c2529e6f257af0e40ddf456923fd9ebda4b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/6b/6b7c9d6dbb17278ceab694906f440c2529e6f257af0e40ddf456923fd9ebda4b"
+    },
+    "assets/voice/infra-fast.wav": {
+      "hash": "f42fb7c956d8ab60778c1e7783e5da5f4e4ff857173d5a197eeb176fd29fd12e",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f4/f42fb7c956d8ab60778c1e7783e5da5f4e4ff857173d5a197eeb176fd29fd12e"
+    },
+    "assets/voice/infra-grows.wav": {
+      "hash": "96f7bbb0ca2da8e487f6fbd62a60d6efb12a886a0d832a269ed21c77645d2747",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/96/96f7bbb0ca2da8e487f6fbd62a60d6efb12a886a0d832a269ed21c77645d2747"
+    },
+    "assets/voice/infra-hook.wav": {
+      "hash": "8e9cc41eab01e12e3b898e2013072c8cb72048cdde5b7bd0edf930ea09cfd36f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8e/8e9cc41eab01e12e3b898e2013072c8cb72048cdde5b7bd0edf930ea09cfd36f"
+    },
+    "assets/voice/infra-outcome.wav": {
+      "hash": "f924090909a6cc27c1f2c46d2ec98116623bd13d0f29277973ddfeedf16fccb5",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f9/f924090909a6cc27c1f2c46d2ec98116623bd13d0f29277973ddfeedf16fccb5"
+    },
+    "assets/voice/infra-problem.wav": {
+      "hash": "6c507e39ea6498e8e187ff552b8837d8fd91b3b096549acba5444320daeb7388",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/6c/6c507e39ea6498e8e187ff552b8837d8fd91b3b096549acba5444320daeb7388"
+    },
+    "assets/voice/infra-reveal.wav": {
+      "hash": "d3451004fe05b420af9834cc289d02afeff4b30f921373f38a4ed59aa4523adf",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d3/d3451004fe05b420af9834cc289d02afeff4b30f921373f38a4ed59aa4523adf"
+    },
+    "assets/voice/infra-secure.wav": {
+      "hash": "551cbd8f081642c09322a18e73941f3e31733273c83dfe0396855afbdb47502b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/55/551cbd8f081642c09322a18e73941f3e31733273c83dfe0396855afbdb47502b"
+    },
+    "assets/voice/outcome.transcript.json": {
+      "hash": "524fac7997f512a2d39592901f0fa57c581f8ef6dae41034cedfe0d4f7065b9f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/52/524fac7997f512a2d39592901f0fa57c581f8ef6dae41034cedfe0d4f7065b9f"
+    },
+    "assets/voice/outcome.wav": {
+      "hash": "2488bfcebcde44bf85ae4cd9c29d4ceb73049e23d372aa205875c4fe689d4575",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/24/2488bfcebcde44bf85ae4cd9c29d4ceb73049e23d372aa205875c4fe689d4575"
+    },
+    "assets/voice/outcome_v2.wav": {
+      "hash": "aa0e4e70ba058ccdbfae220902211ca8cc332adc63388c07226d79a5a6067e0a",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/aa/aa0e4e70ba058ccdbfae220902211ca8cc332adc63388c07226d79a5a6067e0a"
+    },
+    "assets/voice/personality-sample.transcript.json": {
+      "hash": "252da493250792e19042bc19ef684d938a36bb76307a7b2169fa8b7419f3dc95",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/25/252da493250792e19042bc19ef684d938a36bb76307a7b2169fa8b7419f3dc95"
+    },
+    "assets/voice/personality-sample.wav": {
+      "hash": "9d6c96d0f2ea30a2b587dd4f9488acaef2dd6a044736af6e7202c50445cb7714",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/9d/9d6c96d0f2ea30a2b587dd4f9488acaef2dd6a044736af6e7202c50445cb7714"
+    },
+    "assets/voice/problem.transcript.json": {
+      "hash": "09f822d17496adef3102a1c43e5361e70e12bcf94e8c64713d1147aeaf7748fe",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/09/09f822d17496adef3102a1c43e5361e70e12bcf94e8c64713d1147aeaf7748fe"
+    },
+    "assets/voice/problem.wav": {
+      "hash": "218d086aa78eeb4a091d1bf3267d01994218f3ee4f16e0447fa0be446f054fa4",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/21/218d086aa78eeb4a091d1bf3267d01994218f3ee4f16e0447fa0be446f054fa4"
+    },
+    "assets/voice/problem_v2.wav": {
+      "hash": "9c737b2a43d89f616f071c3a0cdecc1735d875b41415151d6d951c1e942c3bf1",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/9c/9c737b2a43d89f616f071c3a0cdecc1735d875b41415151d6d951c1e942c3bf1"
+    },
+    "assets/voice/reveal.transcript.json": {
+      "hash": "8be4f694653168a80eb703839ce95824f2794ca60276040fa855287f7912c0fd",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8b/8be4f694653168a80eb703839ce95824f2794ca60276040fa855287f7912c0fd"
+    },
+    "assets/voice/reveal.wav": {
+      "hash": "15be2d1e6266aaa955d2ce4ed526711a1f6b6fee09e2c3c3ff2c8de4d2936f25",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/15/15be2d1e6266aaa955d2ce4ed526711a1f6b6fee09e2c3c3ff2c8de4d2936f25"
+    },
+    "assets/voice/reveal_v2.wav": {
+      "hash": "e8b4234523320ad67d1bfebb10942751439ac400a000b61e2f5a478f2f3c0f1e",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e8/e8b4234523320ad67d1bfebb10942751439ac400a000b61e2f5a478f2f3c0f1e"
+    },
+    "assets/voice/sample.transcript.json": {
+      "hash": "e2b72c64b7d4dbd9a975a28a677988d9bffc39e511898976dfc11583e792504f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e2/e2b72c64b7d4dbd9a975a28a677988d9bffc39e511898976dfc11583e792504f"
+    },
+    "assets/voice/sample.wav": {
+      "hash": "b8c3431bbce7daa389311a60a80b9202eec27330a87ba182030d0efec0f2724a",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b8/b8c3431bbce7daa389311a60a80b9202eec27330a87ba182030d0efec0f2724a"
+    },
+    "assets/voice/secure.transcript.json": {
+      "hash": "459925bd752afb638093bf604c56ac565d13741139e5e0070219acafa8742266",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/45/459925bd752afb638093bf604c56ac565d13741139e5e0070219acafa8742266"
+    },
+    "assets/voice/secure.wav": {
+      "hash": "98d62383917fcaaaebe26dc9554291bb8f8fa8fbf076bb461c01f78390b10f2f",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/98/98d62383917fcaaaebe26dc9554291bb8f8fa8fbf076bb461c01f78390b10f2f"
+    },
+    "assets/voice/secure_v2.wav": {
+      "hash": "46c135c4ced4a1b4c5663e0cb08102fdeeeb82eb30e416537f8508e36ed3710d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/46/46c135c4ced4a1b4c5663e0cb08102fdeeeb82eb30e416537f8508e36ed3710d"
+    },
+    "audio_request.json": {
+      "hash": "8b24196623d4d2ea84acb213133ba1152a9fe263ce8d199918f64e0e48498180",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8b/8b24196623d4d2ea84acb213133ba1152a9fe263ce8d199918f64e0e48498180"
+    },
+    "audio_samples_request.json": {
+      "hash": "17109b392fc684dab969dffa0e54274e50902827905db61560104fea3f8b0cd6",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/17/17109b392fc684dab969dffa0e54274e50902827905db61560104fea3f8b0cd6"
+    },
+    "compositions/always.html": {
+      "hash": "9cf00bb164f4e0683d7f5ee39bc6600b1ff35f1f0419f89df7b5d2fb58e5720b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/9c/9cf00bb164f4e0683d7f5ee39bc6600b1ff35f1f0419f89df7b5d2fb58e5720b"
+    },
+    "compositions/archive-v1/build.html": {
+      "hash": "40b72295e0eb91c72951b41618385325f637cd30066d31c78ba92891ef01c3b0",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/40/40b72295e0eb91c72951b41618385325f637cd30066d31c78ba92891ef01c3b0"
+    },
+    "compositions/archive-v1/code.html": {
+      "hash": "50637275aebc9c30ab157e669a6dc2a3440c86fad0aa22ae3f351d9444a1bca5",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/50/50637275aebc9c30ab157e669a6dc2a3440c86fad0aa22ae3f351d9444a1bca5"
+    },
+    "compositions/archive-v1/graph.html": {
+      "hash": "4c432bbd6c240a02082fda25c16b87b70d573c1e45c09ec9cc8445f8ab735ffa",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/4c/4c432bbd6c240a02082fda25c16b87b70d573c1e45c09ec9cc8445f8ab735ffa"
+    },
+    "compositions/archive-v1/live.html": {
+      "hash": "34919dc30df40477e9568161f891761c0612ac3918308f17aa38a7ab230ee8df",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/34/34919dc30df40477e9568161f891761c0612ac3918308f17aa38a7ab230ee8df"
+    },
+    "compositions/archive-v1/promote.html": {
+      "hash": "afb1be03886189696fe6e73bb7f94ece691c59849caad13b74b6a9350b07ffa3",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/af/afb1be03886189696fe6e73bb7f94ece691c59849caad13b74b6a9350b07ffa3"
+    },
+    "compositions/archive-v1/scale.html": {
+      "hash": "01b954a831b27bfc4dd2adfff988dfcd4be37c13167fdd765c24ed4fc3fa0951",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/01/01b954a831b27bfc4dd2adfff988dfcd4be37c13167fdd765c24ed4fc3fa0951"
+    },
+    "compositions/captions.html": {
+      "hash": "720a3f855fc1f68a8f745b0cc50700ab8e129d829afae0977795ddcdae8a2cd9",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/72/720a3f855fc1f68a8f745b0cc50700ab8e129d829afae0977795ddcdae8a2cd9"
+    },
+    "compositions/components/browser-device-stage.html": {
+      "hash": "0fb552a8361fe33324b3e12e718f10fa129150853818941369966b1e7df0a388",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/0f/0fb552a8361fe33324b3e12e718f10fa129150853818941369966b1e7df0a388"
+    },
+    "compositions/components/cta-lockup.html": {
+      "hash": "30f9f7c293280b714267bc89d72449e69fc7f6975e45f87ca590f7d9a88016cb",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/30/30f9f7c293280b714267bc89d72449e69fc7f6975e45f87ca590f7d9a88016cb"
+    },
+    "compositions/components/cursor-zoom-follow.html": {
+      "hash": "867303a92c1694eed246b9cfc0cdf24c039c159ba888ce42c0cf4967f59f4a36",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/86/867303a92c1694eed246b9cfc0cdf24c039c159ba888ce42c0cf4967f59f4a36"
+    },
+    "compositions/components/focus-swap.html": {
+      "hash": "0bc8fbb1248d93444737738814661300ea33b03257305614c36a67f00dedd5f7",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/0b/0bc8fbb1248d93444737738814661300ea33b03257305614c36a67f00dedd5f7"
+    },
+    "compositions/components/ticker-takeover.html": {
+      "hash": "cc1b09810ec927636a2baf6ac1b841fc4808e3e8804776e822b01a21100d2641",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/cc/cc1b09810ec927636a2baf6ac1b841fc4808e3e8804776e822b01a21100d2641"
+    },
+    "compositions/components/titlecard-lockup.html": {
+      "hash": "e78a2c2ffe11238b425016076bac24033257bbcd5e19661c6b768b4b2d764781",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/e7/e78a2c2ffe11238b425016076bac24033257bbcd5e19661c6b768b4b2d764781"
+    },
+    "compositions/components/tracing-beam.html": {
+      "hash": "50994c55bc0f5b2aaa523d679656557ca8849621fda9525febaee7090dd024e1",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/50/50994c55bc0f5b2aaa523d679656557ca8849621fda9525febaee7090dd024e1"
+    },
+    "compositions/components/ui-focus-zoom.html": {
+      "hash": "2da44ee109ccdabbcd64324284078978b42e3c55725fdf44fe261b74d248736b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2d/2da44ee109ccdabbcd64324284078978b42e3c55725fdf44fe261b74d248736b"
+    },
+    "compositions/components/zoom-through-transition.html": {
+      "hash": "b52cded3052aa3350e6b84c86ff506cef535a56ba482109c327253dc908aaea9",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b5/b52cded3052aa3350e6b84c86ff506cef535a56ba482109c327253dc908aaea9"
+    },
+    "compositions/endcard.html": {
+      "hash": "2c24d1d12330ddb7e8b63ed5caefd87193d34fd540994c1e72a80be20aa918ef",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2c/2c24d1d12330ddb7e8b63ed5caefd87193d34fd540994c1e72a80be20aa918ef"
+    },
+    "compositions/fast.html": {
+      "hash": "672dc2c2f2905299e78f9e0ad04cb4abe8233f4567bae3d1cad3f14195336687",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/67/672dc2c2f2905299e78f9e0ad04cb4abe8233f4567bae3d1cad3f14195336687"
+    },
+    "compositions/grows.html": {
+      "hash": "a32d05e418088ddf8c4c314fd56ecf737daee3d0c6266ce07abf4927e9c390b6",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/a3/a32d05e418088ddf8c4c314fd56ecf737daee3d0c6266ce07abf4927e9c390b6"
+    },
+    "compositions/hook.html": {
+      "hash": "65e9ff9546570c68c56b94f3b17286adeb137a17da02164fc82e9350643f8927",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/65/65e9ff9546570c68c56b94f3b17286adeb137a17da02164fc82e9350643f8927"
+    },
+    "compositions/outcome.html": {
+      "hash": "948c0be618118f324401d4d77ed1b839bedd96b874c1f85039635862b91b86ba",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/94/948c0be618118f324401d4d77ed1b839bedd96b874c1f85039635862b91b86ba"
+    },
+    "compositions/problem.html": {
+      "hash": "dfb54b9322b49ae4af993581350a3956809c8f6d2a51e3ad08008d8da51a1968",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/df/dfb54b9322b49ae4af993581350a3956809c8f6d2a51e3ad08008d8da51a1968"
+    },
+    "compositions/reveal.html": {
+      "hash": "579ee571f91ebf3ba5076188c8d5f83b303b582e5c2be8637e2b0cb33e709e48",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/57/579ee571f91ebf3ba5076188c8d5f83b303b582e5c2be8637e2b0cb33e709e48"
+    },
+    "compositions/secure.html": {
+      "hash": "1cd9d6bd165f933d5880feb67401ce6569d7eecb3e5244cafbf8b84eacd7409c",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/1c/1cd9d6bd165f933d5880feb67401ce6569d7eecb3e5244cafbf8b84eacd7409c"
+    },
+    "evolut-fabrica-4k.transcript.json": {
+      "hash": "7859077180e158d4120a4ab3fb0ca7114a83dc2181ec08d314ba975c94932112",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/78/7859077180e158d4120a4ab3fb0ca7114a83dc2181ec08d314ba975c94932112"
+    },
+    "evolut-fabrica-revision-1080p.transcript.json": {
+      "hash": "4cb5deb4e9e4986b043eb0a2c12f11a1e563866570084376039d749ea9db71de",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/4c/4cb5deb4e9e4986b043eb0a2c12f11a1e563866570084376039d749ea9db71de"
+    },
+    "evolut-launch-4k.transcript.json": {
+      "hash": "9c6a3a9b0520b1ddb740a62147ef2b20cea0ff89a4ac4f586ba80a237f6d1582",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/9c/9c6a3a9b0520b1ddb740a62147ef2b20cea0ff89a4ac4f586ba80a237f6d1582"
+    },
+    "evolut-launch.transcript.json": {
+      "hash": "2814614452a5e03648d7cdceff94c7714060c6dfefcdfdaa46a7fa5d5fc1d2e2",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/28/2814614452a5e03648d7cdceff94c7714060c6dfefcdfdaa46a7fa5d5fc1d2e2"
+    },
+    "gemini_narration_request.json": {
+      "hash": "46148127100296542d80c5ed7375d30e032a40d2cdb1ae436fc471a5525376bb",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/46/46148127100296542d80c5ed7375d30e032a40d2cdb1ae436fc471a5525376bb"
+    },
+    "hyperframes.json": {
+      "hash": "b6c88d14bec389238059e9fef576ef0c30b880847a8d19391a21abd805246006",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b6/b6c88d14bec389238059e9fef576ef0c30b880847a8d19391a21abd805246006"
+    },
+    "hyperframes.lock.json": {
+      "hash": "3eb598f1458fb14a8bfc39e2088673f29d0ce08e29b10d41501e1a39a21c7aff",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/3e/3eb598f1458fb14a8bfc39e2088673f29d0ce08e29b10d41501e1a39a21c7aff"
+    },
+    "index.html": {
+      "hash": "fbf978a1c39ad5f5ddd15cbea0135a14da5d6798c2f00362b5fce10eaba28ad8",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/fb/fbf978a1c39ad5f5ddd15cbea0135a14da5d6798c2f00362b5fce10eaba28ad8"
+    },
+    "meta.json": {
+      "hash": "941fac71923ca55a4508c1647a843561052c6037691b7af2f2bfd125234df38c",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/94/941fac71923ca55a4508c1647a843561052c6037691b7af2f2bfd125234df38c"
+    },
+    "narration.json": {
+      "hash": "ff12044c836d23768227e20cea2e1c21daf30dcc50a53eca3498e86665fc2761",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ff/ff12044c836d23768227e20cea2e1c21daf30dcc50a53eca3498e86665fc2761"
+    },
+    "package.json": {
+      "hash": "f642a0cb7da9394ff3a2dd5dbe8b518a8e6024026a31b33d066993c8174de975",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f6/f642a0cb7da9394ff3a2dd5dbe8b518a8e6024026a31b33d066993c8174de975"
+    },
+    "render-fabrica.log": {
+      "hash": "df273c8f1b33134f44b430c06293c971cfe09be0279ac25b320fc5509fd211d2",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/df/df273c8f1b33134f44b430c06293c971cfe09be0279ac25b320fc5509fd211d2"
+    },
+    "render-rev.log": {
+      "hash": "2bb3241a6e136591dcc21358bc3fadfb6c72f1a44de8df9cd024155279788906",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2b/2bb3241a6e136591dcc21358bc3fadfb6c72f1a44de8df9cd024155279788906"
+    },
+    "render4k.log": {
+      "hash": "5ef012fd2b1376deb1763cf8d4fbd2a11a32974075bc5e49f5eddef76590f7ed",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/5e/5ef012fd2b1376deb1763cf8d4fbd2a11a32974075bc5e49f5eddef76590f7ed"
+    },
+    "scripts/capture-hall.mjs": {
+      "hash": "b1011615bcc6274c87fa02b9730d1cd77d0f5fea65fe239d9596f0d0d974515b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b1/b1011615bcc6274c87fa02b9730d1cd77d0f5fea65fe239d9596f0d0d974515b"
+    },
+    "scripts/generate_narration.py": {
+      "hash": "8bb92d5a46e336a24629bdf0b98579f5f1ddfd5435c3d7323a00ea1425ce37dc",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/8b/8bb92d5a46e336a24629bdf0b98579f5f1ddfd5435c3d7323a00ea1425ce37dc"
+    },
+    "scripts/run-mocha-avatar.sh": {
+      "hash": "bd059a77aa99fff3d375c4116921a9b73de91d0690937e1432074d86dd5fffa1",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/bd/bd059a77aa99fff3d375c4116921a9b73de91d0690937e1432074d86dd5fffa1"
+    },
+    "scripts/scenes/__pycache__/common.cpython-314.pyc": {
+      "hash": "2f269a4c8c8a45346c94ede439ecaf6d13083450f4dc64d4ba12b6cb2b7ee66b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2f/2f269a4c8c8a45346c94ede439ecaf6d13083450f4dc64d4ba12b6cb2b7ee66b"
+    },
+    "scripts/scenes/build.py": {
+      "hash": "ff09603eabe09416cd2eb78f8018d70fda06f7f7ef65055946d0e8c133708627",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ff/ff09603eabe09416cd2eb78f8018d70fda06f7f7ef65055946d0e8c133708627"
+    },
+    "scripts/scenes/captions.py": {
+      "hash": "32624ec46df47d8b05331b15c5f9840355771eaa520b70ee6c5bce0f823e1314",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/32/32624ec46df47d8b05331b15c5f9840355771eaa520b70ee6c5bce0f823e1314"
+    },
+    "scripts/scenes/common.py": {
+      "hash": "c3ee6539154a26dc906afc9799bf5366f30185d3021ed76cddfedb0dea1be737",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c3/c3ee6539154a26dc906afc9799bf5366f30185d3021ed76cddfedb0dea1be737"
+    },
+    "scripts/scenes/graph.py": {
+      "hash": "294dc4f1a64c461a6781f67a788830f10d40d583f58ea54b614f91180b08b487",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/29/294dc4f1a64c461a6781f67a788830f10d40d583f58ea54b614f91180b08b487"
+    },
+    "scripts/scenes/live.py": {
+      "hash": "c4b3f345f0d5259e77d930f798e94cb57adbfda24ee818f5595283a1aec23253",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c4/c4b3f345f0d5259e77d930f798e94cb57adbfda24ee818f5595283a1aec23253"
+    },
+    "scripts/scenes/promote.py": {
+      "hash": "2091dd7beb9fb09a66911f0fc0ee1d30c5630594491be0647e8ffdb98f7c451b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/20/2091dd7beb9fb09a66911f0fc0ee1d30c5630594491be0647e8ffdb98f7c451b"
+    },
+    "scripts/scenes/scale.py": {
+      "hash": "2910a8bf95fae02bdf3238c69cfe8718d77dd612262772cf9bc6431e64aae7f1",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/29/2910a8bf95fae02bdf3238c69cfe8718d77dd612262772cf9bc6431e64aae7f1"
+    },
+    "scripts/scenes/st_always.py": {
+      "hash": "c264abc8ab27337594c948a29fbb36b85cdd2db9e66599c16e2f482e1879b919",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c2/c264abc8ab27337594c948a29fbb36b85cdd2db9e66599c16e2f482e1879b919"
+    },
+    "scripts/scenes/st_common.py": {
+      "hash": "54b344374d37b6bd0c13a5a734a89c38752f7d21c51fe9336af86ef56654d35a",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/54/54b344374d37b6bd0c13a5a734a89c38752f7d21c51fe9336af86ef56654d35a"
+    },
+    "scripts/scenes/st_fast.py": {
+      "hash": "73b04ab5197acdb2d71e8b821f36a32e947cf4eabe1ff3849e0c636100e73ea3",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/73/73b04ab5197acdb2d71e8b821f36a32e947cf4eabe1ff3849e0c636100e73ea3"
+    },
+    "scripts/scenes/st_grows.py": {
+      "hash": "81fa5c1ab0811cc59f04eb2bd7e0bfd3efdf8f2f3d47a0e3a097b69724a566f0",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/81/81fa5c1ab0811cc59f04eb2bd7e0bfd3efdf8f2f3d47a0e3a097b69724a566f0"
+    },
+    "scripts/scenes/st_secure.py": {
+      "hash": "0d3d201c74710b83878317826ce44fc208406077a0f418365436767ebe53a825",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/0d/0d3d201c74710b83878317826ce44fc208406077a0f418365436767ebe53a825"
+    },
+    "scripts/scenes/v2_open.py": {
+      "hash": "1f77e3f9b3a96c176cda3f190841fd40f7c16759c7938815f62d7ab4c486e04a",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/1f/1f77e3f9b3a96c176cda3f190841fd40f7c16759c7938815f62d7ab4c486e04a"
+    },
+    "scripts/scenes/v2_stations.py": {
+      "hash": "d14a57c882db85112c7ddaf6890bc268a674eccdcdd46d681adc481b20f5978e",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/d1/d14a57c882db85112c7ddaf6890bc268a674eccdcdd46d681adc481b20f5978e"
+    },
+    "scripts/scenes/v3_open.py": {
+      "hash": "c049278ff1b0df55356ecccf65b2d582153f63c22fc4203e9e44fc347e006df7",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/c0/c049278ff1b0df55356ecccf65b2d582153f63c22fc4203e9e44fc347e006df7"
+    },
+    "scripts/scenes/v4_hook3d.py": {
+      "hash": "809d5ce8ecae8975ff464a64ae829b150686b54a63ac35eadf9c2b3b2217f630",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/80/809d5ce8ecae8975ff464a64ae829b150686b54a63ac35eadf9c2b3b2217f630"
+    },
+    "scripts/scenes/v4_problem3d.py": {
+      "hash": "3b831e61de8989ee2ee9133f5d413e52c5857f83f4a729c321c74d3e37c023cc",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/3b/3b831e61de8989ee2ee9133f5d413e52c5857f83f4a729c321c74d3e37c023cc"
+    },
+    "scripts/vo_words.py": {
+      "hash": "ad1a137a2eaecf230ebce18299d008347939b2839fb4c7b0a626f0742271f969",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/ad/ad1a137a2eaecf230ebce18299d008347939b2839fb4c7b0a626f0742271f969"
+    },
+    "snapshots/contact-sheet.jpg": {
+      "hash": "687a7d8d6eb9b85eec284f43498db12ec27575c8d61bcabe8402dbc4e09228c8",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/68/687a7d8d6eb9b85eec284f43498db12ec27575c8d61bcabe8402dbc4e09228c8"
+    },
+    "snapshots/frame-01-at-9s.png": {
+      "hash": "4a541e5552f544db15fd12f8b3af37d711c9897d0e56c0e564c0a7c4d9aa6c82",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/4a/4a541e5552f544db15fd12f8b3af37d711c9897d0e56c0e564c0a7c4d9aa6c82"
+    },
+    "snapshots/frame-03-at-29s.png": {
+      "hash": "299ecf2f1a749fa78e7ff18225b1c3d9ff68f20d5726b63c8868ea0271201b0d",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/29/299ecf2f1a749fa78e7ff18225b1c3d9ff68f20d5726b63c8868ea0271201b0d"
+    },
+    "snapshots/frame-04-at-39s.png": {
+      "hash": "77183aae060ee88ad9683da007730bfed55c3162bc5f09823abeb52d6ac44311",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/77/77183aae060ee88ad9683da007730bfed55c3162bc5f09823abeb52d6ac44311"
+    },
+    "snapshots/frame-05-at-48.5s.png": {
+      "hash": "a35b4ff1ea62aa47c406a81730c7f1de00a7ffb4219b4f35a9c510f2a55b7107",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/a3/a35b4ff1ea62aa47c406a81730c7f1de00a7ffb4219b4f35a9c510f2a55b7107"
+    },
+    "assets/evolut-commercial-bed-65.mp3": {
+      "hash": "b0fc2d10a1d76788f9b2dd66a6e9c3ed09d90b9677d74b312ca53ce246c852d4",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/b0/b0fc2d10a1d76788f9b2dd66a6e9c3ed09d90b9677d74b312ca53ce246c852d4"
+    },
+    "assets/evolut-commercial-bed-69-b.mp3": {
+      "hash": "0ce5208829812474631c50ccc765728c9897e830cb1b3b055b8436f5b28aba35",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/0c/0ce5208829812474631c50ccc765728c9897e830cb1b3b055b8436f5b28aba35"
+    },
+    "assets/evolut-commercial-bed-69.mp3": {
+      "hash": "2ce085c414e4484645cf9100f85228d89ae358c010664aab8f86ea204959244b",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/2c/2ce085c414e4484645cf9100f85228d89ae358c010664aab8f86ea204959244b"
+    },
+    "assets/hall-flight-4k.mp4": {
+      "hash": "7859afc426572634a0204c11f73c6dd55ae77cb8eef3151a396d6da7f940d063",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/78/7859afc426572634a0204c11f73c6dd55ae77cb8eef3151a396d6da7f940d063"
+    },
+    "assets/hall-flight.mp4": {
+      "hash": "4158e5f38bd1d01d03e590c54f7d1bd4853c1ef87b77537e3ff0d0954b506908",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/41/4158e5f38bd1d01d03e590c54f7d1bd4853c1ef87b77537e3ff0d0954b506908"
+    },
+    "snapshots/frame-00-at-2.5s.png": {
+      "hash": "5916b0207ea225ef2c45b8bba510e7feb9b093f2ce2b79079e474d175251d4c9",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/59/5916b0207ea225ef2c45b8bba510e7feb9b093f2ce2b79079e474d175251d4c9"
+    },
+    "snapshots/frame-02-at-19.3s.png": {
+      "hash": "8124dc942a6d2589bab701d6405389cbee2bdb460a888082292c9997d45b63cd",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/81/8124dc942a6d2589bab701d6405389cbee2bdb460a888082292c9997d45b63cd"
+    },
+    "snapshots/frame-06-at-56s.png": {
+      "hash": "0f068da945429cf52d6107c480d57e5ae033537806a3ac66b0bd954fd0166616",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/0f/0f068da945429cf52d6107c480d57e5ae033537806a3ac66b0bd954fd0166616"
+    },
+    "snapshots/frame-07-at-59.75s.png": {
+      "hash": "f935ebed1ce4b3fd85bea92fbbe16b1b634d5884157a67bac93288c2a2c8d580",
+      "content": "/home/jogarba/.cache/hyperframes/history/796d6632-796f-4eee-992c-fc525e2ecbf2/blobs/f9/f935ebed1ce4b3fd85bea92fbbe16b1b634d5884157a67bac93288c2a2c8d580"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  }
+}
