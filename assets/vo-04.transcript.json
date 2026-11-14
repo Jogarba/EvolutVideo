@@ -1,0 +1,132 @@
+{
+  "audio": "assets/vo-04.mp3",
+  "language": "es",
+  "words": [
+    {
+      "text": "Y",
+      "start": 0.24,
+      "end": 0.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 0.34,
+      "end": 0.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vez",
+      "start": 0.5,
+      "end": 0.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 0.68,
+      "end": 0.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "línea,",
+      "start": 0.78,
+      "end": 1.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ves",
+      "start": 1.4,
+      "end": 1.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cómo",
+      "start": 1.58,
+      "end": 1.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 1.74,
+      "end": 1.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 2,
+      "end": 2.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 2.12,
+      "end": 2.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 2.22,
+      "end": 2.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 2.36,
+      "end": 2.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "momento,",
+      "start": 2.56,
+      "end": 3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 3.34,
+      "end": 3.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vivo,",
+      "start": 3.5,
+      "end": 3.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 4.8,
+      "end": 4.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pantallas",
+      "start": 4.98,
+      "end": 5.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "complicadas",
+      "start": 5.46,
+      "end": 6.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 6.1,
+      "end": 6.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 6.2,
+      "end": 6.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sorpresas",
+      "start": 6.4,
+      "end": 7.02,
+      "speaker": "speaker_0"
+    }
+  ]
+}

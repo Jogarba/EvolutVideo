@@ -1,0 +1,267 @@
+<!doctype html>
+<!--
+  cta-lockup: Evolut Brand-Customized Closing Lockup
+  Features the official Evolut Isologo (single hexagonal núcleo inside the O),
+  commercial closing headline, and high-contrast Evolut Blue (#399fef) CTA capsule
+  with mandatory --evolut-on-brand (#000e1d) text.
+-->
+<html
+  lang="es"
+  data-composition-id="cta-lockup"
+  data-composition-duration="6"
+  data-composition-variables='[
+    { "id": "action_line", "type": "string", "role": "content", "label": "Action line", "description": "Primary action statement shown above the CTA.", "default": "Piensa, crea, codea y despliega en minutos." },
+    { "id": "button_label", "type": "string", "role": "content", "label": "Button label", "description": "Text displayed inside the CTA capsule.", "default": "Comienza ahora · evolut.cloud" },
+    { "id": "microcopy", "type": "string", "role": "content", "label": "Microcopy", "description": "Supporting detail shown below the CTA capsule.", "default": "Somos tu equipo de infraestructura inteligente · Workspaces bajo demanda · Vigilancia 360°" },
+    { "id": "accent", "type": "enum", "role": "style", "label": "Accent", "description": "Fill color used by the CTA capsule.", "default": "blue", "options": [{ "value": "green", "label": "Green" }, { "value": "blue", "label": "Blue" }] }
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CTA Lockup — Evolut</title>
+  </head>
+  <body>
+    <template>
+      <div data-hf-id="hf-n6ug" id="root" data-composition-id="cta-lockup" data-duration="6" data-fps="30">
+        <style>
+          *,
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
+
+          #root {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            container-type: size;
+            isolation: isolate;
+            color: var(--fg, #f2f5f7);
+            font-family: var(--font-body, 'Hanken Grotesk Variable', system-ui, sans-serif);
+            pointer-events: none;
+          }
+
+          .cl-clip {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+          }
+
+          .cl-lockup {
+            width: min(88cqw, 150cqh);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            will-change: transform;
+          }
+
+          .cl-logo-wrap {
+            margin-bottom: 4.2cqh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.6cqh;
+            will-change: transform, opacity;
+          }
+
+          .cl-isologo {
+            height: 8.5cqh;
+            width: auto;
+            display: block;
+          }
+
+          .cl-kicker {
+            color: #399fef;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.7cqh;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+          }
+
+          .cl-action {
+            max-width: 84cqw;
+            margin: 0 0 4.8cqh;
+            color: var(--fg, #f2f5f7);
+            font-family: var(--font-display, 'Michroma', sans-serif);
+            font-size: min(4.8cqw, 6.4cqh);
+            font-weight: 400;
+            line-height: 1.22;
+            letter-spacing: -0.01em;
+            text-wrap: balance;
+            will-change: transform, opacity;
+          }
+
+          .cl-button {
+            min-width: 34cqw;
+            max-width: 78cqw;
+            margin: 0 0 3.4cqh;
+            padding: 2.6cqh 4.8cqw;
+            overflow: hidden;
+            border: 0;
+            border-radius: 50cqh;
+            background: #399fef;
+            box-shadow: 0 2.2cqh 6cqh rgba(57, 159, 239, 0.34);
+            color: #000e1d;
+            font-family: var(--font-display, 'Michroma', sans-serif);
+            font-size: min(2.6cqw, 3.6cqh);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            transform-origin: 50% 50%;
+            will-change: transform, opacity;
+          }
+
+          .cl-microcopy {
+            max-width: 82cqw;
+            margin: 0;
+            color: #bfc3c7;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.7cqh;
+            font-weight: 500;
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+            will-change: transform, opacity;
+          }
+        </style>
+
+        <div data-hf-id="hf-f8fi"
+          id="cta-lockup-clip"
+          class="cl-clip clip"
+          data-start="0"
+          data-duration="6"
+          data-track-index="0"
+        >
+          <div data-hf-id="hf-3vxw" class="cl-lockup">
+            <div data-hf-id="hf-wep4" class="cl-logo-wrap">
+              <img data-hf-id="hf-b692" class="cl-isologo" src="/assets/evolut-isologo-on-dark.svg" alt="Evolut" />
+              <div data-hf-id="hf-92lo" class="cl-kicker">TU EQUIPO DE INFRAESTRUCTURA INTELIGENTE</div>
+            </div>
+            <h2 data-hf-id="hf-xfl9" class="cl-action"></h2>
+            <button data-hf-id="hf-1kb2" class="cl-button" type="button" tabindex="-1"></button>
+            <p data-hf-id="hf-nvva" class="cl-microcopy"></p>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+        <script>
+          (function () {
+            "use strict";
+
+            var root = document.getElementById("root");
+            var lockup = root.querySelector(".cl-lockup");
+            var logoWrap = root.querySelector(".cl-logo-wrap");
+            var actionLine = root.querySelector(".cl-action");
+            var button = root.querySelector(".cl-button");
+            var microcopy = root.querySelector(".cl-microcopy");
+            var vars =
+              window.__hyperframes && window.__hyperframes.getVariables
+                ? window.__hyperframes.getVariables()
+                : {};
+
+            var actionText =
+              vars.action_line == null
+                ? "Piensa, crea, codea y despliega tu aplicación en minutos."
+                : String(vars.action_line);
+            var buttonText =
+              vars.button_label == null
+                ? "Solicitar demostración · evolut.cloud"
+                : String(vars.button_label);
+            var microcopyText =
+              vars.microcopy == null
+                ? "Workspaces bajo demanda · Optimización máxima de recursos · Vigilancia 360°"
+                : String(vars.microcopy);
+
+            actionLine.textContent = actionText;
+            button.textContent = buttonText;
+            microcopy.textContent = microcopyText;
+            root.style.setProperty("--cl-accent", "#399fef");
+
+            var IN_BASE = 1.6;
+            var duration = Math.max(0.001, parseFloat(root.dataset.duration || "6"));
+            var envelopeScale = Math.min(1, duration / IN_BASE);
+            var IN = IN_BASE * envelopeScale;
+            var HOLD = Math.max(0, duration - IN);
+
+            var ACTION_DURATION = 0.5 * envelopeScale;
+            var BUTTON_AT = 0.56 * envelopeScale;
+            var BUTTON_DURATION = 0.6 * envelopeScale;
+            var BUTTON_OPACITY_DURATION = 0.24 * envelopeScale;
+            var MICROCOPY_AT = 1.18 * envelopeScale;
+            var MICROCOPY_DURATION = 0.42 * envelopeScale;
+
+            var tl = gsap.timeline({ paused: true });
+
+            tl.fromTo(
+              logoWrap,
+              { opacity: 0, y: "2.4cqh" },
+              { opacity: 1, y: 0, duration: 0.42 * envelopeScale, ease: "power3.out" },
+              0,
+            );
+            tl.fromTo(
+              actionLine,
+              { opacity: 0, y: "3.4cqh" },
+              { opacity: 1, y: 0, duration: ACTION_DURATION, ease: "power3.out" },
+              0.15 * envelopeScale,
+            );
+            tl.fromTo(
+              button,
+              { scale: 0.78, y: "2.2cqh" },
+              {
+                scale: 1,
+                y: 0,
+                duration: BUTTON_DURATION,
+                ease: "back.out(1.6)",
+              },
+              BUTTON_AT,
+            );
+            tl.fromTo(
+              button,
+              { opacity: 0 },
+              {
+                opacity: 1,
+                duration: BUTTON_OPACITY_DURATION,
+                ease: "power2.out",
+              },
+              BUTTON_AT,
+            );
+            tl.fromTo(
+              microcopy,
+              { opacity: 0, y: "1.8cqh" },
+              {
+                opacity: 1,
+                y: 0,
+                duration: MICROCOPY_DURATION,
+                ease: "power2.out",
+              },
+              MICROCOPY_AT,
+            );
+
+            if (HOLD > 0) {
+              tl.fromTo(
+                lockup,
+                { y: 0 },
+                {
+                  y: "-0.35cqh",
+                  duration: HOLD / 2,
+                  ease: "sine.inOut",
+                  yoyo: true,
+                  repeat: 1,
+                },
+                IN,
+              );
+            }
+
+            tl.seek(0);
+            window.__timelines = window.__timelines || {};
+            window.__timelines["cta-lockup"] = tl;
+          })();
+        </script>
+      </div>
+    </template>
+  </body>
+</html>

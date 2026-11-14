@@ -1,0 +1,243 @@
+<template>
+  <style>
+    @font-face { font-family: "Michroma"; src: url("assets/fonts/Michroma-Regular.ttf") format("truetype"); font-weight: 400; font-display: block; }
+    @font-face { font-family: "Hanken Grotesk Variable"; src: url("assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/JetBrainsMono-Variable.ttf") format("truetype"); font-weight: 400 600; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; color: #f2f5f7; font-family: "Hanken Grotesk Variable", sans-serif; }
+    .glass { background: linear-gradient(180deg, rgba(25,34,44,.84), rgba(10,15,20,.86)); backdrop-filter: blur(18px) saturate(1.3); box-shadow: inset 0 1.5px 0 rgba(255,255,255,.16), inset 0 0 0 1.5px rgba(242,245,247,.12), 0 50px 120px rgba(0,0,0,.6), 0 0 90px rgba(57,159,239,.12); border-radius: 32px; }
+    /* light falling on the glass from the hall's ceiling lamps */
+    .glass::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,.08), rgba(255,255,255,0) 38%), radial-gradient(120% 60% at 50% 0%, rgba(57,159,239,.10), rgba(57,159,239,0) 60%); }
+    .raised { background: linear-gradient(180deg, rgba(30,38,46,.92), rgba(20,25,30,.92)); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 8px 24px rgba(0,0,0,.25); }
+    .well { background: rgba(7,12,16,.72); border-radius: 16px; }
+    .frost { background: rgba(14,19,24,.80); box-shadow: inset 0 0 0 1.5px rgba(242,245,247,.2); border-radius: 999px; }
+    .pill { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 8px 20px; font-size: 28px; font-weight: 500; white-space: nowrap; }
+    .pill svg { width: 26px; height: 26px; flex: none; }
+    .ok { color: #5ed19d; background: #102a1e; } .warn { color: #f4b85a; background: #2f210c; }
+    .bad { color: #e47c76; background: #351c1a; } .info { color: #399fef; background: #132636; }
+    .neu { color: #94999e; background: rgba(22,27,32,.92); }
+    .mono { font-family: "JetBrains Mono Variable", monospace; }
+    .muted { color: #94999e; } .body { color: #bfc3c7; }
+    .kin { font-family: "Michroma", sans-serif; text-shadow: 0 0 28px #070c10, 0 0 14px #070c10, 0 0 4px #070c10; }
+    .halo { text-shadow: 0 0 22px #070c10, 0 0 10px #070c10, 0 0 3px #070c10; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; border-radius: 16px; background: #399fef; color: #000e1d; font-weight: 700; overflow: hidden; position: relative; }
+    .shine { position: absolute; top: 0; bottom: 0; width: 140px; left: -200px; background: linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.55), rgba(255,255,255,0)); }
+    .cursor { position: absolute; left: 0; top: 0; width: 84px; height: 84px; z-index: 20; filter: drop-shadow(0 8px 16px rgba(0,0,0,.55)); }
+    .led { fill: #5ed19d; filter: drop-shadow(0 0 4px rgba(94,209,157,.8)); }
+    .icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    #lv-flash { position: absolute; inset: 0; background: #0f3424; }
+    #lv-world { position: absolute; inset: 0; }
+    #lv-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .card { position: absolute; overflow: hidden; }
+    .cap { position: absolute; left: 34px; top: 26px; font: 500 28px "JetBrains Mono Variable", monospace; color: #94999e; letter-spacing: 1px; }
+    #lv-head { position: absolute; left: 120px; top: 168px; display: flex; gap: 18px; align-items: center; }
+    #lv-head b { font: 600 44px "JetBrains Mono Variable", monospace; margin-right: 10px; }
+    #lv-rack { left: 120px; top: 250px; width: 820px; height: 610px; }
+    #lv-rack svg { position: absolute; left: 0; top: 70px; overflow: visible; }
+    .led { fill: #5ed19d; }
+    .tok { fill: #a6d0f6; }
+    .rlabel { position: absolute; top: 548px; width: 200px; text-align: center; font: 500 28px "JetBrains Mono Variable", monospace; color: #5ed19d; }
+    .kpi { position: absolute; top: 250px; width: 255px; height: 190px; padding: 22px 26px; }
+    #lv-chart { left: 1000px; top: 470px; width: 800px; height: 240px; }
+    #lv-logs { left: 1000px; top: 730px; width: 800px; height: 150px; }
+    #lv-logwin { position: absolute; left: 34px; right: 34px; top: 70px; bottom: 14px; overflow: hidden; }
+    #lv-loglines { font: 500 28px/1.6 "JetBrains Mono Variable", monospace; color: #bfc3c7; white-space: pre; }
+    #lv-loglines i { color: #5ed19d; font-style: normal; }
+    #lv-band { position: absolute; left: 0; right: 0; bottom: 0; height: 260px; background: linear-gradient(180deg, rgba(5,8,13,0), rgba(5,8,13,.9) 55%); }
+    #lv-text { position: absolute; left: 120px; top: 900px; font-size: 70px; white-space: nowrap; }
+    #lv-slot { display: inline-block; position: relative; width: 760px; height: 96px; overflow: hidden; vertical-align: bottom; }
+    #lv-slot span { position: absolute; left: 0; top: 0; }
+    #lv-slot span:not(:first-child) { color: #399fef; }
+    #lv-slot span:first-child { color: #399fef; }
+    #lv-rt { position: absolute; left: 0; right: 0; top: 900px; text-align: center; font-size: 76px; }
+    #lv-rt b { color: #399fef; font-weight: 400; }
+
+  </style>
+  <div data-hf-id="hf-v915" id="root" data-composition-id="live" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-zy84" id="lv-world">
+      <div data-hf-id="hf-wd48" id="lv-cam" data-layout-allow-overflow>
+        <div data-hf-id="hf-l84u" id="lv-head"><b data-hf-id="hf-9dql">portal-clientes</b><span data-hf-id="hf-j87k" class="pill info "><svg data-hf-id="hf-2m83" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-m1lh" cx="12" cy="12" r="10"/><path data-hf-id="hf-sdt9" d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span data-hf-id="hf-ik3k">PROD</span></span><span data-hf-id="hf-nprc" class="pill info "><svg data-hf-id="hf-s2v7" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-t51r" cx="6" cy="6" r="3"/><circle data-hf-id="hf-2o6c" cx="6" cy="18" r="3"/><circle data-hf-id="hf-tyev" cx="18" cy="9" r="3"/><path data-hf-id="hf-l9yi" d="M6 9v6M18 12c0 4-6 3-9 6"/></svg><span data-hf-id="hf-9dyg">v1.4.0</span></span><span data-hf-id="hf-kpre" class="pill ok "><svg data-hf-id="hf-rok6" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-jqh5" cx="12" cy="12" r="10"/><path data-hf-id="hf-yfzu" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-2nsb">3 de 3 réplicas listas</span></span></div>
+        <div data-hf-id="hf-7m96" id="lv-rack" class="card glass">
+          <div data-hf-id="hf-dg95" class="cap">RÉPLICAS</div>
+          <svg data-hf-id="hf-8y42" width="820" height="560" viewBox="0 0 820 560"><defs data-hf-id="hf-mh0t">
+      <linearGradient data-hf-id="hf-dnrs" id="u-gt" x1="0" y1="0" x2="1" y2="1"><stop data-hf-id="hf-gsa9" offset="0" stop-color="#335f86"/><stop data-hf-id="hf-lx53" offset="1" stop-color="#17304a"/></linearGradient>
+      <linearGradient data-hf-id="hf-qwp9" id="u-gl" x1="0" y1="0" x2="0" y2="1"><stop data-hf-id="hf-2brf" offset="0" stop-color="#16283a"/><stop data-hf-id="hf-42n7" offset="1" stop-color="#091019"/></linearGradient>
+      <linearGradient data-hf-id="hf-5fmn" id="u-gr" x1="0" y1="0" x2="0" y2="1"><stop data-hf-id="hf-tb1t" offset="0" stop-color="#1b3045"/><stop data-hf-id="hf-31bj" offset="1" stop-color="#0c1620"/></linearGradient>
+    </defs><path data-hf-id="hf-utzb" d="M160 407.86 L660 407.86" stroke="#203a52" stroke-width="6" stroke-linecap="round"/><path data-hf-id="hf-qaas" id="lv-bus" d="M160 407.86 L660 407.86" stroke="#66b8ff" stroke-width="3" stroke-dasharray="8 14" stroke-linecap="round"/><polygon data-hf-id="hf-nlv9" id="lv-tk00" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-4o80" id="lv-tk01" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-v97n" id="lv-tk02" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-wg5q" id="lv-tk03" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-n335" id="lv-tk04" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-ygz0" id="lv-tk05" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-c7jj" id="lv-tk06" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-1gga" id="lv-tk07" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-xk6l" id="lv-tk08" class="tok" points="160,-32 172,-20 160,-8 148,-20"/><polygon data-hf-id="hf-h9ip" id="lv-tk10" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-t23w" id="lv-tk11" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-2ktr" id="lv-tk12" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-eafe" id="lv-tk13" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-lz5p" id="lv-tk14" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-z95k" id="lv-tk15" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-hwdn" id="lv-tk16" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-2wx2" id="lv-tk17" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-1p89" id="lv-tk18" class="tok" points="410,-32 422,-20 410,-8 398,-20"/><polygon data-hf-id="hf-qzmd" id="lv-tk20" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-9qzk" id="lv-tk21" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-09vr" id="lv-tk22" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-84si" id="lv-tk23" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-fr3l" id="lv-tk24" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-mlf0" id="lv-tk25" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-re37" id="lv-tk26" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-nf32" id="lv-tk27" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><polygon data-hf-id="hf-2u4d" id="lv-tk28" class="tok" points="660,-32 672,-20 660,-8 648,-20"/><g data-hf-id="hf-zybt" id="lv-u0">
+      <ellipse data-hf-id="hf-aazc" cx="160" cy="407.86" rx="106.2" ry="32.4" fill="#399fef" fill-opacity=".10"/>
+      <ellipse data-hf-id="hf-nmn6" id="lv-u0-base" cx="160" cy="407.86" rx="90.0" ry="27.0" fill="none" stroke="#399fef" stroke-opacity=".55" stroke-width="2.5" stroke-dasharray="10 8"/>
+      <path data-hf-id="hf-y1j1" d="M110.5 357.3 C97.0 413.9 52.0 411.9 38.5 421.9" fill="none" stroke="#0b1520" stroke-width="7" stroke-linecap="round"/><path data-hf-id="hf-2ss7" d="M110.5 357.3 C97.0 413.9 52.0 411.9 38.5 421.9" fill="none" stroke="#399fef" stroke-opacity=".35" stroke-width="2"/>
+      <polygon data-hf-id="hf-qkp5" points="70.0,171.9 160.0,223.9 160.0,391.9 70.0,339.9" fill="url(#u-gl)" stroke="#399fef" stroke-opacity=".55" stroke-width="2"/>
+      <polygon data-hf-id="hf-er3p" points="160.0,223.9 250.0,171.9 250.0,339.9 160.0,391.9" fill="url(#u-gr)" stroke="#399fef" stroke-opacity=".55" stroke-width="2"/>
+      <line data-hf-id="hf-xo7j" x1="84" y1="260.0" x2="146" y2="295.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-wme8" x1="84" y1="273.0" x2="146" y2="308.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-8or3" x1="84" y1="286.0" x2="146" y2="321.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-s0n9" x1="84" y1="299.0" x2="146" y2="334.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-3bnp" x1="84" y1="312.0" x2="146" y2="347.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-8bkq" x1="84" y1="325.0" x2="146" y2="360.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-ykto" x1="84" y1="338.0" x2="146" y2="373.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><circle data-hf-id="hf-lc7f" cx="78.0" cy="186.5" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-nb55" cx="152.0" cy="229.2" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-j52o" cx="78.0" cy="334.5" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-aqr5" cx="152.0" cy="377.2" r="2.5" fill="#355a7a"/><path data-hf-id="hf-131n" d="M170.0 246.1 L199.6 229.0 L199.6 241.0 L170.0 258.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-0717" cx="194.2" cy="238.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-avvu" d="M170.0 270.1 L199.6 253.0 L199.6 265.0 L170.0 282.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-gqww" cx="194.2" cy="262.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-g7ll" d="M170.0 294.1 L199.6 277.0 L199.6 289.0 L170.0 306.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-sqpi" cx="194.2" cy="286.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-f8w7" d="M170.0 318.1 L199.6 301.0 L199.6 313.0 L170.0 330.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-g0yq" cx="194.2" cy="310.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-diee" d="M170.0 342.1 L199.6 325.0 L199.6 337.0 L170.0 354.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-twps" cx="194.2" cy="334.1" r="2.2" fill="#399fef" fill-opacity=".8"/><line data-hf-id="hf-jeyi" x1="204.4" y1="220.8" x2="209.4" y2="220.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-p7ou" x1="204.4" y1="252.3" x2="209.4" y2="252.3" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-d338" x1="204.4" y1="283.8" x2="209.4" y2="283.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-3nca" x1="204.4" y1="315.3" x2="209.4" y2="315.3" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-q2f8" x1="204.4" y1="346.8" x2="209.4" y2="346.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/>
+      <polygon data-hf-id="hf-3lqi" points="210.4,220.8 238.0,204.9 238.0,330.9 210.4,346.8" fill="#05090d" stroke="#2a4a66" stroke-width="2"/>
+      <polygon data-hf-id="hf-rnja" id="lv-u0-g" points="210.4,220.8 238.0,204.9 238.0,330.9 210.4,346.8" fill="#399fef"/>
+      <polygon data-hf-id="hf-pyfw" points="160.0,120.0 250.0,171.9 160.0,223.9 70.0,171.9" fill="url(#u-gt)" stroke="#66b8ff" stroke-width="2.5"/>
+      <polygon data-hf-id="hf-8glo" points="160.0,138.2 218.5,171.9 160.0,205.7 101.5,171.9" fill="none" stroke="#66b8ff" stroke-opacity=".35" stroke-width="1.5"/>
+      <polygon data-hf-id="hf-uk6k" points="160.0,155.3 178.0,163.6 178.0,180.2 160.0,188.5 142.0,180.2 142.0,163.6" fill="#399fef" fill-opacity=".25" stroke="#66b8ff" stroke-width="2"/>
+      <polyline data-hf-id="hf-913t" points="70.0,171.9 160.0,223.9 250.0,171.9" fill="none" stroke="#d6ecff" stroke-opacity=".75" stroke-width="2.5"/><line data-hf-id="hf-y38y" x1="160" y1="223.85999999999999" x2="160" y2="391.86" stroke="#d6ecff" stroke-opacity=".35" stroke-width="2"/><circle data-hf-id="hf-cdds" id="lv-u0-led0" class="led" cx="92.0" cy="218.6" r="6"/><circle data-hf-id="hf-rgz0" id="lv-u0-led1" class="led" cx="112.0" cy="230.2" r="6"/><circle data-hf-id="hf-hwnk" id="lv-u0-led2" class="led" cx="132.0" cy="241.7" r="6"/>
+    </g><g data-hf-id="hf-wz28" id="lv-u1">
+      <ellipse data-hf-id="hf-7rxs" cx="410" cy="407.86" rx="106.2" ry="32.4" fill="#399fef" fill-opacity=".10"/>
+      <ellipse data-hf-id="hf-oe73" id="lv-u1-base" cx="410" cy="407.86" rx="90.0" ry="27.0" fill="none" stroke="#399fef" stroke-opacity=".55" stroke-width="2.5" stroke-dasharray="10 8"/>
+      <path data-hf-id="hf-tllh" d="M360.5 357.3 C347.0 413.9 302.0 411.9 288.5 421.9" fill="none" stroke="#0b1520" stroke-width="7" stroke-linecap="round"/><path data-hf-id="hf-q8sf" d="M360.5 357.3 C347.0 413.9 302.0 411.9 288.5 421.9" fill="none" stroke="#399fef" stroke-opacity=".35" stroke-width="2"/>
+      <polygon data-hf-id="hf-dg87" points="320.0,171.9 410.0,223.9 410.0,391.9 320.0,339.9" fill="url(#u-gl)" stroke="#399fef" stroke-opacity=".55" stroke-width="2"/>
+      <polygon data-hf-id="hf-d70d" points="410.0,223.9 500.0,171.9 500.0,339.9 410.0,391.9" fill="url(#u-gr)" stroke="#399fef" stroke-opacity=".55" stroke-width="2"/>
+      <line data-hf-id="hf-60cg" x1="334" y1="260.0" x2="396" y2="295.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-1eb7" x1="334" y1="273.0" x2="396" y2="308.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-uhog" x1="334" y1="286.0" x2="396" y2="321.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-gb2u" x1="334" y1="299.0" x2="396" y2="334.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-hw6u" x1="334" y1="312.0" x2="396" y2="347.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-o3h5" x1="334" y1="325.0" x2="396" y2="360.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-d0ef" x1="334" y1="338.0" x2="396" y2="373.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><circle data-hf-id="hf-96y7" cx="328.0" cy="186.5" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-0gb7" cx="402.0" cy="229.2" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-yuec" cx="328.0" cy="334.5" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-4wzr" cx="402.0" cy="377.2" r="2.5" fill="#355a7a"/><path data-hf-id="hf-z7vv" d="M420.0 246.1 L449.6 229.0 L449.6 241.0 L420.0 258.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-l8c1" cx="444.2" cy="238.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-f6ua" d="M420.0 270.1 L449.6 253.0 L449.6 265.0 L420.0 282.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-8j6a" cx="444.2" cy="262.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-9yl5" d="M420.0 294.1 L449.6 277.0 L449.6 289.0 L420.0 306.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-dt1o" cx="444.2" cy="286.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-b08n" d="M420.0 318.1 L449.6 301.0 L449.6 313.0 L420.0 330.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-g4m4" cx="444.2" cy="310.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-ca3u" d="M420.0 342.1 L449.6 325.0 L449.6 337.0 L420.0 354.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-ihw6" cx="444.2" cy="334.1" r="2.2" fill="#399fef" fill-opacity=".8"/><line data-hf-id="hf-izcw" x1="454.4" y1="220.8" x2="459.4" y2="220.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-b21o" x1="454.4" y1="252.3" x2="459.4" y2="252.3" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-77my" x1="454.4" y1="283.8" x2="459.4" y2="283.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-8rog" x1="454.4" y1="315.3" x2="459.4" y2="315.3" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-mvz6" x1="454.4" y1="346.8" x2="459.4" y2="346.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/>
+      <polygon data-hf-id="hf-ru5q" points="460.4,220.8 488.0,204.9 488.0,330.9 460.4,346.8" fill="#05090d" stroke="#2a4a66" stroke-width="2"/>
+      <polygon data-hf-id="hf-cisl" id="lv-u1-g" points="460.4,220.8 488.0,204.9 488.0,330.9 460.4,346.8" fill="#399fef"/>
+      <polygon data-hf-id="hf-0ak8" points="410.0,120.0 500.0,171.9 410.0,223.9 320.0,171.9" fill="url(#u-gt)" stroke="#66b8ff" stroke-width="2.5"/>
+      <polygon data-hf-id="hf-e9rq" points="410.0,138.2 468.5,171.9 410.0,205.7 351.5,171.9" fill="none" stroke="#66b8ff" stroke-opacity=".35" stroke-width="1.5"/>
+      <polygon data-hf-id="hf-czrc" points="410.0,155.3 428.0,163.6 428.0,180.2 410.0,188.5 392.0,180.2 392.0,163.6" fill="#399fef" fill-opacity=".25" stroke="#66b8ff" stroke-width="2"/>
+      <polyline data-hf-id="hf-zi4p" points="320.0,171.9 410.0,223.9 500.0,171.9" fill="none" stroke="#d6ecff" stroke-opacity=".75" stroke-width="2.5"/><line data-hf-id="hf-1ipe" x1="410" y1="223.85999999999999" x2="410" y2="391.86" stroke="#d6ecff" stroke-opacity=".35" stroke-width="2"/><circle data-hf-id="hf-iio7" id="lv-u1-led0" class="led" cx="342.0" cy="218.6" r="6"/><circle data-hf-id="hf-ykku" id="lv-u1-led1" class="led" cx="362.0" cy="230.2" r="6"/><circle data-hf-id="hf-nuvi" id="lv-u1-led2" class="led" cx="382.0" cy="241.7" r="6"/>
+    </g><g data-hf-id="hf-7ujv" id="lv-u2">
+      <ellipse data-hf-id="hf-8xbt" cx="660" cy="407.86" rx="106.2" ry="32.4" fill="#399fef" fill-opacity=".10"/>
+      <ellipse data-hf-id="hf-lqqx" id="lv-u2-base" cx="660" cy="407.86" rx="90.0" ry="27.0" fill="none" stroke="#399fef" stroke-opacity=".55" stroke-width="2.5" stroke-dasharray="10 8"/>
+      <path data-hf-id="hf-llif" d="M610.5 357.3 C597.0 413.9 552.0 411.9 538.5 421.9" fill="none" stroke="#0b1520" stroke-width="7" stroke-linecap="round"/><path data-hf-id="hf-pd21" d="M610.5 357.3 C597.0 413.9 552.0 411.9 538.5 421.9" fill="none" stroke="#399fef" stroke-opacity=".35" stroke-width="2"/>
+      <polygon data-hf-id="hf-27fr" points="570.0,171.9 660.0,223.9 660.0,391.9 570.0,339.9" fill="url(#u-gl)" stroke="#399fef" stroke-opacity=".55" stroke-width="2"/>
+      <polygon data-hf-id="hf-c4i1" points="660.0,223.9 750.0,171.9 750.0,339.9 660.0,391.9" fill="url(#u-gr)" stroke="#399fef" stroke-opacity=".55" stroke-width="2"/>
+      <line data-hf-id="hf-hdrz" x1="584" y1="260.0" x2="646" y2="295.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-hvf4" x1="584" y1="273.0" x2="646" y2="308.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-1b0f" x1="584" y1="286.0" x2="646" y2="321.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-8eph" x1="584" y1="299.0" x2="646" y2="334.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-xto5" x1="584" y1="312.0" x2="646" y2="347.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-kjgq" x1="584" y1="325.0" x2="646" y2="360.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><line data-hf-id="hf-pc7w" x1="584" y1="338.0" x2="646" y2="373.8" stroke="#203a52" stroke-width="3" stroke-linecap="round"/><circle data-hf-id="hf-38ym" cx="578.0" cy="186.5" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-gpaq" cx="652.0" cy="229.2" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-ifwt" cx="578.0" cy="334.5" r="2.5" fill="#355a7a"/><circle data-hf-id="hf-7kva" cx="652.0" cy="377.2" r="2.5" fill="#355a7a"/><path data-hf-id="hf-d8ov" d="M670.0 246.1 L699.6 229.0 L699.6 241.0 L670.0 258.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-3uug" cx="694.2" cy="238.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-z0xe" d="M670.0 270.1 L699.6 253.0 L699.6 265.0 L670.0 282.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-ho07" cx="694.2" cy="262.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-yevl" d="M670.0 294.1 L699.6 277.0 L699.6 289.0 L670.0 306.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-2nu9" cx="694.2" cy="286.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-1rqz" d="M670.0 318.1 L699.6 301.0 L699.6 313.0 L670.0 330.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-9wtl" cx="694.2" cy="310.1" r="2.2" fill="#399fef" fill-opacity=".8"/><path data-hf-id="hf-jcbi" d="M670.0 342.1 L699.6 325.0 L699.6 337.0 L670.0 354.1Z" fill="#0b1520" stroke="#2a4a66" stroke-width="1.5"/><circle data-hf-id="hf-3uxv" cx="694.2" cy="334.1" r="2.2" fill="#399fef" fill-opacity=".8"/><line data-hf-id="hf-dqk4" x1="704.4" y1="220.8" x2="709.4" y2="220.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-co2o" x1="704.4" y1="252.3" x2="709.4" y2="252.3" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-etm6" x1="704.4" y1="283.8" x2="709.4" y2="283.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-fz38" x1="704.4" y1="315.3" x2="709.4" y2="315.3" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/><line data-hf-id="hf-afxy" x1="704.4" y1="346.8" x2="709.4" y2="346.8" stroke="#399fef" stroke-opacity=".6" stroke-width="2"/>
+      <polygon data-hf-id="hf-0lcy" points="710.4,220.8 738.0,204.9 738.0,330.9 710.4,346.8" fill="#05090d" stroke="#2a4a66" stroke-width="2"/>
+      <polygon data-hf-id="hf-ztmw" id="lv-u2-g" points="710.4,220.8 738.0,204.9 738.0,330.9 710.4,346.8" fill="#399fef"/>
+      <polygon data-hf-id="hf-cpmw" points="660.0,120.0 750.0,171.9 660.0,223.9 570.0,171.9" fill="url(#u-gt)" stroke="#66b8ff" stroke-width="2.5"/>
+      <polygon data-hf-id="hf-kp46" points="660.0,138.2 718.5,171.9 660.0,205.7 601.5,171.9" fill="none" stroke="#66b8ff" stroke-opacity=".35" stroke-width="1.5"/>
+      <polygon data-hf-id="hf-5l1w" points="660.0,155.3 678.0,163.6 678.0,180.2 660.0,188.5 642.0,180.2 642.0,163.6" fill="#399fef" fill-opacity=".25" stroke="#66b8ff" stroke-width="2"/>
+      <polyline data-hf-id="hf-vtos" points="570.0,171.9 660.0,223.9 750.0,171.9" fill="none" stroke="#d6ecff" stroke-opacity=".75" stroke-width="2.5"/><line data-hf-id="hf-13xk" x1="660" y1="223.85999999999999" x2="660" y2="391.86" stroke="#d6ecff" stroke-opacity=".35" stroke-width="2"/><circle data-hf-id="hf-a4ix" id="lv-u2-led0" class="led" cx="592.0" cy="218.6" r="6"/><circle data-hf-id="hf-akjr" id="lv-u2-led1" class="led" cx="612.0" cy="230.2" r="6"/><circle data-hf-id="hf-q1vj" id="lv-u2-led2" class="led" cx="632.0" cy="241.7" r="6"/>
+    </g></svg>
+          <div data-hf-id="hf-rrz4" class="rlabel" style="left:60px">réplica 1</div><div data-hf-id="hf-4xw9" class="rlabel" style="left:310px">réplica 2</div><div data-hf-id="hf-9a67" class="rlabel" style="left:560px">réplica 3</div>
+        </div>
+        <div data-hf-id="hf-pxga" class="kpi glass" id="lv-kp0" style="left:1000px"><span data-hf-id="hf-fjkf" class="muted" style="font-size:28px">Tráfico</span><div data-hf-id="hf-pbb4" style="margin-top:12px"><span data-hf-id="hf-miu9" class="pill info "><svg data-hf-id="hf-ra95" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ozdc" cx="12" cy="12" r="10"/><path data-hf-id="hf-cdgv" d="M12 16v-4M12 8h.01"/></svg><span data-hf-id="hf-bwni">normal</span></span></div><svg data-hf-id="hf-5f98" width="200" height="56" viewBox="0 0 200 56" style="position:absolute;left:26px;bottom:20px"><path data-hf-id="hf-sq3i" id="lv-k0" d="M0 40 C30 38 40 20 70 26 S120 10 140 18 S180 6 200 10" fill="none" stroke="#399fef" stroke-width="4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div><div data-hf-id="hf-84gt" class="kpi glass" id="lv-kp1" style="left:1275px"><span data-hf-id="hf-4fqb" class="muted" style="font-size:28px">Errores</span><div data-hf-id="hf-2260" style="margin-top:12px"><span data-hf-id="hf-q5gu" class="pill ok "><svg data-hf-id="hf-qvy4" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ol2b" cx="12" cy="12" r="10"/><path data-hf-id="hf-b76m" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-2k6p">ninguno</span></span></div><svg data-hf-id="hf-4kj8" width="200" height="56" viewBox="0 0 200 56" style="position:absolute;left:26px;bottom:20px"><path data-hf-id="hf-2krj" id="lv-k1" d="M0 46 H200" fill="none" stroke="#5ed19d" stroke-width="4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div><div data-hf-id="hf-gxdm" class="kpi glass" id="lv-kp2" style="left:1550px"><span data-hf-id="hf-4g5b" class="muted" style="font-size:28px">Respuesta</span><div data-hf-id="hf-0v8x" style="margin-top:12px"><span data-hf-id="hf-qjrv" class="pill ok "><svg data-hf-id="hf-qhn3" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ijk2" cx="12" cy="12" r="10"/><path data-hf-id="hf-blhn" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-2lho">rápida</span></span></div><svg data-hf-id="hf-3dm5" width="200" height="56" viewBox="0 0 200 56" style="position:absolute;left:26px;bottom:20px"><path data-hf-id="hf-7rzd" id="lv-k2" d="M0 30 C40 34 60 22 90 28 S150 24 200 26" fill="none" stroke="#5ed19d" stroke-width="4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+        <div data-hf-id="hf-g6et" id="lv-chart" class="card glass">
+          <div data-hf-id="hf-xf5c" class="cap">TRÁFICO · EN VIVO</div>
+          <svg data-hf-id="hf-8rve" width="800" height="240" viewBox="0 0 800 260" style="position:absolute;left:0;top:0">
+            <defs data-hf-id="hf-vl9d"><linearGradient data-hf-id="hf-3dk4" id="lv-area" x1="0" y1="0" x2="0" y2="1"><stop data-hf-id="hf-iz8f" offset="0" stop-color="#399fef" stop-opacity=".35"/><stop data-hf-id="hf-ivnc" offset="1" stop-color="#399fef" stop-opacity="0"/></linearGradient>
+            <clipPath data-hf-id="hf-t7fa" id="lv-clip"><rect data-hf-id="hf-3n95" id="lv-cliprect" x="0" y="0" width="800" height="260"/></clipPath></defs>
+            <path data-hf-id="hf-at6v" d="M34 120 H766 M34 170 H766 M34 220 H766" stroke="rgba(242,245,247,.07)" stroke-width="2"/>
+            <g data-hf-id="hf-moi2" clip-path="url(#lv-clip)">
+              <path data-hf-id="hf-f59v" d="M34 210 C110 200 140 170 200 178 S300 130 360 146 S460 100 520 116 S620 80 680 90 S740 74 766 76 V240 H34Z" fill="url(#lv-area)"/>
+              <path data-hf-id="hf-805n" d="M34 210 C110 200 140 170 200 178 S300 130 360 146 S460 100 520 116 S620 80 680 90 S740 74 766 76" fill="none" stroke="#399fef" stroke-width="6"/>
+              <path data-hf-id="hf-0mvh" d="M34 232 C120 228 160 216 220 220 S330 200 380 208 S480 190 540 196 S640 178 700 182 S740 176 766 177" fill="none" stroke="#5ed19d" stroke-width="5"/>
+            </g>
+          </svg>
+          <div data-hf-id="hf-7wbp" id="lv-head-dot" style="position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:#399fef;box-shadow:0 0 22px #399fef"></div>
+        </div>
+        <div data-hf-id="hf-0p2m" id="lv-logs" class="card glass">
+          <div data-hf-id="hf-8oty" class="cap">REGISTROS</div>
+          <div data-hf-id="hf-nedg" id="lv-logwin"><div data-hf-id="hf-op2b" id="lv-loglines"><div data-hf-id="hf-bjb5"><i data-hf-id="hf-i1ne">200</i> GET /                    <span data-hf-id="hf-5jbk" class="muted">réplica 2</span></div><div data-hf-id="hf-mjwc"><i data-hf-id="hf-njem">200</i> POST /api/pedidos        <span data-hf-id="hf-4ceh" class="muted">réplica 1</span></div><div data-hf-id="hf-hjcb"><i data-hf-id="hf-nxpn">200</i> GET /api/clientes        <span data-hf-id="hf-550j" class="muted">réplica 3</span></div><div data-hf-id="hf-7f04"><i data-hf-id="hf-hncd">201</i> POST /api/pedidos        <span data-hf-id="hf-uqar" class="muted">réplica 3</span></div><div data-hf-id="hf-e2n8"><i data-hf-id="hf-oc0o">200</i> GET /api/catalogo        <span data-hf-id="hf-04al" class="muted">réplica 1</span></div><div data-hf-id="hf-2a39"><i data-hf-id="hf-ljvh">200</i> GET /                    <span data-hf-id="hf-ubzq" class="muted">réplica 3</span></div><div data-hf-id="hf-yypa"><i data-hf-id="hf-ly6i">200</i> GET /api/clientes/42     <span data-hf-id="hf-7pig" class="muted">réplica 2</span></div><div data-hf-id="hf-di4v"><i data-hf-id="hf-mchj">200</i> POST /api/sesion         <span data-hf-id="hf-1b7o" class="muted">réplica 1</span></div><div data-hf-id="hf-x7z0"><i data-hf-id="hf-mqsk">200</i> GET /api/catalogo        <span data-hf-id="hf-6ild" class="muted">réplica 2</span></div><div data-hf-id="hf-0two"><i data-hf-id="hf-qbjt">200</i> GET /api/pedidos/7       <span data-hf-id="hf-txop" class="muted">réplica 3</span></div><div data-hf-id="hf-b240"><i data-hf-id="hf-cppd">201</i> POST /api/pagos          <span data-hf-id="hf-0wwn" class="muted">réplica 1</span></div><div data-hf-id="hf-3h0c"><i data-hf-id="hf-qpuu">200</i> GET /                    <span data-hf-id="hf-6wwe" class="muted">réplica 2</span></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div data-hf-id="hf-gk19" id="lv-band"></div>
+    <div data-hf-id="hf-ujnl" id="lv-text" class="kin">Mira <span data-hf-id="hf-7aad" id="lv-slot"><span data-hf-id="hf-4573" id="lv-s1">tu app,</span><span data-hf-id="hf-hklf" id="lv-s2">tus visitas,</span><span data-hf-id="hf-i6fl" id="lv-s3">cada detalle,</span></span></div>
+    <div data-hf-id="hf-mjjb" id="lv-rt" class="kin">Todo, <b data-hf-id="hf-hnwq">en vivo.</b></div>
+    <div data-hf-id="hf-dh72" id="lv-flash"></div>
+  </div>
+  <script>
+    gsap.config({ force3D: false });
+    const root = gsap.timeline({ paused: true });
+    const tl = gsap.timeline();
+    const cam = (px, py, s) => ({ x: 960 - px * s, y: 560 - py * s, scale: s });
+    // a pane rises out of depth: tilted back, lower and blurred, landing flat
+    const DEPTH = { opacity: 0, y: 90, rotationX: 18, scale: 0.94, transformPerspective: 1800, filter: "blur(10px)" };
+    const LAND = { opacity: 1, y: 0, rotationX: 0, scale: 1, filter: "blur(0px)", duration: 0.75, ease: "expo.out" };
+
+    tl.fromTo("#lv-flash", { opacity: 1 }, { opacity: 0, duration: 0.35, ease: "power2.out" }, 0);
+    tl.fromTo("#lv-world", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(80% at 50% 50%)", duration: 0.45, ease: "power3.out" }, 0);
+    tl.fromTo("#lv-cam", cam(530, 560, 1.22), { ...cam(530, 560, 1.15), duration: 2.2, ease: "power2.out" }, 0);
+    tl.to("#lv-cam", { ...cam(1400, 500, 1.4), duration: 0.55, ease: "power2.inOut" }, 2.35);
+    tl.to("#lv-cam", { ...cam(1400, 760, 1.45), duration: 0.55, ease: "power2.inOut" }, 4.55);
+    tl.to("#lv-cam", { ...cam(960, 540, 0.95), duration: 0.6, ease: "power2.inOut" }, 6.6);
+    tl.fromTo(["#lv-head", "#lv-rack", "#lv-kp0", "#lv-kp1", "#lv-kp2", "#lv-chart", "#lv-logs"], DEPTH, { ...LAND, stagger: 0.07 }, 0.1);
+    ["#lv-u0", "#lv-u1", "#lv-u2"].forEach((u, i) => tl.fromTo(u, { opacity: 0, y: -80 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.4)" }, 0.25 + i * 0.12));
+    tl.fromTo("#lv-tk00", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 0.55); tl.to("#lv-tk00", { opacity: 0, duration: 0.08 }, 0.97);
+    tl.to("#lv-u0-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 0.97);
+    tl.fromTo("#lv-tk01", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 1.47); tl.to("#lv-tk01", { opacity: 0, duration: 0.08 }, 1.89);
+    tl.to("#lv-u0-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 1.89);
+    tl.fromTo("#lv-tk02", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 2.39); tl.to("#lv-tk02", { opacity: 0, duration: 0.08 }, 2.81);
+    tl.to("#lv-u0-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 2.81);
+    tl.fromTo("#lv-tk03", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 3.31); tl.to("#lv-tk03", { opacity: 0, duration: 0.08 }, 3.73);
+    tl.to("#lv-u0-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 3.73);
+    tl.fromTo("#lv-tk04", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 4.23); tl.to("#lv-tk04", { opacity: 0, duration: 0.08 }, 4.65);
+    tl.to("#lv-u0-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 4.65);
+    tl.fromTo("#lv-tk05", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 5.15); tl.to("#lv-tk05", { opacity: 0, duration: 0.08 }, 5.57);
+    tl.to("#lv-u0-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 5.57);
+    tl.fromTo("#lv-tk06", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 6.07); tl.to("#lv-tk06", { opacity: 0, duration: 0.08 }, 6.49);
+    tl.to("#lv-u0-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 6.49);
+    tl.fromTo("#lv-tk07", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 6.99); tl.to("#lv-tk07", { opacity: 0, duration: 0.08 }, 7.41);
+    tl.to("#lv-u0-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 7.41);
+    tl.fromTo("#lv-tk08", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 7.91); tl.to("#lv-tk08", { opacity: 0, duration: 0.08 }, 8.33);
+    tl.to("#lv-u0-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 8.33);
+    tl.fromTo("#lv-tk10", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 0.84); tl.to("#lv-tk10", { opacity: 0, duration: 0.08 }, 1.26);
+    tl.to("#lv-u1-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 1.26);
+    tl.fromTo("#lv-tk11", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 1.76); tl.to("#lv-tk11", { opacity: 0, duration: 0.08 }, 2.18);
+    tl.to("#lv-u1-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 2.18);
+    tl.fromTo("#lv-tk12", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 2.68); tl.to("#lv-tk12", { opacity: 0, duration: 0.08 }, 3.10);
+    tl.to("#lv-u1-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 3.10);
+    tl.fromTo("#lv-tk13", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 3.60); tl.to("#lv-tk13", { opacity: 0, duration: 0.08 }, 4.02);
+    tl.to("#lv-u1-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 4.02);
+    tl.fromTo("#lv-tk14", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 4.52); tl.to("#lv-tk14", { opacity: 0, duration: 0.08 }, 4.94);
+    tl.to("#lv-u1-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 4.94);
+    tl.fromTo("#lv-tk15", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 5.44); tl.to("#lv-tk15", { opacity: 0, duration: 0.08 }, 5.86);
+    tl.to("#lv-u1-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 5.86);
+    tl.fromTo("#lv-tk16", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 6.36); tl.to("#lv-tk16", { opacity: 0, duration: 0.08 }, 6.78);
+    tl.to("#lv-u1-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 6.78);
+    tl.fromTo("#lv-tk17", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 7.28); tl.to("#lv-tk17", { opacity: 0, duration: 0.08 }, 7.70);
+    tl.to("#lv-u1-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 7.70);
+    tl.fromTo("#lv-tk18", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 8.20); tl.to("#lv-tk18", { opacity: 0, duration: 0.08 }, 8.62);
+    tl.to("#lv-u1-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 8.62);
+    tl.fromTo("#lv-tk20", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 1.13); tl.to("#lv-tk20", { opacity: 0, duration: 0.08 }, 1.55);
+    tl.to("#lv-u2-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 1.55);
+    tl.fromTo("#lv-tk21", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 2.05); tl.to("#lv-tk21", { opacity: 0, duration: 0.08 }, 2.47);
+    tl.to("#lv-u2-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 2.47);
+    tl.fromTo("#lv-tk22", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 2.97); tl.to("#lv-tk22", { opacity: 0, duration: 0.08 }, 3.39);
+    tl.to("#lv-u2-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 3.39);
+    tl.fromTo("#lv-tk23", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 3.89); tl.to("#lv-tk23", { opacity: 0, duration: 0.08 }, 4.31);
+    tl.to("#lv-u2-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 4.31);
+    tl.fromTo("#lv-tk24", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 4.81); tl.to("#lv-tk24", { opacity: 0, duration: 0.08 }, 5.23);
+    tl.to("#lv-u2-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 5.23);
+    tl.fromTo("#lv-tk25", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 5.73); tl.to("#lv-tk25", { opacity: 0, duration: 0.08 }, 6.15);
+    tl.to("#lv-u2-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 6.15);
+    tl.fromTo("#lv-tk26", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 6.65); tl.to("#lv-tk26", { opacity: 0, duration: 0.08 }, 7.07);
+    tl.to("#lv-u2-led0", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 7.07);
+    tl.fromTo("#lv-tk27", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 7.57); tl.to("#lv-tk27", { opacity: 0, duration: 0.08 }, 7.99);
+    tl.to("#lv-u2-led1", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 7.99);
+    tl.fromTo("#lv-tk28", { y: 0, opacity: 0 }, { y: 184, opacity: 1, duration: 0.42, ease: "power2.in" }, 8.49); tl.to("#lv-tk28", { opacity: 0, duration: 0.08 }, 8.91);
+    tl.to("#lv-u2-led2", { fill: "#d6ffe9", duration: 0.06, yoyo: true, repeat: 1 }, 8.91);
+    tl.fromTo("#lv-u0-g", { scaleY: 0.1, transformOrigin: "50% 100%" }, { scaleY: 0.35, duration: 0.6, ease: "power3.out" }, 0.4);
+    tl.to("#lv-u0-g", { scaleY: 0.62, duration: 0.9, ease: "power1.inOut" }, 1.20);
+    tl.to("#lv-u0-g", { scaleY: 0.48, duration: 0.9, ease: "power1.inOut" }, 2.70);
+    tl.to("#lv-u0-g", { scaleY: 0.7, duration: 0.9, ease: "power1.inOut" }, 4.20);
+    tl.to("#lv-u0-g", { scaleY: 0.52, duration: 0.9, ease: "power1.inOut" }, 5.70);
+    tl.to("#lv-u0-g", { scaleY: 0.6, duration: 0.9, ease: "power1.inOut" }, 7.20);
+    tl.fromTo("#lv-u1-g", { scaleY: 0.1, transformOrigin: "50% 100%" }, { scaleY: 0.42, duration: 0.6, ease: "power3.out" }, 0.4);
+    tl.to("#lv-u1-g", { scaleY: 0.55, duration: 0.9, ease: "power1.inOut" }, 1.40);
+    tl.to("#lv-u1-g", { scaleY: 0.72, duration: 0.9, ease: "power1.inOut" }, 2.90);
+    tl.to("#lv-u1-g", { scaleY: 0.5, duration: 0.9, ease: "power1.inOut" }, 4.40);
+    tl.to("#lv-u1-g", { scaleY: 0.64, duration: 0.9, ease: "power1.inOut" }, 5.90);
+    tl.to("#lv-u1-g", { scaleY: 0.58, duration: 0.9, ease: "power1.inOut" }, 7.40);
+    tl.fromTo("#lv-u2-g", { scaleY: 0.1, transformOrigin: "50% 100%" }, { scaleY: 0.3, duration: 0.6, ease: "power3.out" }, 0.4);
+    tl.to("#lv-u2-g", { scaleY: 0.5, duration: 0.9, ease: "power1.inOut" }, 1.60);
+    tl.to("#lv-u2-g", { scaleY: 0.44, duration: 0.9, ease: "power1.inOut" }, 3.10);
+    tl.to("#lv-u2-g", { scaleY: 0.66, duration: 0.9, ease: "power1.inOut" }, 4.60);
+    tl.to("#lv-u2-g", { scaleY: 0.58, duration: 0.9, ease: "power1.inOut" }, 6.10);
+    tl.to("#lv-u2-g", { scaleY: 0.47, duration: 0.9, ease: "power1.inOut" }, 7.60);
+    ["#lv-k0", "#lv-k1", "#lv-k2"].forEach((k, i) => tl.to(k, { strokeDashoffset: 0, duration: 1.4, ease: "power2.out" }, 0.6 + i * 0.1));
+    // the chart is drawn by a live head that keeps moving
+    tl.fromTo("#lv-cliprect", { attr: { width: 34 } }, { attr: { width: 766 }, duration: 7.5, ease: "none" }, 0.5);
+    tl.fromTo("#lv-head-dot", { x: 23, y: 199 }, { keyframes: [{"x": 189, "y": 167, "duration": 1.5, "ease": "none"}, {"x": 349, "y": 135, "duration": 1.5, "ease": "none"}, {"x": 509, "y": 105, "duration": 1.5, "ease": "none"}, {"x": 669, "y": 79, "duration": 1.5, "ease": "none"}, {"x": 755, "y": 65, "duration": 1.5, "ease": "none"}] }, 0.5);
+    tl.fromTo("#lv-bus", { strokeDashoffset: 0 }, { strokeDashoffset: -440, duration: 9.5, ease: "none" }, 0.3);
+    tl.fromTo(["#lv-u0-base", "#lv-u1-base", "#lv-u2-base"], { strokeDashoffset: 0 }, { strokeDashoffset: 180, duration: 9.5, ease: "none" }, 0.3);
+    tl.fromTo("#lv-loglines", { y: 0 }, { y: -400, duration: 9, ease: "steps(9)" }, 0.8);
+    tl.fromTo("#lv-text", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18 }, 0.2);
+    tl.fromTo("#lv-s2", { yPercent: 110 }, { yPercent: 110, duration: 0.01 }, 0);
+    tl.fromTo("#lv-s3", { yPercent: 110 }, { yPercent: 110, duration: 0.01 }, 0);
+    tl.to("#lv-s1", { yPercent: -110, duration: 0.14, ease: "power2.in" }, 2.45);
+    tl.to("#lv-s2", { yPercent: 0, duration: 0.18, ease: "back.out(1.4)" }, 2.55);
+    tl.to("#lv-s2", { yPercent: -110, duration: 0.14, ease: "power2.in" }, 4.65);
+    tl.to("#lv-s3", { yPercent: 0, duration: 0.18, ease: "back.out(1.4)" }, 4.75);
+    tl.to("#lv-text", { opacity: 0, filter: "blur(8px)", duration: 0.15 }, 6.5);
+    tl.fromTo("#lv-rt", { opacity: 0, filter: "blur(10px)", scale: 1.08 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.22, ease: "expo.out" }, 7.0);
+    tl.to(["#lv-world", "#lv-rt", "#lv-band"], { y: -1080, filter: "blur(10px)", duration: 0.6, ease: "power2.inOut" }, 9.7);
+    root.add(tl.timeScale(1.111111), 0);
+    window.__timelines["live"] = root;
+  </script>
+</template>

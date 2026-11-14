@@ -1,0 +1,64 @@
+{
+  "provider": "gemini",
+  "voice": "Kore",
+  "rate": "natural",
+  "delivery": "Más personalidad y variación de entonación: curiosidad al inicio, empatía en el problema, alivio al presentar Evolut, beneficio con calidez y cierre alentador. Español latinoamericano, tono conversacional, ligero y humano.",
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Tu app está lista. ¿Y ahora, cómo la llevas a producción?",
+      "duration": 3.692,
+      "start": 0.08
+    },
+    {
+      "id": "problem",
+      "text": "Configurar servidores, sumar costos, resolver la seguridad… Uf, ponerla en marcha puede convertirse en otro proyecto. Y tú quieres avanzar.",
+      "duration": 8.511,
+      "start": 4.1
+    },
+    {
+      "id": "reveal",
+      "text": "Para eso está Evolut: infraestructura como servicio para tus aplicaciones, con un equipo que te acompaña desde el despliegue hasta la operación.",
+      "duration": 7.827,
+      "start": 12.78
+    },
+    {
+      "id": "fast",
+      "text": "¿Ya tienes tu aplicación? La llevamos a producción contigo. Si necesitas desarrollarla, también podemos ayudarte. Tú eliges por dónde empezar.",
+      "duration": 8.404,
+      "start": 20.81
+    },
+    {
+      "id": "secure",
+      "text": "Antes de publicar, revisamos la seguridad y la calidad del código. Detectamos riesgos para que puedas corregirlos a tiempo.",
+      "duration": 6.692,
+      "start": 29.3
+    },
+    {
+      "id": "always",
+      "text": "Y una vez en línea, acompañamos su operación. Tu aplicación conectada con tus usuarios, donde estén.",
+      "duration": 6.145,
+      "start": 36.08
+    },
+    {
+      "id": "grows",
+      "text": "¿Tu aplicación crece? Te ayudamos a ajustar la infraestructura y la capacidad a lo que realmente necesitas.",
+      "duration": 6.338,
+      "start": 42.34
+    },
+    {
+      "id": "outcome",
+      "text": "Menos carga técnica. Más tiempo para tu producto y tus usuarios.",
+      "duration": 4.188,
+      "start": 48.79
+    },
+    {
+      "id": "cta",
+      "text": "Evolut. Tu aplicación, en línea. Con respaldo. Conoce más en evolut punto cloud.",
+      "duration": 6.362,
+      "start": 53.22
+    }
+  ],
+  "model": "gemini-3.8-flash-tts",
+  "tts_model": "gemini-3.8-flash-tts"
+}

@@ -1,0 +1,72 @@
+{
+  "audio": "assets/vo/hook.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Tu",
+      "start": 0.05,
+      "end": 0.165,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 0.165,
+      "end": 0.445,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 0.445,
+      "end": 0.865,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lista.",
+      "start": 0.865,
+      "end": 1.265,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "¿Y",
+      "start": 1.61,
+      "end": 1.735,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ahora,",
+      "start": 1.735,
+      "end": 2.075,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cómo",
+      "start": 2.355,
+      "end": 2.575,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 2.575,
+      "end": 2.735,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "llevas",
+      "start": 2.735,
+      "end": 2.955,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 2.955,
+      "end": 3.075,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "producción?",
+      "start": 3.075,
+      "end": 3.625,
+      "speaker": "speaker_0"
+    }
+  ]
+}

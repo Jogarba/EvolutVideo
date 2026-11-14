@@ -1,0 +1,84 @@
+{
+  "audio": "assets/voice/outcome.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Así",
+      "start": 0.44,
+      "end": 0.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tú",
+      "start": 0.88,
+      "end": 0.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "te",
+      "start": 1.02,
+      "end": 1.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "enfocas",
+      "start": 1.1,
+      "end": 1.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 1.44,
+      "end": 1.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 1.54,
+      "end": 1.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 1.64,
+      "end": 1.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "importa:",
+      "start": 1.72,
+      "end": 2.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 2.5,
+      "end": 2.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clientes",
+      "start": 2.82,
+      "end": 3.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 3.5,
+      "end": 3.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 3.62,
+      "end": 3.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ventas",
+      "start": 3.8,
+      "end": 4.18,
+      "speaker": "speaker_0"
+    }
+  ]
+}

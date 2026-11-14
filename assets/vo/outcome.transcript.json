@@ -1,0 +1,72 @@
+{
+  "audio": "assets/vo/outcome.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Menos",
+      "start": 0.05,
+      "end": 0.51,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "carga",
+      "start": 0.51,
+      "end": 0.73,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "técnica.",
+      "start": 0.73,
+      "end": 1.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Más",
+      "start": 1.63,
+      "end": 1.91,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tiempo",
+      "start": 1.91,
+      "end": 2.37,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "para",
+      "start": 2.37,
+      "end": 2.59,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 2.59,
+      "end": 2.73,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "producto",
+      "start": 2.73,
+      "end": 3.15,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 3.15,
+      "end": 3.37,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 3.37,
+      "end": 3.55,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "usuarios.",
+      "start": 3.55,
+      "end": 4.05,
+      "speaker": "speaker_0"
+    }
+  ]
+}

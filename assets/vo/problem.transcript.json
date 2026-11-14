@@ -1,0 +1,126 @@
+{
+  "audio": "assets/vo/problem.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Configurar",
+      "start": 0.044,
+      "end": 0.202,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "servidores,",
+      "start": 0.465,
+      "end": 1.237,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sumar",
+      "start": 1.728,
+      "end": 1.903,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "costos,",
+      "start": 1.904,
+      "end": 2.395,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "resolver",
+      "start": 2.816,
+      "end": 3.027,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 3.026,
+      "end": 3.272,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "seguridad…",
+      "start": 3.272,
+      "end": 3.868,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Uf,",
+      "start": 3.991,
+      "end": 4.333,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ponerla",
+      "start": 4.623,
+      "end": 4.956,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 4.956,
+      "end": 5.061,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "marcha",
+      "start": 5.061,
+      "end": 5.412,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "puede",
+      "start": 5.412,
+      "end": 5.57,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "convertirse",
+      "start": 5.57,
+      "end": 6.096,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 6.096,
+      "end": 6.359,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "otro",
+      "start": 6.36,
+      "end": 6.641,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "proyecto.",
+      "start": 6.64,
+      "end": 7.412,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Y",
+      "start": 7.588,
+      "end": 7.641,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tú",
+      "start": 7.64,
+      "end": 7.728,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "quieres",
+      "start": 7.728,
+      "end": 7.939,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "avanzar.",
+      "start": 7.939,
+      "end": 8.448,
+      "speaker": "speaker_0"
+    }
+  ]
+}

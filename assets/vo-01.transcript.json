@@ -1,0 +1,78 @@
+{
+  "audio": "assets/vo-01.mp3",
+  "language": "es",
+  "words": [
+    {
+      "text": "¿Y",
+      "start": 0.2,
+      "end": 0.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "si",
+      "start": 0.32,
+      "end": 0.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "publicar",
+      "start": 0.46,
+      "end": 0.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 0.88,
+      "end": 0.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 0.98,
+      "end": 1.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fuera",
+      "start": 1.12,
+      "end": 1.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tan",
+      "start": 1.34,
+      "end": 1.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fácil",
+      "start": 1.54,
+      "end": 1.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "como",
+      "start": 1.82,
+      "end": 2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mandar",
+      "start": 2.04,
+      "end": 2.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 2.28,
+      "end": 2.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mensaje?",
+      "start": 2.36,
+      "end": 2.76,
+      "speaker": "speaker_0"
+    }
+  ]
+}

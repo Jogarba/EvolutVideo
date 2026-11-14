@@ -1,0 +1,166 @@
+<template>
+  <style>
+    @font-face { font-family: "Michroma"; src: url("assets/fonts/Michroma-Regular.ttf") format("truetype"); font-weight: 400; font-display: block; }
+    @font-face { font-family: "Hanken Grotesk Variable"; src: url("assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/JetBrainsMono-Variable.ttf") format("truetype"); font-weight: 400 600; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; color: #f2f5f7; font-family: "Hanken Grotesk Variable", sans-serif; }
+    .glass { background: linear-gradient(180deg, rgba(25,34,44,.84), rgba(10,15,20,.86)); backdrop-filter: blur(18px) saturate(1.3); box-shadow: inset 0 1.5px 0 rgba(255,255,255,.16), inset 0 0 0 1.5px rgba(242,245,247,.12), 0 50px 120px rgba(0,0,0,.6), 0 0 90px rgba(57,159,239,.12); border-radius: 32px; }
+    /* light falling on the glass from the hall's ceiling lamps */
+    .glass::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,.08), rgba(255,255,255,0) 38%), radial-gradient(120% 60% at 50% 0%, rgba(57,159,239,.10), rgba(57,159,239,0) 60%); }
+    .raised { background: linear-gradient(180deg, rgba(30,38,46,.92), rgba(20,25,30,.92)); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 8px 24px rgba(0,0,0,.25); }
+    .well { background: rgba(7,12,16,.72); border-radius: 16px; }
+    .frost { background: rgba(14,19,24,.80); box-shadow: inset 0 0 0 1.5px rgba(242,245,247,.2); border-radius: 999px; }
+    .pill { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 8px 20px; font-size: 28px; font-weight: 500; white-space: nowrap; }
+    .pill svg { width: 26px; height: 26px; flex: none; }
+    .ok { color: #5ed19d; background: #102a1e; } .warn { color: #f4b85a; background: #2f210c; }
+    .bad { color: #e47c76; background: #351c1a; } .info { color: #399fef; background: #132636; }
+    .neu { color: #94999e; background: rgba(22,27,32,.92); }
+    .mono { font-family: "JetBrains Mono Variable", monospace; }
+    .muted { color: #94999e; } .body { color: #bfc3c7; }
+    .kin { font-family: "Michroma", sans-serif; text-shadow: 0 0 28px #070c10, 0 0 14px #070c10, 0 0 4px #070c10; }
+    .halo { text-shadow: 0 0 22px #070c10, 0 0 10px #070c10, 0 0 3px #070c10; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; border-radius: 16px; background: #399fef; color: #000e1d; font-weight: 700; overflow: hidden; position: relative; }
+    .shine { position: absolute; top: 0; bottom: 0; width: 140px; left: -200px; background: linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.55), rgba(255,255,255,0)); }
+    .cursor { position: absolute; left: 0; top: 0; width: 84px; height: 84px; z-index: 20; filter: drop-shadow(0 8px 16px rgba(0,0,0,.55)); }
+    .led { fill: #5ed19d; filter: drop-shadow(0 0 4px rgba(94,209,157,.8)); }
+    .icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    #p-world { position: absolute; inset: 0; }
+    #p-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    #p-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+    .env { font-family: "Michroma", sans-serif; font-size: 46px; fill: #f2f5f7; text-anchor: middle; }
+    .under { position: absolute; top: 720px; width: 420px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .chip { position: absolute; left: 0; top: 0; height: 76px; padding: 0 28px; display: flex; align-items: center; gap: 14px; font: 600 34px "JetBrains Mono Variable", monospace; border-radius: 99px; }
+    .chip svg { width: 32px; height: 32px; }
+    .chip .lk { display: none; }
+    #p-sweep { position: absolute; left: 790px; top: 350px; width: 340px; height: 340px; border-radius: 50%; background: conic-gradient(from 0deg, rgba(94,209,157,0) 0deg, rgba(94,209,157,.0) 290deg, rgba(94,209,157,.55) 360deg); }
+    #p-sweep2 { position: absolute; left: 790px; top: 350px; width: 340px; height: 340px; border-radius: 50%; background: conic-gradient(from 0deg, rgba(228,124,118,0) 0deg, rgba(228,124,118,0) 290deg, rgba(228,124,118,.6) 360deg); }
+    #p-checks { position: absolute; left: 1150px; top: 330px; width: 600px; padding: 34px; }
+    #p-checks h4 { font-size: 30px; font-weight: 600; margin-bottom: 18px; }
+    .crow { display: flex; align-items: center; gap: 16px; height: 72px; padding: 0 22px; margin-top: 12px; font-size: 30px; }
+    .crow .s { margin-left: auto; }
+    #p-banner { position: absolute; left: 0; right: 0; top: 880px; display: flex; justify-content: center; }
+    #p-btn { position: absolute; left: 760px; top: 950px; width: 400px; height: 84px; font-size: 34px; }
+    #p-text { position: absolute; left: 0; right: 0; top: 930px; text-align: center; font-size: 62px; white-space: nowrap; }
+    #p-text span { display: inline-block; margin-right: 22px; }
+    #p-text .g { color: #5ed19d; }
+    #p-stop { position: absolute; left: 0; right: 0; top: 80px; text-align: center; font-size: 72px; }
+    #p-stop b { color: #e47c76; font-weight: 400; }
+    #p-flash { position: absolute; inset: 0; background: #0f3424; }
+
+  </style>
+  <div data-hf-id="hf-ia99" id="root" data-composition-id="promote" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-mb70" id="p-world">
+      <div data-hf-id="hf-dlka" id="p-cam" data-layout-allow-overflow>
+        <svg data-hf-id="hf-2i21" id="p-svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+          <line data-hf-id="hf-y2mg" x1="590" y1="520" x2="790" y2="520" stroke="#303c48" stroke-width="6" stroke-dasharray="12 12"/>
+          <line data-hf-id="hf-olte" x1="1130" y1="520" x2="1330" y2="520" stroke="#303c48" stroke-width="6" stroke-dasharray="12 12"/>
+          <line data-hf-id="hf-zbf4" id="p-w1" x1="590" y1="520" x2="790" y2="520" stroke="#399fef" stroke-width="6" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-f0rx" id="p-w2" x1="1130" y1="520" x2="1330" y2="520" stroke="#5ed19d" stroke-width="6" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <circle data-hf-id="hf-k3ym" id="p-e1" cx="590" cy="520" r="11" fill="#a6d0f6"/>
+          <circle data-hf-id="hf-2g9b" id="p-e2" cx="1130" cy="520" r="11" fill="#5ed19d"/>
+          <circle data-hf-id="hf-8cmn" id="p-burst" cx="1500" cy="520" r="175" fill="none" stroke="#5ed19d" stroke-width="4"/>
+          <polygon data-hf-id="hf-x5z1" id="p-h-dev" points="420,350 567,435 567,605 420,690 273,605 273,435" fill="rgba(14,19,24,.86)" stroke="#399fef" stroke-width="5"/><polygon data-hf-id="hf-28ib" points="420,380 541,450 541,590 420,660 299,590 299,450" fill="none" stroke="#399fef" stroke-opacity=".25" stroke-width="2"/><text data-hf-id="hf-l27p" class="env" x="420" y="536">DEV</text><polygon data-hf-id="hf-utia" id="p-h-qa" points="960,350 1107,435 1107,605 960,690 813,605 813,435" fill="rgba(14,19,24,.86)" stroke="#399fef" stroke-width="5"/><polygon data-hf-id="hf-wp0x" points="960,380 1081,450 1081,590 960,660 839,590 839,450" fill="none" stroke="#399fef" stroke-opacity=".25" stroke-width="2"/><text data-hf-id="hf-zf0h" class="env" x="960" y="536">QA</text><polygon data-hf-id="hf-149r" id="p-h-prod" points="1500,350 1647,435 1647,605 1500,690 1353,605 1353,435" fill="rgba(14,19,24,.86)" stroke="#5ed19d" stroke-width="5"/><polygon data-hf-id="hf-5359" points="1500,380 1621,450 1621,590 1500,660 1379,590 1379,450" fill="none" stroke="#5ed19d" stroke-opacity=".25" stroke-width="2"/><text data-hf-id="hf-1ojz" class="env" x="1500" y="536">PROD</text>
+        </svg>
+        <div data-hf-id="hf-2sur" id="p-sweep" style="clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)"></div>
+        <div data-hf-id="hf-214h" id="p-sweep2" style="clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)"></div>
+        <div data-hf-id="hf-mzui" class="under" style="left:210px"><span data-hf-id="hf-j87k" class="pill info "><svg data-hf-id="hf-2m83" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-t51r" cx="6" cy="6" r="3"/><circle data-hf-id="hf-2o6c" cx="6" cy="18" r="3"/><circle data-hf-id="hf-tyev" cx="18" cy="9" r="3"/><path data-hf-id="hf-l9yi" d="M6 9v6M18 12c0 4-6 3-9 6"/></svg><span data-hf-id="hf-9dyg">v1.4.0</span></span><span data-hf-id="hf-kpre" class="pill ok "><svg data-hf-id="hf-s2v7" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-m1lh" cx="12" cy="12" r="10"/><path data-hf-id="hf-yfzu" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-0zmy">Sano</span></span></div>
+        <div data-hf-id="hf-i2t7" class="under" style="left:750px" id="p-qa-under"><span data-hf-id="hf-fu7q" class="pill bad " id="p-blocked"><svg data-hf-id="hf-rok6" viewBox="0 0 24 24" class="icon"><rect data-hf-id="hf-rlbj" x="3" y="11" width="18" height="11" rx="2"/><path data-hf-id="hf-4qh8" d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-hf-id="hf-9dvn">Bloqueada · vulnerabilidad crítica</span></span></div>
+        <div data-hf-id="hf-6vt6" class="under" style="left:1290px" id="p-prod-under"><span data-hf-id="hf-2jvk" class="pill info " id="p-prod-ver"><svg data-hf-id="hf-ra95" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ttkf" cx="6" cy="6" r="3"/><circle data-hf-id="hf-ckgs" cx="6" cy="18" r="3"/><circle data-hf-id="hf-z43b" cx="18" cy="9" r="3"/><path data-hf-id="hf-2f72" d="M6 9v6M18 12c0 4-6 3-9 6"/></svg><span data-hf-id="hf-z274">v1.4.0</span></span><span data-hf-id="hf-483t" class="pill ok " id="p-prod-ok"><svg data-hf-id="hf-qvy4" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-jqh5" cx="12" cy="12" r="10"/><path data-hf-id="hf-b76m" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-oh7y">Sano</span></span></div>
+        <div data-hf-id="hf-tvua" class="chip glass" id="p-chip1" style="color:#f2f5f7;box-shadow: inset 0 0 0 2px #399fef, 0 0 40px rgba(57,159,239,.4)"><svg data-hf-id="hf-qhn3" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-tf9e" cx="6" cy="6" r="3"/><circle data-hf-id="hf-bdjp" cx="6" cy="18" r="3"/><circle data-hf-id="hf-ypsa" cx="18" cy="9" r="3"/><path data-hf-id="hf-2ti3" d="M6 9v6M18 12c0 4-6 3-9 6"/></svg>v1.4.0</div>
+        <div data-hf-id="hf-p1ty" class="chip glass" id="p-chip2" style="color:#f2f5f7;box-shadow: inset 0 0 0 2px #399fef"><svg data-hf-id="hf-q3c2" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-t0yd" cx="6" cy="6" r="3"/><circle data-hf-id="hf-bruq" cx="6" cy="18" r="3"/><circle data-hf-id="hf-ybh9" cx="18" cy="9" r="3"/><path data-hf-id="hf-37t4" d="M6 9v6M18 12c0 4-6 3-9 6"/></svg>v1.4.1</div>
+        <div data-hf-id="hf-yfbg" id="p-checks" class="glass"><h4 data-hf-id="hf-u9ug">Control de calidad y seguridad</h4>
+          <div data-hf-id="hf-ujz5" class="crow raised" id="p-c0">Calidad de código<span data-hf-id="hf-0xgc" class="s"><span data-hf-id="hf-q5gu" class="pill ok "><svg data-hf-id="hf-pp11" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ozdc" cx="12" cy="12" r="10"/><path data-hf-id="hf-blhn" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-igc3">aprobado</span></span></span></div>
+          <div data-hf-id="hf-b07y" class="crow raised" id="p-c1">Vulnerabilidades<span data-hf-id="hf-l26s" class="s"><span data-hf-id="hf-qjrv" class="pill ok "><svg data-hf-id="hf-paq0" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ol2b" cx="12" cy="12" r="10"/><path data-hf-id="hf-bzso" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-4y0v">ninguna</span></span></span></div>
+          <div data-hf-id="hf-5ey1" class="crow raised" id="p-c2">Imagen escaneada<span data-hf-id="hf-jv9p" class="s"><span data-hf-id="hf-qy2w" class="pill ok "><svg data-hf-id="hf-owez" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-ijk2" cx="12" cy="12" r="10"/><path data-hf-id="hf-97nh" d="m9 12 2 2 4-4"/></svg><span data-hf-id="hf-d09l">limpia</span></span></span></div>
+        </div>
+      </div>
+    </div>
+    <div data-hf-id="hf-0di4" id="p-text" class="kin"><span data-hf-id="hf-8xru" id="p-w1x">Revisada</span><span data-hf-id="hf-qyic" id="p-w2x">por ti,</span><span data-hf-id="hf-qtjs" id="p-w3x">antes</span><span data-hf-id="hf-uspx" id="p-w4x">de</span><span data-hf-id="hf-kjey" id="p-w5x" class="g">salir.</span></div>
+    <div data-hf-id="hf-joi9" id="p-stop" class="kin">Si no es seguro, <b data-hf-id="hf-tut5">no sale.</b></div>
+    <div data-hf-id="hf-whvu" id="p-banner"><span data-hf-id="hf-t6im" class="pill info " id="p-ban"><svg data-hf-id="hf-padl" viewBox="0 0 24 24" class="icon"><circle data-hf-id="hf-i591" cx="12" cy="12" r="10"/><path data-hf-id="hf-cdgv" d="M12 16v-4M12 8h.01"/></svg><span data-hf-id="hf-7jr1">Dev ya corre v1.4.0: se puede promover</span></span></div>
+    <div data-hf-id="hf-l38e" id="p-btn" class="btn"><svg data-hf-id="hf-s8xx" viewBox="0 0 24 24" class="icon" style="width:36px;height:36px"><path data-hf-id="hf-eag0" d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1zM12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/></svg>Promover v1.4.0<span data-hf-id="hf-bhoi" class="shine" id="p-shine"></span></div>
+    <div data-hf-id="hf-mwo3" class="cursor" id="p-cursor"><svg data-hf-id="hf-ulu9" viewBox="0 0 24 24"><path data-hf-id="hf-ho05" d="M4 2l15 11-6.5 1.2L16 21l-3 1.4-3.6-6.8L4 20z" fill="#f2f5f7" stroke="#05080d" stroke-width="1.2"/></svg></div>
+    <div data-hf-id="hf-2y2e" id="p-flash"></div>
+  </div>
+  <script>
+    gsap.config({ force3D: false });
+    const root = gsap.timeline({ paused: true });
+    const tl = gsap.timeline();
+    const cam = (px, py, s) => ({ x: 960 - px * s, y: 560 - py * s, scale: s });
+    // a pane rises out of depth: tilted back, lower and blurred, landing flat
+    const DEPTH = { opacity: 0, y: 90, rotationX: 18, scale: 0.94, transformPerspective: 1800, filter: "blur(10px)" };
+    const LAND = { opacity: 1, y: 0, rotationX: 0, scale: 1, filter: "blur(0px)", duration: 0.75, ease: "expo.out" };
+
+    const chipAt = (x) => x - 110;
+    tl.fromTo("#p-world", { x: 1920, filter: "blur(10px)" }, { x: 0, filter: "blur(0px)", duration: 0.6, ease: "power2.inOut" }, 0);
+    const tb = gsap.timeline(); tl.add(tb, 0.3);
+    tb.fromTo("#p-cam", cam(560, 560, 1.3), cam(560, 560, 1.3), 0);
+    tb.fromTo("#p-flash", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+    tb.fromTo("#p-chip1", { x: chipAt(420), y: 236, opacity: 0 }, { x: chipAt(420), y: 250, opacity: 1, duration: 0.4, ease: "expo.out" }, 0.3);
+    tb.fromTo("#p-chip2", { x: chipAt(420), y: 236, opacity: 0 }, { x: chipAt(420), y: 236, opacity: 0, duration: 0.01 }, 0);
+    ["#p-sweep", "#p-sweep2", "#p-burst", "#p-checks", "#p-banner", "#p-btn", "#p-stop", "#p-qa-under", "#p-prod-ver", "#p-prod-ok"].forEach((s) => tb.fromTo(s, { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0));
+    ["#p-w1x", "#p-w2x", "#p-w3x", "#p-w4x", "#p-w5x"].forEach((w, i) => {
+      tb.fromTo(w, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13 }, 0.25 + i * 0.16 + (i > 1 ? 0.35 : 0));
+    });
+
+    // DEV -> QA: the wire charges, an energy pulse runs it, the chip rides along
+    tb.to("#p-cam", { ...cam(960, 600, 1.2), duration: 0.6, ease: "power2.inOut" }, 1.4);
+    tb.to("#p-w1", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 1.45);
+    tb.fromTo("#p-e1", { attr: { cx: 590 }, opacity: 1 }, { attr: { cx: 790 }, duration: 0.5, ease: "power2.inOut" }, 1.45);
+    tb.to("#p-e1", { opacity: 0, duration: 0.15 }, 1.95);
+    tb.to("#p-chip1", { x: chipAt(960), duration: 0.6, ease: "power2.inOut" }, 1.4);
+    // scan: a radar sweep inside the QA hexagon while the checks land
+    tb.to("#p-sweep", { opacity: 1, duration: 0.15 }, 2.0);
+    tb.fromTo("#p-sweep", { rotation: 0 }, { rotation: 720, duration: 1.3, ease: "none" }, 2.0);
+    tb.to("#p-sweep", { opacity: 0, duration: 0.2 }, 3.2);
+    tb.fromTo("#p-checks", { ...DEPTH, x: 80 }, { ...LAND, x: 0 }, 2.0);
+    [0, 1, 2].forEach((i) => tb.fromTo(`#p-c${i} .pill`, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 2.4 + i * 0.3));
+    tb.to("#p-h-qa", { attr: { stroke: "#5ed19d" }, duration: 0.2 }, 3.2);
+
+    // promote: banner, button, click, the chip shoots to PROD
+    tb.to("#p-checks", { opacity: 0, x: 40, filter: "blur(8px)", duration: 0.2 }, 3.35);
+    tb.to("#p-cam", { ...cam(960, 560, 1.0), duration: 0.55, ease: "power2.inOut" }, 3.3);
+    tb.to("#p-banner", { opacity: 1, duration: 0.01 }, 3.4);
+    tb.fromTo("#p-ban", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, 3.4);
+    tb.fromTo("#p-btn", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.6)" }, 3.5);
+    tb.fromTo("#p-shine", { x: 0 }, { x: 760, duration: 0.5, ease: "power2.inOut" }, 3.75);
+    tb.fromTo("#p-cursor", { x: 1950, y: 1150 }, { x: 1000, y: 985, duration: 0.5, ease: "power3.out" }, 3.55);
+    tb.to("#p-cursor", { scale: 0.82, duration: 0.07 }, 4.15);
+    tb.to("#p-btn", { scale: 0.94, duration: 0.07 }, 4.15);
+    tb.to(["#p-cursor", "#p-btn", "#p-banner"], { opacity: 0, duration: 0.18 }, 4.3);
+    tb.to("#p-w2", { strokeDashoffset: 0, duration: 0.35, ease: "power3.in" }, 4.25);
+    tb.fromTo("#p-e2", { attr: { cx: 1130 }, opacity: 1 }, { attr: { cx: 1330 }, duration: 0.35, ease: "power3.in" }, 4.25);
+    tb.to("#p-e2", { opacity: 0, duration: 0.1 }, 4.6);
+    tb.to("#p-chip1", { x: chipAt(1500), boxShadow: "inset 0 0 0 2px #5ed19d, 0 0 50px rgba(94,209,157,.5)", duration: 0.35, ease: "power3.in" }, 4.25);
+    tb.to("#p-h-prod", { attr: { fill: "rgba(16,52,36,.9)" }, duration: 0.25 }, 4.6);
+    tb.fromTo("#p-burst", { opacity: 0.8, scale: 1, transformOrigin: "50% 50%" }, { opacity: 0, scale: 1.45, duration: 0.45, ease: "power2.out", immediateRender: false }, 4.6);
+    tb.to("#p-prod-ver", { opacity: 1, duration: 0.01 }, 4.7);
+    tb.fromTo("#p-prod-ver", { y: 16 }, { y: 0, duration: 0.35, ease: "expo.out" }, 4.7);
+    tb.to("#p-prod-ok", { opacity: 1, duration: 0.01 }, 4.82);
+    tb.fromTo("#p-prod-ok", { scale: 0.6 }, { scale: 1, duration: 0.35, ease: "back.out(2)" }, 4.82);
+    tb.to("#p-text", { opacity: 0, filter: "blur(8px)", duration: 0.2 }, 3.15);
+
+    // an unsafe version is caught at QA
+    tb.to("#p-h-qa", { attr: { stroke: "#399fef" }, duration: 0.2 }, 5.3);
+    tb.to("#p-chip2", { opacity: 1, y: 250, duration: 0.35, ease: "expo.out" }, 5.4);
+    tb.to("#p-chip2", { x: chipAt(960), duration: 0.5, ease: "power2.inOut" }, 5.8);
+    tb.to("#p-sweep2", { opacity: 1, duration: 0.12 }, 6.3);
+    tb.fromTo("#p-sweep2", { rotation: 0 }, { rotation: 540, duration: 0.7, ease: "none" }, 6.3);
+    tb.to("#p-sweep2", { opacity: 0, duration: 0.15 }, 7.0);
+    tb.to("#p-h-qa", { attr: { stroke: "#e47c76", fill: "rgba(53,28,26,.9)" }, duration: 0.15 }, 6.95);
+    tb.to("#p-chip2", { boxShadow: "inset 0 0 0 2px #e47c76, 0 0 50px rgba(228,124,118,.55)", color: "#e47c76", duration: 0.15 }, 6.95);
+    tb.fromTo("#p-chip2", { x: chipAt(960) }, { x: chipAt(960) - 16, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 7.0);
+    tb.to("#p-qa-under", { opacity: 1, duration: 0.01 }, 7.05);
+    tb.fromTo("#p-blocked", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, 7.05);
+    tb.to("#p-stop", { opacity: 1, duration: 0.01 }, 7.2);
+    tb.fromTo("#p-stop", { filter: "blur(10px)", scale: 1.06 }, { filter: "blur(0px)", scale: 1, duration: 0.22, ease: "expo.out" }, 7.2);
+    tb.to("#p-stop", { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 9.0);
+
+    // zoom through the PROD hexagon
+    tb.to("#p-cam", { ...cam(1500, 520, 12), duration: 0.75, ease: "power3.in" }, 9.25);
+    tb.to("#p-flash", { opacity: 1, duration: 0.25, ease: "power2.in" }, 9.72);
+    root.add(tl.timeScale(0.909091), 0);
+    window.__timelines["promote"] = root;
+  </script>
+</template>

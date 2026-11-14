@@ -1,0 +1,395 @@
+<!doctype html>
+<!--
+  ticker-takeover: Evolut Brand-Customized Registry Component
+  A compact ticker rolls through infrastructure cost/pain points, locks on
+  the final solution with an Evolut Blue (#399fef) flash, then promotes the
+  full-frame commercial positioning headline.
+-->
+<html
+  lang="es"
+  data-composition-id="ticker-takeover"
+  data-composition-duration="5.5"
+  data-composition-variables='[
+    { "id": "options", "type": "string", "role": "content", "label": "Options", "description": "Comma-separated words shown by the ticker.", "default": "Operación 24/7,Escalado elástico,Ciberseguridad,Monitoreo total" },
+    { "id": "final_word", "type": "string", "role": "content", "label": "Final word", "description": "Word the ticker locks on and promotes.", "default": "INFRAESTRUCTURA INTELIGENTE" },
+    { "id": "accent", "type": "enum", "role": "style", "label": "Accent", "description": "Color used for the lock flash and promoted word.", "default": "blue", "options": [{ "value": "green", "label": "Green" }, { "value": "blue", "label": "Blue" }] }
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ticker Takeover — Evolut</title>
+  </head>
+  <body>
+    <template>
+      <div data-hf-id="hf-jppn" id="root" data-composition-id="ticker-takeover" data-duration="5.5" data-fps="30">
+        <style>
+          *,
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
+
+          #root {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            container-type: size;
+            isolation: isolate;
+            color: var(--fg, #f2f5f7);
+            font-family: var(--font-body, 'Hanken Grotesk Variable', system-ui, sans-serif);
+            pointer-events: none;
+          }
+
+          .tt-clip {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+          }
+
+          .tt-question-wrap {
+            position: absolute;
+            top: 10cqh;
+            left: 7cqw;
+            right: 7cqw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2.2cqh;
+            will-change: transform, opacity;
+          }
+
+          .tt-kicker-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1cqw;
+            padding: 0.9cqh 1.8cqw;
+            border-radius: 999px;
+            border: 1px solid #646a6f;
+            background: #0e1318;
+            color: #f4b85a;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+          }
+
+          .tt-question {
+            margin: 0;
+            max-width: 82cqw;
+            color: #f2f5f7;
+            font-family: var(--font-display, 'Michroma', sans-serif);
+            font-size: 4.3cqh;
+            font-weight: 400;
+            line-height: 1.24;
+            letter-spacing: -0.01em;
+          }
+
+          .tt-question strong {
+            color: #399fef;
+            font-weight: 400;
+          }
+
+          .tt-cost-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.4cqw;
+            padding: 1.2cqh 2.4cqw;
+            border-radius: 1.4cqh;
+            border: 1px solid #e47c76;
+            background: #161b20;
+            color: #f2f5f7;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+          }
+
+          .tt-cost-pill b {
+            color: #e47c76;
+            font-weight: 700;
+          }
+
+          .tt-ticker {
+            position: absolute;
+            top: 56cqh;
+            left: 11cqw;
+            width: 78cqw;
+            height: 17cqh;
+            display: grid;
+            grid-template-columns: 20cqw 1fr;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #646a6f;
+            border-radius: 2.4cqh;
+            background: #0e1318;
+            box-shadow: 0 3cqh 9cqh rgba(7, 12, 16, 0.78);
+            will-change: transform, opacity;
+          }
+
+          .tt-label {
+            display: grid;
+            place-items: center;
+            height: 11cqh;
+            border-right: 1px solid #646a6f;
+            color: #399fef;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+          }
+
+          .tt-window {
+            position: relative;
+            height: 12cqh;
+            overflow: hidden;
+          }
+
+          .tt-reel {
+            width: 100%;
+            will-change: transform;
+          }
+
+          .tt-item {
+            display: flex;
+            align-items: center;
+            height: 12cqh;
+            padding: 0 3.5cqw;
+            color: #f2f5f7;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 3.9cqh;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+            will-change: transform, color;
+          }
+
+          .tt-headline-block {
+            position: absolute;
+            top: 48cqh;
+            left: 6cqw;
+            width: 88cqw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.4cqh;
+            text-align: center;
+            transform-origin: 50% 50%;
+            will-change: transform, opacity;
+          }
+
+          .tt-sublead {
+            color: #bfc3c7;
+            font-family: var(--font-body, 'Hanken Grotesk Variable', sans-serif);
+            font-size: 3.1cqh;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+          }
+
+          .tt-headline {
+            padding: 1.8cqh 3.4cqw;
+            border-radius: 2cqh;
+            background: #399fef;
+            color: #000e1d;
+            font-family: var(--font-display, 'Michroma', sans-serif);
+            font-size: 4.8cqh;
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+            text-align: center;
+            box-shadow: 0 2.5cqh 7cqh rgba(57, 159, 239, 0.32);
+          }
+
+          .tt-caption {
+            color: #5ed19d;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+          }
+        </style>
+
+        <div data-hf-id="hf-gtoc"
+          id="ticker-takeover-clip"
+          class="tt-clip clip"
+          data-start="0"
+          data-duration="5.5"
+          data-track-index="0"
+        >
+          <div data-hf-id="hf-xy22" class="tt-question-wrap">
+            <div data-hf-id="hf-9unq" class="tt-kicker-badge" data-layout-ignore>EL PROBLEMA DE ESCALAR HOY</div>
+            <h1 data-hf-id="hf-po2g" class="tt-question">
+              ¿Sabes cuánto te cuesta un <strong data-hf-id="hf-qonl">equipo de infraestructura especializado</strong>?
+            </h1>
+            <div data-hf-id="hf-ko0v" class="tt-cost-pill" data-layout-ignore>
+              <span data-hf-id="hf-coad">Nómina mensual + guardia + operación:</span>
+              <b data-hf-id="hf-6ap2">+$18,500 USD / mes</b>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-d0wq" class="tt-ticker" data-layout-ignore>
+            <div data-hf-id="hf-8ce6" class="tt-label">EVOLUT AI</div>
+            <div data-hf-id="hf-5bxp" class="tt-window">
+              <div data-hf-id="hf-27cd" class="tt-reel"></div>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-gdhd" class="tt-headline-block">
+            <div data-hf-id="hf-gisz" class="tt-sublead">Olvídate de contratar y mantener servidores complejos.</div>
+            <div data-hf-id="hf-g7j9" class="tt-headline"></div>
+            <div data-hf-id="hf-ohy5" class="tt-caption">SOMOS TU EQUIPO DE INFRAESTRUCTURA INTELIGENTE</div>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+        <script>
+          (function () {
+            "use strict";
+
+            var root = document.getElementById("root");
+            var questionWrap = root.querySelector(".tt-question-wrap");
+            var ticker = root.querySelector(".tt-ticker");
+            var reel = root.querySelector(".tt-reel");
+            var headlineBlock = root.querySelector(".tt-headline-block");
+            var headline = root.querySelector(".tt-headline");
+            var vars =
+              window.__hyperframes && window.__hyperframes.getVariables
+                ? window.__hyperframes.getVariables()
+                : {};
+
+            var defaultOptions = [
+              "Operación 24/7 sin fricción",
+              "Escalado automático real",
+              "Seguridad y aislamiento",
+              "Observabilidad total"
+            ];
+            var finalWord =
+              vars.final_word == null
+                ? "INFRAESTRUCTURA INTELIGENTE"
+                : String(vars.final_word).trim();
+            if (!finalWord) finalWord = "INFRAESTRUCTURA INTELIGENTE";
+
+            var rawOptions =
+              vars.options == null ? defaultOptions.join(",") : String(vars.options);
+            var candidates = rawOptions
+              .split(",")
+              .map(function (word) {
+                return word.trim();
+              })
+              .filter(Boolean);
+            var options = [];
+            var finalKey = finalWord.toLowerCase();
+
+            function addOption(word) {
+              var normalized = word.toLowerCase();
+              var isFinal = normalized === finalKey;
+              var isDuplicate = options.some(function (option) {
+                return option.toLowerCase() === normalized;
+              });
+              if (!isFinal && !isDuplicate && options.length < 5) options.push(word);
+            }
+
+            candidates.forEach(addOption);
+            defaultOptions.forEach(function (word) {
+              if (options.length < 3) addOption(word);
+            });
+            options.push(finalWord);
+
+            options.forEach(function (word) {
+              var item = document.createElement("span");
+              item.className = "tt-item";
+              item.setAttribute("data-layout-ignore", "");
+              item.textContent = word;
+              reel.appendChild(item);
+            });
+
+            var finalItem = reel.lastElementChild;
+            var accentColor = "#399fef";
+
+            root.style.setProperty("--tt-accent", accentColor);
+            headline.textContent = finalWord;
+
+            var IN_BASE = 3.15;
+            var OUT_BASE = 0.45;
+            var duration = Math.max(0.001, parseFloat(root.dataset.duration || "5.5"));
+            var envelopeScale =
+              duration < IN_BASE + OUT_BASE ? duration / (IN_BASE + OUT_BASE) : 1;
+            var IN = IN_BASE * envelopeScale;
+            var OUT = OUT_BASE * envelopeScale;
+            var HOLD = Math.max(0, duration - IN - OUT);
+            var OUT_START = IN + HOLD;
+
+            var ROLL_START = 0.28 * envelopeScale;
+            var ACCEL_DURATION = 0.82 * envelopeScale;
+            var DECEL_DURATION = 0.93 * envelopeScale;
+            var LOCK_AT = ROLL_START + ACCEL_DURATION + DECEL_DURATION;
+            var PROMOTE_AT = LOCK_AT + 0.18 * envelopeScale;
+            var PROMOTE_DURATION = Math.max(0.001, IN - PROMOTE_AT);
+            var finalOffset = -(options.length - 1) * 12;
+            var accelOffset = finalOffset * 0.72;
+
+            var tl = gsap.timeline({ paused: true });
+
+            gsap.set(questionWrap, { opacity: 1, y: "0cqh" });
+            gsap.set(ticker, { opacity: 1, scale: 1 });
+            gsap.set(headlineBlock, { opacity: 0, scale: 0.78, y: "10cqh" });
+
+            tl.fromTo(
+              reel,
+              { y: "0cqh" },
+              { y: accelOffset + "cqh", duration: ACCEL_DURATION, ease: "power4.in" },
+              ROLL_START,
+            );
+            tl.to(
+              reel,
+              { y: finalOffset + "cqh", duration: DECEL_DURATION, ease: "power4.out" },
+              ROLL_START + ACCEL_DURATION,
+            );
+            tl.fromTo(
+              finalItem,
+              { scale: 1.08, color: accentColor },
+              { scale: 1, color: accentColor, duration: 0.3 * envelopeScale, ease: "expo.out" },
+              LOCK_AT,
+            );
+            tl.fromTo(
+              headlineBlock,
+              { opacity: 0, scale: 0.78, y: "10cqh" },
+              {
+                opacity: 1,
+                scale: 1,
+                y: "0cqh",
+                duration: PROMOTE_DURATION,
+                ease: "power3.out",
+              },
+              PROMOTE_AT,
+            );
+            tl.to(
+              ticker,
+              { opacity: 0, scale: 0.96, duration: PROMOTE_DURATION * 0.5, ease: "power2.in" },
+              PROMOTE_AT,
+            );
+
+            if (HOLD > 0) {
+              tl.to(
+                headlineBlock,
+                { y: "-0.6cqh", duration: HOLD / 2, ease: "sine.inOut", yoyo: true, repeat: 1 },
+                IN,
+              );
+            }
+
+            tl.to(
+              [headlineBlock, questionWrap],
+              { opacity: 0, y: "-2.5cqh", duration: OUT, ease: "power2.in" },
+              OUT_START,
+            );
+
+            tl.seek(0);
+            window.__timelines = window.__timelines || {};
+            window.__timelines["ticker-takeover"] = tl;
+          })();
+        </script>
+      </div>
+    </template>
+  </body>
+</html>

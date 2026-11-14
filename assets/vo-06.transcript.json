@@ -1,0 +1,126 @@
+{
+  "audio": "assets/vo-06.mp3",
+  "language": "es",
+  "words": [
+    {
+      "text": "Y",
+      "start": 0.22,
+      "end": 0.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 0.34,
+      "end": 0.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 0.5,
+      "end": 0.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 0.62,
+      "end": 0.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sabe",
+      "start": 0.74,
+      "end": 0.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 0.98,
+      "end": 1.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "empresa,",
+      "start": 1.06,
+      "end": 1.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 1.76,
+      "end": 1.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "equipos,",
+      "start": 1.94,
+      "end": 2.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 2.72,
+      "end": 2.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "proyectos",
+      "start": 2.88,
+      "end": 3.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 3.4,
+      "end": 3.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 3.52,
+      "end": 3.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "decisiones",
+      "start": 3.66,
+      "end": 4.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "queda",
+      "start": 4.64,
+      "end": 4.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "conectado",
+      "start": 4.84,
+      "end": 5.24,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 5.28,
+      "end": 5.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 5.38,
+      "end": 5.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "solo",
+      "start": 5.48,
+      "end": 5.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lugar",
+      "start": 5.68,
+      "end": 5.96,
+      "speaker": "speaker_0"
+    }
+  ]
+}

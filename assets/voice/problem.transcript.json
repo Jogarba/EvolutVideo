@@ -1,0 +1,120 @@
+{
+  "audio": "assets/voice/problem.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Uy,",
+      "start": 0.34,
+      "end": 0.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lanzar",
+      "start": 0.54,
+      "end": 0.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 0.96,
+      "end": 1.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 1.22,
+      "end": 1.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "es",
+      "start": 1.38,
+      "end": 1.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 1.52,
+      "end": 1.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "carrera",
+      "start": 1.78,
+      "end": 2.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 2.2,
+      "end": 2.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "obstáculos:",
+      "start": 2.3,
+      "end": 2.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "servidores",
+      "start": 3.22,
+      "end": 3.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 3.82,
+      "end": 3.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "configurar,",
+      "start": 3.98,
+      "end": 4.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cuentas",
+      "start": 4.9,
+      "end": 5.24,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 5.28,
+      "end": 5.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pagar",
+      "start": 5.44,
+      "end": 6.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 6.14,
+      "end": 6.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "noches",
+      "start": 6.36,
+      "end": 6.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 6.72,
+      "end": 6.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "dormir",
+      "start": 6.88,
+      "end": 7.22,
+      "speaker": "speaker_0"
+    }
+  ]
+}

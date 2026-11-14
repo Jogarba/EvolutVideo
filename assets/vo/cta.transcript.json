@@ -1,0 +1,72 @@
+{
+  "audio": "assets/vo/cta.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Evolut.",
+      "start": 0.05,
+      "end": 0.75,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tu",
+      "start": 0.75,
+      "end": 1.13,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "aplicación,",
+      "start": 1.13,
+      "end": 1.79,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 1.79,
+      "end": 2.21,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "línea.",
+      "start": 2.21,
+      "end": 2.65,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Con",
+      "start": 2.93,
+      "end": 3.05,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "respaldo.",
+      "start": 3.05,
+      "end": 3.63,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Conoce",
+      "start": 3.97,
+      "end": 4.43,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "más",
+      "start": 4.43,
+      "end": 4.69,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 4.69,
+      "end": 5.03,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "evolut.cloud",
+      "start": 5.03,
+      "end": 6.28,
+      "speaker": "speaker_0"
+    }
+  ]
+}

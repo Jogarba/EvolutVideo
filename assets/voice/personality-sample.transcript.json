@@ -1,0 +1,78 @@
+{
+  "audio": "assets/voice/personality-sample.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "¿Y",
+      "start": 0.2,
+      "end": 0.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "si",
+      "start": 0.36,
+      "end": 0.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 0.54,
+      "end": 0.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "próxima",
+      "start": 0.7,
+      "end": 1.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "gran",
+      "start": 1.28,
+      "end": 1.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "idea",
+      "start": 1.66,
+      "end": 1.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pudiera",
+      "start": 2.16,
+      "end": 2.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "estar",
+      "start": 2.5,
+      "end": 2.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 2.84,
+      "end": 2.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "línea",
+      "start": 2.98,
+      "end": 3.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hoy",
+      "start": 3.68,
+      "end": 3.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mismo?",
+      "start": 3.92,
+      "end": 4.2,
+      "speaker": "speaker_0"
+    }
+  ]
+}

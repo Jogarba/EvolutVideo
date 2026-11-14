@@ -1,0 +1,27 @@
+<template>
+  <style>
+    @font-face { font-family:EvolutTitle; src:url("assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-weight:300 700; font-display:block; }
+    #root { position:absolute; inset:0; text-align:center; color:#f0f6ff; font-family:EvolutTitle,sans-serif; }
+    #ec-shade { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 53%,#050c17e8 13%,#060d18b9 38%,transparent 78%); }
+    #ec-logo { position:absolute; width:865px; left:527.5px; top:355px; filter:drop-shadow(0 0 28px #66b8ff70); }
+    #ec-line, #ec-cta { position:absolute; left:130px; right:130px; font-weight:600; }
+    #ec-line { top:535px; font-size:42px; }
+    #ec-cta { top:629px; font-size:40px; color:#a3ddff; text-shadow:0 0 22px #399fef70; }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+    <div id="ec-shade"></div>
+    <img id="ec-logo" src="assets/evolut-isologo-on-dark.svg" alt="Evolut">
+    <div id="ec-line">Tu app en producción, con respaldo.</div>
+    <div id="ec-cta">evolut.cloud</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused:true });
+    tl.fromTo("#ec-shade", { opacity:0 }, { opacity:1, duration:.78 }, .92);
+    tl.fromTo("#ec-logo", { opacity:0, scale:.94, clipPath:"inset(0 100% 0 0)" }, { opacity:1, scale:1, clipPath:"inset(0 0 0 0)", duration:.64, ease:"power3.inOut" }, 1.35);
+    tl.fromTo("#ec-line", { opacity:0 }, { opacity:1, duration:.35 }, 2.39);
+    tl.fromTo("#ec-cta", { opacity:0, y:12 }, { opacity:1, y:0, duration:.36, ease:"power3.out" }, 4.27);
+    tl.to("#ec-line", { opacity:0, duration:.52, ease:"sine.inOut" }, 6.1);
+    tl.to("#ec-cta", { opacity:0, duration:.56, ease:"sine.inOut" }, 9.05);
+    window.__timelines.endcard = tl;
+  </script>
+</template>

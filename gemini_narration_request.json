@@ -1,0 +1,48 @@
+{
+  "provider": "gemini",
+  "tts_model": "gemini-3.8-flash-tts",
+  "voice": "Kore",
+  "lang": "es",
+  "style": "Español colombiano natural. Misma narradora Kore, cálida y cercana, hablando con una persona. Curiosidad en las preguntas, empatía al mencionar dificultades, alivio al presentar la solución. Sonrisa ligera audible, énfasis y melodía variables. Ritmo ágil de conversación, frases ligadas con pausas muy breves; sin silencios dramáticos, sin voz de anuncio y sin monotonía. No leer instrucciones. Pronunciar Evolut como E-vo-lut.",
+  "lines": [
+    {
+      "id": "infra-hook",
+      "text": "Tu app está lista. ¿Y ahora, cómo la llevas a producción?"
+    },
+    {
+      "id": "infra-problem",
+      "text": "Configurar servidores, sumar costos, resolver la seguridad… Uf, ponerla en marcha puede convertirse en otro proyecto. Y tú quieres avanzar."
+    },
+    {
+      "id": "infra-reveal",
+      "text": "Para eso está Evolut: infraestructura como servicio para tus aplicaciones, con un equipo que te acompaña desde el despliegue hasta la operación."
+    },
+    {
+      "id": "infra-fast",
+      "text": "¿Ya tienes tu aplicación? La llevamos a producción contigo. Si necesitas desarrollarla, también podemos ayudarte. Tú eliges por dónde empezar."
+    },
+    {
+      "id": "infra-secure",
+      "text": "Antes de publicar, revisamos la seguridad y la calidad del código. Detectamos riesgos para que puedas corregirlos a tiempo."
+    },
+    {
+      "id": "infra-always",
+      "text": "Y una vez en línea, acompañamos su operación. Tu aplicación conectada con tus usuarios, donde estén."
+    },
+    {
+      "id": "infra-grows",
+      "text": "¿Tu aplicación crece? Te ayudamos a ajustar la infraestructura y la capacidad a lo que realmente necesitas."
+    },
+    {
+      "id": "infra-outcome",
+      "text": "Menos carga técnica. Más tiempo para tu producto y tus usuarios."
+    },
+    {
+      "id": "infra-cta",
+      "text": "Evolut. Tu aplicación, en línea. Con respaldo. Conoce más en evolut punto cloud."
+    }
+  ],
+  "bgm": {
+    "mode": "none"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "audio": "assets/vo/fast.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "¿Ya",
+      "start": 0.05,
+      "end": 0.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tienes",
+      "start": 0.2,
+      "end": 0.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 0.44,
+      "end": 0.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "aplicación?",
+      "start": 0.58,
+      "end": 1.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "La",
+      "start": 1.5,
+      "end": 1.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "llevamos",
+      "start": 1.58,
+      "end": 1.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 1.96,
+      "end": 2.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "producción",
+      "start": 2.08,
+      "end": 2.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "contigo.",
+      "start": 2.44,
+      "end": 3.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Si",
+      "start": 3.54,
+      "end": 3.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "necesitas",
+      "start": 3.64,
+      "end": 4.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "desarrollarla,",
+      "start": 4.16,
+      "end": 4.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "también",
+      "start": 5.1,
+      "end": 5.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "podemos",
+      "start": 5.36,
+      "end": 5.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ayudarte.",
+      "start": 5.74,
+      "end": 6.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tú",
+      "start": 6.8,
+      "end": 6.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "eliges",
+      "start": 6.94,
+      "end": 7.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "por",
+      "start": 7.46,
+      "end": 7.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "dónde",
+      "start": 7.66,
+      "end": 7.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "empezar.",
+      "start": 7.9,
+      "end": 8.26,
+      "speaker": "speaker_0"
+    }
+  ]
+}

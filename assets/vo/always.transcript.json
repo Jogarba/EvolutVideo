@@ -1,0 +1,102 @@
+{
+  "audio": "assets/vo/always.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Y",
+      "start": 0.05,
+      "end": 0.17,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 0.17,
+      "end": 0.41,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vez",
+      "start": 0.41,
+      "end": 0.55,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 0.55,
+      "end": 0.77,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "línea,",
+      "start": 0.77,
+      "end": 1.03,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "acompañamos",
+      "start": 1.31,
+      "end": 1.99,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "su",
+      "start": 1.99,
+      "end": 2.13,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "operación.",
+      "start": 2.13,
+      "end": 2.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tu",
+      "start": 2.93,
+      "end": 3.07,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "aplicación",
+      "start": 3.07,
+      "end": 3.79,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "conectada",
+      "start": 3.79,
+      "end": 4.47,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "con",
+      "start": 4.47,
+      "end": 4.71,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 4.71,
+      "end": 4.87,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "usuarios,",
+      "start": 4.87,
+      "end": 5.35,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "donde",
+      "start": 5.35,
+      "end": 5.67,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "estén.",
+      "start": 5.67,
+      "end": 6.05,
+      "speaker": "speaker_0"
+    }
+  ]
+}

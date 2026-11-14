@@ -1,0 +1,120 @@
+{
+  "audio": "assets/voice/secure.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Cada",
+      "start": 0.36,
+      "end": 0.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cambio",
+      "start": 0.68,
+      "end": 0.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 1,
+      "end": 1.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "haces",
+      "start": 1.14,
+      "end": 1.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pasa",
+      "start": 1.58,
+      "end": 1.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "por",
+      "start": 1.88,
+      "end": 1.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nuestro",
+      "start": 2.02,
+      "end": 2.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "escudo.",
+      "start": 2.3,
+      "end": 2.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Lo",
+      "start": 3.1,
+      "end": 3.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "revisamos",
+      "start": 3.24,
+      "end": 3.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 4.08,
+      "end": 4.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "si",
+      "start": 4.34,
+      "end": 4.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "algo",
+      "start": 4.54,
+      "end": 4.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "no",
+      "start": 4.76,
+      "end": 4.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "es",
+      "start": 4.84,
+      "end": 4.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "seguro,",
+      "start": 4.94,
+      "end": 5.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "se",
+      "start": 5.58,
+      "end": 5.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "queda",
+      "start": 5.8,
+      "end": 6.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fuera",
+      "start": 6.12,
+      "end": 6.34,
+      "speaker": "speaker_0"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "audio": "assets/vo/grows.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "¿Tu",
+      "start": 0.05,
+      "end": 0.17,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "aplicación",
+      "start": 0.17,
+      "end": 0.73,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "crece?",
+      "start": 0.73,
+      "end": 1.19,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Te",
+      "start": 1.39,
+      "end": 1.63,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ayudamos",
+      "start": 1.63,
+      "end": 2.09,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 2.09,
+      "end": 2.23,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ajustar",
+      "start": 2.23,
+      "end": 2.59,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 2.59,
+      "end": 2.69,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "infraestructura",
+      "start": 2.69,
+      "end": 3.45,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 3.45,
+      "end": 3.71,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 3.71,
+      "end": 3.87,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "capacidad",
+      "start": 3.87,
+      "end": 4.41,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 4.41,
+      "end": 4.71,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 4.71,
+      "end": 4.79,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 4.79,
+      "end": 4.95,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "realmente",
+      "start": 4.95,
+      "end": 5.41,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "necesitas.",
+      "start": 5.41,
+      "end": 6.19,
+      "speaker": "speaker_0"
+    }
+  ]
+}

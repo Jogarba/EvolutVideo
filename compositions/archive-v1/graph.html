@@ -1,0 +1,147 @@
+<template>
+  <style>
+    @font-face { font-family: "Michroma"; src: url("assets/fonts/Michroma-Regular.ttf") format("truetype"); font-weight: 400; font-display: block; }
+    @font-face { font-family: "Hanken Grotesk Variable"; src: url("assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "JetBrains Mono Variable"; src: url("assets/fonts/JetBrainsMono-Variable.ttf") format("truetype"); font-weight: 400 600; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; color: #f2f5f7; font-family: "Hanken Grotesk Variable", sans-serif; }
+    .glass { background: linear-gradient(180deg, rgba(25,34,44,.84), rgba(10,15,20,.86)); backdrop-filter: blur(18px) saturate(1.3); box-shadow: inset 0 1.5px 0 rgba(255,255,255,.16), inset 0 0 0 1.5px rgba(242,245,247,.12), 0 50px 120px rgba(0,0,0,.6), 0 0 90px rgba(57,159,239,.12); border-radius: 32px; }
+    /* light falling on the glass from the hall's ceiling lamps */
+    .glass::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,.08), rgba(255,255,255,0) 38%), radial-gradient(120% 60% at 50% 0%, rgba(57,159,239,.10), rgba(57,159,239,0) 60%); }
+    .raised { background: linear-gradient(180deg, rgba(30,38,46,.92), rgba(20,25,30,.92)); border-radius: 18px; box-shadow: inset 0 1px 0 rgba(255,255,255,.07), 0 8px 24px rgba(0,0,0,.25); }
+    .well { background: rgba(7,12,16,.72); border-radius: 16px; }
+    .frost { background: rgba(14,19,24,.80); box-shadow: inset 0 0 0 1.5px rgba(242,245,247,.2); border-radius: 999px; }
+    .pill { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 8px 20px; font-size: 28px; font-weight: 500; white-space: nowrap; }
+    .pill svg { width: 26px; height: 26px; flex: none; }
+    .ok { color: #5ed19d; background: #102a1e; } .warn { color: #f4b85a; background: #2f210c; }
+    .bad { color: #e47c76; background: #351c1a; } .info { color: #399fef; background: #132636; }
+    .neu { color: #94999e; background: rgba(22,27,32,.92); }
+    .mono { font-family: "JetBrains Mono Variable", monospace; }
+    .muted { color: #94999e; } .body { color: #bfc3c7; }
+    .kin { font-family: "Michroma", sans-serif; text-shadow: 0 0 28px #070c10, 0 0 14px #070c10, 0 0 4px #070c10; }
+    .halo { text-shadow: 0 0 22px #070c10, 0 0 10px #070c10, 0 0 3px #070c10; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; border-radius: 16px; background: #399fef; color: #000e1d; font-weight: 700; overflow: hidden; position: relative; }
+    .shine { position: absolute; top: 0; bottom: 0; width: 140px; left: -200px; background: linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.55), rgba(255,255,255,0)); }
+    .cursor { position: absolute; left: 0; top: 0; width: 84px; height: 84px; z-index: 20; filter: drop-shadow(0 8px 16px rgba(0,0,0,.55)); }
+    .led { fill: #5ed19d; filter: drop-shadow(0 0 4px rgba(94,209,157,.8)); }
+    .icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    #gr-cam { position: absolute; inset: 0; }
+    #gr-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+    #gr-core { position: absolute; left: 810px; top: 390px; width: 300px; height: 300px; }
+    #gr-coreglow { position: absolute; left: 760px; top: 340px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(closest-side, rgba(57,159,239,.45), rgba(57,159,239,0)); }
+    #gr-text { position: absolute; left: 0; right: 0; top: 60px; text-align: center; font-size: 60px; }
+    #gr-text2 { position: absolute; left: 0; right: 0; top: 968px; text-align: center; font-size: 60px; color: #399fef; }
+
+  </style>
+  <div data-hf-id="hf-7m1t" id="root" data-composition-id="graph" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-q985" id="gr-cam" data-layout-allow-overflow>
+      <div data-hf-id="hf-rh85" id="gr-coreglow"></div>
+      <svg data-hf-id="hf-ljhy" id="gr-svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+        <g data-hf-id="hf-40vr" id="gr-orbit">
+          <line data-hf-id="hf-aeui" class="gr-e" x1="960" y1="240" x2="1413" y2="752" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-sjp5" class="gr-e" x1="1413" y1="328" x2="960" y2="840" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-dgrk" class="gr-e" x1="1600" y1="540" x2="507" y2="752" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-o5cb" class="gr-e" x1="1413" y1="752" x2="320" y2="540" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-ij6u" class="gr-e" x1="960" y1="840" x2="507" y2="328" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-ms6t" class="gr-e" x1="507" y1="752" x2="960" y2="240" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-6gcm" class="gr-e" x1="320" y1="540" x2="1413" y2="328" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-wlg7" class="gr-e" x1="507" y1="328" x2="1600" y2="540" stroke="#399fef" stroke-opacity=".22" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-qwl6" class="gr-e" x1="960" y1="540" x2="960" y2="240" stroke="#67b1f2" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-snrn" class="gr-e" x1="960" y1="540" x2="1413" y2="328" stroke="#75dcab" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-seht" class="gr-e" x1="960" y1="540" x2="1600" y2="540" stroke="#f0b965" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-b8l9" class="gr-e" x1="960" y1="540" x2="1413" y2="752" stroke="#e48ab3" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-xy7z" class="gr-e" x1="960" y1="540" x2="960" y2="840" stroke="#aab4c2" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-389f" class="gr-e" x1="960" y1="540" x2="507" y2="752" stroke="#67b1f2" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-oln7" class="gr-e" x1="960" y1="540" x2="320" y2="540" stroke="#75dcab" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <line data-hf-id="hf-jszb" class="gr-e" x1="960" y1="540" x2="507" y2="328" stroke="#d2736e" stroke-opacity=".55" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <circle data-hf-id="hf-k9zn" id="gr-p00" r="8" fill="#67b1f2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-qnmu" id="gr-p01" r="8" fill="#67b1f2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-rq2d" id="gr-p02" r="8" fill="#67b1f2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-xssk" id="gr-p10" r="8" fill="#75dcab" cx="960" cy="540"/>
+          <circle data-hf-id="hf-2a21" id="gr-p11" r="8" fill="#75dcab" cx="960" cy="540"/>
+          <circle data-hf-id="hf-dnui" id="gr-p12" r="8" fill="#75dcab" cx="960" cy="540"/>
+          <circle data-hf-id="hf-z0dt" id="gr-p20" r="8" fill="#f0b965" cx="960" cy="540"/>
+          <circle data-hf-id="hf-38h8" id="gr-p21" r="8" fill="#f0b965" cx="960" cy="540"/>
+          <circle data-hf-id="hf-no1r" id="gr-p22" r="8" fill="#f0b965" cx="960" cy="540"/>
+          <circle data-hf-id="hf-x47f" id="gr-p30" r="8" fill="#e48ab3" cx="960" cy="540"/>
+          <circle data-hf-id="hf-oiwu" id="gr-p31" r="8" fill="#e48ab3" cx="960" cy="540"/>
+          <circle data-hf-id="hf-4ka5" id="gr-p32" r="8" fill="#e48ab3" cx="960" cy="540"/>
+          <circle data-hf-id="hf-3rue" id="gr-p40" r="8" fill="#aab4c2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-p5sz" id="gr-p41" r="8" fill="#aab4c2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-aztc" id="gr-p42" r="8" fill="#aab4c2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-d5xk" id="gr-p50" r="8" fill="#67b1f2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-zpkt" id="gr-p51" r="8" fill="#67b1f2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-jo7i" id="gr-p52" r="8" fill="#67b1f2" cx="960" cy="540"/>
+          <circle data-hf-id="hf-6fwt" id="gr-p60" r="8" fill="#75dcab" cx="960" cy="540"/>
+          <circle data-hf-id="hf-im8o" id="gr-p61" r="8" fill="#75dcab" cx="960" cy="540"/>
+          <circle data-hf-id="hf-phez" id="gr-p62" r="8" fill="#75dcab" cx="960" cy="540"/>
+          <circle data-hf-id="hf-s5pf" id="gr-p70" r="8" fill="#d2736e" cx="960" cy="540"/>
+          <circle data-hf-id="hf-6rqu" id="gr-p71" r="8" fill="#d2736e" cx="960" cy="540"/>
+          <circle data-hf-id="hf-aykl" id="gr-p72" r="8" fill="#d2736e" cx="960" cy="540"/>
+          <g data-hf-id="hf-88ic" class="gr-n" id="gr-n0"><circle data-hf-id="hf-quv5" class="gr-halo" cx="960" cy="240" r="56" fill="#67b1f2" fill-opacity=".14"/><circle data-hf-id="hf-wbw2" cx="960" cy="240" r="34" fill="#0e1318" stroke="#67b1f2" stroke-width="5"/><circle data-hf-id="hf-56x9" cx="960" cy="240" r="12" fill="#67b1f2"/><text data-hf-id="hf-xjbt" x="960" y="322" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Agentes de IA</text></g>
+          <g data-hf-id="hf-9065" class="gr-n" id="gr-n1"><circle data-hf-id="hf-pexy" class="gr-halo" cx="1413" cy="328" r="56" fill="#75dcab" fill-opacity=".14"/><circle data-hf-id="hf-cowx" cx="1413" cy="328" r="34" fill="#0e1318" stroke="#75dcab" stroke-width="5"/><circle data-hf-id="hf-7igi" cx="1413" cy="328" r="12" fill="#75dcab"/><text data-hf-id="hf-j9k0" x="1413" y="410" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Documentos</text></g>
+          <g data-hf-id="hf-f5vy" class="gr-n" id="gr-n2"><circle data-hf-id="hf-3c5g" class="gr-halo" cx="1600" cy="540" r="56" fill="#f0b965" fill-opacity=".14"/><circle data-hf-id="hf-8azr" cx="1600" cy="540" r="34" fill="#0e1318" stroke="#f0b965" stroke-width="5"/><circle data-hf-id="hf-zq5w" cx="1600" cy="540" r="12" fill="#f0b965"/><text data-hf-id="hf-s71m" x="1600" y="622" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Decisiones</text></g>
+          <g data-hf-id="hf-j3zz" class="gr-n" id="gr-n3"><circle data-hf-id="hf-654q" class="gr-halo" cx="1413" cy="752" r="56" fill="#e48ab3" fill-opacity=".14"/><circle data-hf-id="hf-9v35" cx="1413" cy="752" r="34" fill="#0e1318" stroke="#e48ab3" stroke-width="5"/><circle data-hf-id="hf-5idy" cx="1413" cy="752" r="12" fill="#e48ab3"/><text data-hf-id="hf-r032" x="1413" y="834" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Servicios</text></g>
+          <g data-hf-id="hf-n240" class="gr-n" id="gr-n4"><circle data-hf-id="hf-587u" class="gr-halo" cx="960" cy="840" r="56" fill="#aab4c2" fill-opacity=".14"/><circle data-hf-id="hf-8g13" cx="960" cy="840" r="34" fill="#0e1318" stroke="#aab4c2" stroke-width="5"/><circle data-hf-id="hf-bh10" cx="960" cy="840" r="12" fill="#aab4c2"/><text data-hf-id="hf-1pwb" x="960" y="922" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Equipos</text></g>
+          <g data-hf-id="hf-ntrt" class="gr-n" id="gr-n5"><circle data-hf-id="hf-c8no" class="gr-halo" cx="507" cy="752" r="56" fill="#67b1f2" fill-opacity=".14"/><circle data-hf-id="hf-l35h" cx="507" cy="752" r="34" fill="#0e1318" stroke="#67b1f2" stroke-width="5"/><circle data-hf-id="hf-pfu6" cx="507" cy="752" r="12" fill="#67b1f2"/><text data-hf-id="hf-gka1" x="507" y="834" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Aplicaciones</text></g>
+          <g data-hf-id="hf-rrvu" class="gr-n" id="gr-n6"><circle data-hf-id="hf-xi62" class="gr-halo" cx="320" cy="540" r="56" fill="#75dcab" fill-opacity=".14"/><circle data-hf-id="hf-l0kz" cx="320" cy="540" r="34" fill="#0e1318" stroke="#75dcab" stroke-width="5"/><circle data-hf-id="hf-go9s" cx="320" cy="540" r="12" fill="#75dcab"/><text data-hf-id="hf-327o" x="320" y="622" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Bases de datos</text></g>
+          <g data-hf-id="hf-vpzv" class="gr-n" id="gr-n7"><circle data-hf-id="hf-03t0" class="gr-halo" cx="507" cy="328" r="56" fill="#d2736e" fill-opacity=".14"/><circle data-hf-id="hf-so7t" cx="507" cy="328" r="34" fill="#0e1318" stroke="#d2736e" stroke-width="5"/><circle data-hf-id="hf-qa4m" cx="507" cy="328" r="12" fill="#d2736e"/><text data-hf-id="hf-5d9y" x="507" y="410" text-anchor="middle" font-size="32" font-weight="500" fill="#f2f5f7" font-family="Hanken Grotesk Variable" stroke="#070c10" stroke-width="6" paint-order="stroke">Alertas</text></g>
+        </g>
+      </svg>
+      <img data-hf-id="hf-mvsn" id="gr-core" src="assets/evolut-isotipo-on-dark.svg" alt="" />
+    </div>
+    <div data-hf-id="hf-5ht9" id="gr-text" class="kin">Y todo lo que sabe tu empresa,</div>
+    <div data-hf-id="hf-ntqv" id="gr-text2" class="kin">en un solo lugar.</div>
+  </div>
+  <script>
+    gsap.config({ force3D: false });
+    const root = gsap.timeline({ paused: true });
+    const tl = gsap.timeline();
+    const cam = (px, py, s) => ({ x: 960 - px * s, y: 560 - py * s, scale: s });
+    // a pane rises out of depth: tilted back, lower and blurred, landing flat
+    const DEPTH = { opacity: 0, y: 90, rotationX: 18, scale: 0.94, transformPerspective: 1800, filter: "blur(10px)" };
+    const LAND = { opacity: 1, y: 0, rotationX: 0, scale: 1, filter: "blur(0px)", duration: 0.75, ease: "expo.out" };
+
+    tl.fromTo("#gr-cam", { scale: 1.3, opacity: 0, filter: "blur(14px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power3.out" }, 0.25);
+    tl.fromTo("#gr-core", { scale: 0.5 }, { scale: 0.5, duration: 0.01 }, 0);
+    tl.fromTo("#gr-coreglow", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "expo.out" }, 0.3);
+    tl.fromTo(".gr-n", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.6)", stagger: 0.12 }, 0.35);
+    tl.to(".gr-e", { strokeDashoffset: 0, duration: 0.6, ease: "power2.out", stagger: 0.06 }, 0.5);
+    tl.fromTo(".gr-halo", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.35, duration: 0.5, ease: "power2.out", yoyo: true, repeat: 1, stagger: 0.12 }, 1.6);
+    tl.fromTo("#gr-orbit", { rotation: 0, svgOrigin: "960 540" }, { rotation: 24, svgOrigin: "960 540", duration: 6.0, ease: "none" }, 0);
+    tl.fromTo(".gr-n", { rotation: 0 }, { rotation: -24, transformOrigin: "50% 50%", duration: 6.0, ease: "none" }, 0);
+    tl.fromTo("#gr-p00", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 960, cy: 240 }, duration: 0.7, ease: "power1.inOut" }, 1.10); tl.to("#gr-p00", { opacity: 0, duration: 0.08 }, 1.80);
+    tl.fromTo("#gr-p01", { attr: { cx: 960, cy: 240 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 2.55); tl.to("#gr-p01", { opacity: 0, duration: 0.08 }, 3.25);
+    tl.fromTo("#gr-p02", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 960, cy: 240 }, duration: 0.7, ease: "power1.inOut" }, 4.00); tl.to("#gr-p02", { opacity: 0, duration: 0.08 }, 4.70);
+    tl.fromTo("#gr-p10", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 1413, cy: 328 }, duration: 0.7, ease: "power1.inOut" }, 1.27); tl.to("#gr-p10", { opacity: 0, duration: 0.08 }, 1.97);
+    tl.fromTo("#gr-p11", { attr: { cx: 1413, cy: 328 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 2.72); tl.to("#gr-p11", { opacity: 0, duration: 0.08 }, 3.42);
+    tl.fromTo("#gr-p12", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 1413, cy: 328 }, duration: 0.7, ease: "power1.inOut" }, 4.17); tl.to("#gr-p12", { opacity: 0, duration: 0.08 }, 4.87);
+    tl.fromTo("#gr-p20", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 1600, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 1.44); tl.to("#gr-p20", { opacity: 0, duration: 0.08 }, 2.14);
+    tl.fromTo("#gr-p21", { attr: { cx: 1600, cy: 540 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 2.89); tl.to("#gr-p21", { opacity: 0, duration: 0.08 }, 3.59);
+    tl.fromTo("#gr-p22", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 1600, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 4.34); tl.to("#gr-p22", { opacity: 0, duration: 0.08 }, 5.04);
+    tl.fromTo("#gr-p30", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 1413, cy: 752 }, duration: 0.7, ease: "power1.inOut" }, 1.61); tl.to("#gr-p30", { opacity: 0, duration: 0.08 }, 2.31);
+    tl.fromTo("#gr-p31", { attr: { cx: 1413, cy: 752 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 3.06); tl.to("#gr-p31", { opacity: 0, duration: 0.08 }, 3.76);
+    tl.fromTo("#gr-p32", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 1413, cy: 752 }, duration: 0.7, ease: "power1.inOut" }, 4.51); tl.to("#gr-p32", { opacity: 0, duration: 0.08 }, 5.21);
+    tl.fromTo("#gr-p40", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 960, cy: 840 }, duration: 0.7, ease: "power1.inOut" }, 1.78); tl.to("#gr-p40", { opacity: 0, duration: 0.08 }, 2.48);
+    tl.fromTo("#gr-p41", { attr: { cx: 960, cy: 840 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 3.23); tl.to("#gr-p41", { opacity: 0, duration: 0.08 }, 3.93);
+    tl.fromTo("#gr-p42", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 960, cy: 840 }, duration: 0.7, ease: "power1.inOut" }, 4.68); tl.to("#gr-p42", { opacity: 0, duration: 0.08 }, 5.38);
+    tl.fromTo("#gr-p50", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 507, cy: 752 }, duration: 0.7, ease: "power1.inOut" }, 1.95); tl.to("#gr-p50", { opacity: 0, duration: 0.08 }, 2.65);
+    tl.fromTo("#gr-p51", { attr: { cx: 507, cy: 752 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 3.40); tl.to("#gr-p51", { opacity: 0, duration: 0.08 }, 4.10);
+    tl.fromTo("#gr-p52", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 507, cy: 752 }, duration: 0.7, ease: "power1.inOut" }, 4.85); tl.to("#gr-p52", { opacity: 0, duration: 0.08 }, 5.55);
+    tl.fromTo("#gr-p60", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 320, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 2.12); tl.to("#gr-p60", { opacity: 0, duration: 0.08 }, 2.82);
+    tl.fromTo("#gr-p61", { attr: { cx: 320, cy: 540 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 3.57); tl.to("#gr-p61", { opacity: 0, duration: 0.08 }, 4.27);
+    tl.fromTo("#gr-p62", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 320, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 5.02); tl.to("#gr-p62", { opacity: 0, duration: 0.08 }, 5.72);
+    tl.fromTo("#gr-p70", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 507, cy: 328 }, duration: 0.7, ease: "power1.inOut" }, 2.29); tl.to("#gr-p70", { opacity: 0, duration: 0.08 }, 2.99);
+    tl.fromTo("#gr-p71", { attr: { cx: 507, cy: 328 }, opacity: 1 }, { attr: { cx: 960, cy: 540 }, duration: 0.7, ease: "power1.inOut" }, 3.74); tl.to("#gr-p71", { opacity: 0, duration: 0.08 }, 4.44);
+    tl.fromTo("#gr-p72", { attr: { cx: 960, cy: 540 }, opacity: 1 }, { attr: { cx: 507, cy: 328 }, duration: 0.7, ease: "power1.inOut" }, 5.19); tl.to("#gr-p72", { opacity: 0, duration: 0.08 }, 5.89);
+    tl.fromTo("#gr-text", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2 }, 0.25);
+    tl.fromTo("#gr-text2", { opacity: 0, filter: "blur(10px)", scale: 1.08 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.22, ease: "expo.out" }, 2.9);
+    // everything collapses into the core, which becomes the end mark
+    tl.to(["#gr-text", "#gr-text2"], { opacity: 0, filter: "blur(8px)", duration: 0.18 }, 5.9);
+    tl.to("#gr-orbit", { scale: 0, opacity: 0, svgOrigin: "960 540", duration: 0.55, ease: "power3.in" }, 6.05);
+    tl.to("#gr-core", { scale: 1, duration: 0.6, ease: "expo.out" }, 6.35);
+    tl.to("#gr-coreglow", { opacity: 0, scale: 0.6, duration: 0.45, ease: "power2.in" }, 6.3);
+    root.add(tl.timeScale(0.952381), 0);
+    window.__timelines["graph"] = root;
+  </script>
+</template>

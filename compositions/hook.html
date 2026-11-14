@@ -1,0 +1,25 @@
+<template>
+  <style>
+    @font-face { font-family:EvolutTitle; src:url("assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-weight:300 700; font-display:block; }
+    #root { position:absolute; inset:0; font-family:EvolutTitle,sans-serif; pointer-events:none; }
+    .guide { position:absolute; left:50%; transform:translateX(-50%); width:max-content; max-width:1150px;
+      padding:11px 25px 12px; border:1px solid #82cfff5c; border-radius:10px; background:#071421f5;
+      color:#f4faff; font-size:46px; font-weight:650; line-height:1.12; text-align:center; opacity:0;
+      box-shadow:0 6px 22px #040a1440; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+    <div id="hook-cue-1" class="guide" style="top:164px">Funciona en pruebas</div>
+    <div id="hook-cue-2" class="guide" style="top:164px">Falta publicarla</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused:true });
+    function cue(selector, start, end) {
+      const fade = Math.min(.36, (end - start) * .22);
+      tl.fromTo(selector, { opacity:0 }, { opacity:1, duration:.19, ease:"power2.out" }, start);
+      tl.to(selector, { opacity:0, duration:fade, ease:"sine.inOut" }, end - fade);
+    }
+    cue("#hook-cue-1", 0, 1.6);
+    cue("#hook-cue-2", 1.72, 3.45);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

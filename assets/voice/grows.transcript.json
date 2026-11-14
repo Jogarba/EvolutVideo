@@ -1,0 +1,108 @@
+{
+  "audio": "assets/voice/grows.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Llegan",
+      "start": 0.28,
+      "end": 0.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "más",
+      "start": 0.56,
+      "end": 0.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clientes,",
+      "start": 0.72,
+      "end": 1.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut",
+      "start": 1.64,
+      "end": 2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 2.04,
+      "end": 2.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nota",
+      "start": 2.16,
+      "end": 2.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 2.48,
+      "end": 2.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "suma",
+      "start": 2.62,
+      "end": 2.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "capacidad",
+      "start": 2.9,
+      "end": 3.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "por",
+      "start": 3.44,
+      "end": 3.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ti",
+      "start": 3.62,
+      "end": 3.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 4.08,
+      "end": 4.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 4.24,
+      "end": 4.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tengas",
+      "start": 4.38,
+      "end": 4.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 4.64,
+      "end": 4.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hacer",
+      "start": 4.7,
+      "end": 4.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nada",
+      "start": 4.92,
+      "end": 5.14,
+      "speaker": "speaker_0"
+    }
+  ]
+}

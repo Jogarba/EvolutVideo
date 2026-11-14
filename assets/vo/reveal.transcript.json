@@ -1,0 +1,138 @@
+{
+  "audio": "assets/vo/reveal.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Para",
+      "start": 0.05,
+      "end": 0.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "eso",
+      "start": 0.22,
+      "end": 0.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 0.44,
+      "end": 0.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut:",
+      "start": 0.74,
+      "end": 1.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "infraestructura",
+      "start": 1.66,
+      "end": 2.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "como",
+      "start": 2.44,
+      "end": 2.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "servicio",
+      "start": 2.64,
+      "end": 2.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "para",
+      "start": 2.98,
+      "end": 3.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 3.26,
+      "end": 3.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "aplicaciones,",
+      "start": 3.46,
+      "end": 4.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "con",
+      "start": 4.34,
+      "end": 4.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 4.44,
+      "end": 4.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "equipo",
+      "start": 4.62,
+      "end": 4.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 4.86,
+      "end": 5.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "te",
+      "start": 5.1,
+      "end": 5.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "acompaña",
+      "start": 5.22,
+      "end": 5.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "desde",
+      "start": 5.82,
+      "end": 6.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "el",
+      "start": 6.1,
+      "end": 6.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "despliegue",
+      "start": 6.32,
+      "end": 6.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hasta",
+      "start": 6.82,
+      "end": 7.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 7.18,
+      "end": 7.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "operación.",
+      "start": 7.28,
+      "end": 7.68,
+      "speaker": "speaker_0"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<template>
+  <style>
+    @font-face { font-family:EvolutTitle; src:url("assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-weight:300 700; font-display:block; }
+    #root { position:absolute; inset:0; font-family:EvolutTitle,sans-serif; pointer-events:none; }
+    .guide { position:absolute; left:50%; transform:translateX(-50%); width:max-content; max-width:1150px;
+      padding:11px 25px 12px; border:1px solid #82cfff5c; border-radius:10px; background:#071421f5;
+      color:#f4faff; font-size:46px; font-weight:650; line-height:1.12; text-align:center; opacity:0;
+      box-shadow:0 6px 22px #040a1440; }
+    #reveal-logo { position:absolute; width:730px; left:595px; top:173px; opacity:0; filter:drop-shadow(0 0 24px #5aabff55); }
+  </style>
+  <div id="root" data-composition-id="reveal" data-width="1920" data-height="1080">
+    <img id="reveal-logo" src="assets/evolut-isologo-on-dark.svg" alt="Evolut">
+    <div id="reveal-cue-1" class="guide" style="top:322px">Tu app a producción</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused:true });
+    function cue(selector, start, end) {
+      const fade = Math.min(.36, (end - start) * .22);
+      tl.fromTo(selector, { opacity:0 }, { opacity:1, duration:.19, ease:"power2.out" }, start);
+      tl.to(selector, { opacity:0, duration:fade, ease:"sine.inOut" }, end - fade);
+    }
+    tl.fromTo("#reveal-logo", { opacity:0, scale:.94, clipPath:"inset(0 100% 0 0)" }, {
+      opacity:1, scale:1, clipPath:"inset(0 0 0 0)", duration:.72, ease:"power3.out"
+    }, .10);
+    cue("#reveal-cue-1", .94, 4.55);
+    tl.to("#reveal-logo", { opacity:0, duration:.58, ease:"sine.inOut" }, 5.08);
+    window.__timelines["reveal"] = tl;
+  </script>
+</template>

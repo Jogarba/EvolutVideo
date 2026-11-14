@@ -1,0 +1,120 @@
+{
+  "audio": "assets/vo/secure.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Antes",
+      "start": 0.05,
+      "end": 0.25,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 0.25,
+      "end": 0.41,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "publicar,",
+      "start": 0.41,
+      "end": 1.01,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "revisamos",
+      "start": 1.25,
+      "end": 1.63,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 1.63,
+      "end": 1.75,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "seguridad",
+      "start": 1.75,
+      "end": 2.21,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 2.21,
+      "end": 2.41,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 2.41,
+      "end": 2.53,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "calidad",
+      "start": 2.53,
+      "end": 2.79,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "del",
+      "start": 2.79,
+      "end": 3.05,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "código.",
+      "start": 3.05,
+      "end": 3.43,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Detectamos",
+      "start": 3.95,
+      "end": 4.45,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "riesgos",
+      "start": 4.45,
+      "end": 4.93,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "para",
+      "start": 4.93,
+      "end": 5.19,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 5.19,
+      "end": 5.33,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "puedas",
+      "start": 5.33,
+      "end": 5.71,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "corregirlos",
+      "start": 5.71,
+      "end": 6.21,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 6.21,
+      "end": 6.29,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tiempo.",
+      "start": 6.29,
+      "end": 6.57,
+      "speaker": "speaker_0"
+    }
+  ]
+}

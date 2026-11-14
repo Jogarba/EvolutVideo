@@ -1,0 +1,369 @@
+<!doctype html>
+<!--
+  focus-swap: Evolut Brand-Customized Registry Component
+  360° Application Watch: shifts focus from instant bottleneck/trace/log detection
+  to 1-click version rollback & 100% SLA stability.
+-->
+<html
+  lang="es"
+  data-composition-variables='[
+    { "id": "focus", "type": "enum", "role": "motion", "label": "Final focus", "description": "Card that ends sharp, full-size, and fully opaque.", "default": "b", "options": [{ "value": "a", "label": "Card A" }, { "value": "b", "label": "Card B" }] },
+    { "id": "blurPx", "type": "number", "role": "style", "label": "Unfocused blur", "description": "Blur applied to the card outside the viewer focus.", "default": 4, "min": 0, "max": 20, "step": 1, "unit": "px" },
+    { "id": "dim", "type": "number", "role": "style", "label": "Unfocused opacity", "description": "Opacity of the card outside the viewer focus.", "default": 0.65, "min": 0, "max": 1, "step": 0.05 }
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Focus Swap — Evolut</title>
+  </head>
+  <body>
+    <template>
+      <div data-hf-id="hf-g78a" id="root" data-composition-id="focus-swap" data-duration="6.5" data-fps="30">
+        <style>
+          *,
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
+
+          #root {
+            position: absolute;
+            inset: 0;
+            container-type: size;
+            isolation: isolate;
+            overflow: hidden;
+            background: transparent;
+            color: var(--fg, #f2f5f7);
+            font-family: var(--font-body, 'Hanken Grotesk Variable', system-ui, sans-serif);
+          }
+
+          .fs-clip {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 8cqh 6cqw 5cqh;
+          }
+
+          .fs-top-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2cqw;
+          }
+
+          .fs-title-block h2 {
+            margin: 0 0 0.8cqh;
+            font-family: var(--font-display, 'Michroma', sans-serif);
+            font-size: 3.6cqh;
+            font-weight: 400;
+            color: #f2f5f7;
+          }
+
+          .fs-title-block h2 span {
+            color: #399fef;
+          }
+
+          .fs-title-block p {
+            margin: 0;
+            font-size: 2.7cqh;
+            color: #bfc3c7;
+          }
+
+          .fs-live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.9cqw;
+            padding: 1cqh 1.8cqw;
+            border-radius: 999px;
+            border: 1px solid #646a6f;
+            background: #0e1318;
+            color: #5ed19d;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            font-weight: 700;
+          }
+
+          .fs-live-dot {
+            width: 1.1cqh;
+            height: 1.1cqh;
+            border-radius: 50%;
+            background: #5ed19d;
+          }
+
+          .fs-pair {
+            width: 100%;
+            height: 66cqh;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 3.2cqw;
+            align-items: stretch;
+          }
+
+          .fs-card {
+            min-width: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3.4cqh 2.8cqw;
+            overflow: hidden;
+            border: 1px solid #646a6f;
+            border-radius: 2cqh;
+            background: #0e1318;
+            box-shadow: 0 2.4cqh 6cqh rgba(7, 12, 16, 0.82);
+            transform-origin: center;
+            will-change: transform, filter, opacity;
+          }
+
+          .fs-card-a::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 0.65cqh;
+            background: #f4b85a;
+          }
+
+          .fs-card-b::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 0.65cqh;
+            background: #399fef;
+          }
+
+          .fs-card-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          .fs-tag-warn {
+            padding: 0.6cqh 1.2cqw;
+            border-radius: 0.8cqh;
+            background: #161b20;
+            border: 1px solid #f4b85a;
+            color: #f4b85a;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            font-weight: 700;
+          }
+
+          .fs-tag-ok {
+            padding: 0.6cqh 1.2cqw;
+            border-radius: 0.8cqh;
+            background: #399fef;
+            color: #000e1d;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            font-weight: 700;
+          }
+
+          .fs-status {
+            color: #bfc3c7;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+          }
+
+          .fs-title {
+            margin: 0;
+            color: #f2f5f7;
+            font-family: var(--font-display, 'Michroma', sans-serif);
+            font-size: 2.9cqh;
+            font-weight: 400;
+            line-height: 1.2;
+          }
+
+          .fs-detail {
+            margin: 0;
+            color: #bfc3c7;
+            font-size: 2.6cqh;
+            line-height: 1.35;
+          }
+
+          .fs-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2cqw;
+          }
+
+          .fs-metric-box {
+            padding: 1.6cqh 1.4cqw;
+            border-radius: 1.2cqh;
+            border: 1px solid #646a6f;
+            background: #161b20;
+          }
+
+          .fs-metric-lbl {
+            color: #bfc3c7;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            margin-bottom: 0.5cqh;
+          }
+
+          .fs-metric-val {
+            color: #f2f5f7;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.8cqh;
+            font-weight: 700;
+          }
+
+          .fs-metric-val.warn {
+            color: #f4b85a;
+          }
+
+          .fs-metric-val.ok {
+            color: #5ed19d;
+          }
+
+          .fs-log-strip {
+            padding: 1.4cqh 1.4cqw;
+            border-radius: 1.1cqh;
+            border: 1px solid #646a6f;
+            background: #070c10;
+            font-family: var(--font-mono, 'JetBrains Mono Variable', monospace);
+            font-size: 2.6cqh;
+            color: #bfc3c7;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          .fs-log-strip b {
+            color: #399fef;
+          }
+        </style>
+
+        <div data-hf-id="hf-2ixn" class="fs-clip clip" data-start="0" data-duration="6.5" data-track-index="0">
+          <div data-hf-id="hf-p43e" class="fs-top-banner">
+            <div data-hf-id="hf-3pt0" class="fs-title-block">
+              <h2 data-hf-id="hf-bgcy">Vigilamos <span data-hf-id="hf-mye8">cada aspecto de tu aplicación</span></h2>
+              <p data-hf-id="hf-ozyj">Logs, trazas, rendimiento, cuellos de botella, alertas y rollback instantáneo.</p>
+            </div>
+            <div data-hf-id="hf-9b53" class="fs-live-badge" data-layout-ignore>
+              <span data-hf-id="hf-c8n9" class="fs-live-dot"></span>
+              <span data-hf-id="hf-e34n">EN TIEMPO REAL · LIVE</span>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-ovuu" class="fs-pair">
+            <article data-hf-id="hf-4p88" class="fs-card fs-card-a" data-focus-card="a" aria-label="Detección de cuello de botella" data-layout-ignore>
+              <div data-hf-id="hf-fr9b" class="fs-card-head">
+                <span data-hf-id="hf-4sea" class="fs-tag-warn">01 · DETECCIÓN</span>
+                <span data-hf-id="hf-jxl6" class="fs-status">LOGS · TRAZAS</span>
+              </div>
+              <h3 data-hf-id="hf-6zsc" class="fs-title">Cuellos de botella al instante</h3>
+              <p data-hf-id="hf-9ehs" class="fs-detail">
+                Inspecciona cada petición, respuesta y traza exacta cuando ocurre saturación.
+              </p>
+              <div data-hf-id="hf-rilu" class="fs-metrics-grid">
+                <div data-hf-id="hf-luh6" class="fs-metric-box">
+                  <div data-hf-id="hf-wxjc" class="fs-metric-lbl">LATENCIA P95</div>
+                  <div data-hf-id="hf-nsbw" class="fs-metric-val warn">1.34s → Pico</div>
+                </div>
+                <div data-hf-id="hf-cuvi" class="fs-metric-box">
+                  <div data-hf-id="hf-e8d0" class="fs-metric-lbl">ALERTA ACTIVA</div>
+                  <div data-hf-id="hf-atuk" class="fs-metric-val">Notificado</div>
+                </div>
+              </div>
+              <div data-hf-id="hf-2bot" class="fs-log-strip">
+                <span data-hf-id="hf-g0tv">Traza #8f2a · POST /checkout</span>
+                <b data-hf-id="hf-r80y">Ver log →</b>
+              </div>
+            </article>
+
+            <article data-hf-id="hf-zi3b" class="fs-card fs-card-b" data-focus-card="b" data-hold aria-label="Rollback y rendimiento" data-layout-ignore>
+              <div data-hf-id="hf-41xb" class="fs-card-head">
+                <span data-hf-id="hf-frgh" class="fs-tag-ok">02 · RECUPERACIÓN</span>
+                <span data-hf-id="hf-wliu" class="fs-status">VERSIÓN · SLA</span>
+              </div>
+              <h3 data-hf-id="hf-5kvw" class="fs-title">Rollback de versión en 1 clic</h3>
+              <p data-hf-id="hf-9p5a" class="fs-detail">
+                Cambia entre versiones publicadas en segundos y mantén tu operación al 100%.
+              </p>
+              <div data-hf-id="hf-5zg6" class="fs-metrics-grid">
+                <div data-hf-id="hf-d96j" class="fs-metric-box">
+                  <div data-hf-id="hf-ph5g" class="fs-metric-lbl">DISPONIBILIDAD</div>
+                  <div data-hf-id="hf-wq72" class="fs-metric-val ok">100.00% SLA</div>
+                </div>
+                <div data-hf-id="hf-dnhk" class="fs-metric-box">
+                  <div data-hf-id="hf-cu0y" class="fs-metric-lbl">RESPUESTA P50</div>
+                  <div data-hf-id="hf-xbbk" class="fs-metric-val ok">15 ms óptimo</div>
+                </div>
+              </div>
+              <div data-hf-id="hf-sw9t" class="fs-log-strip">
+                <span data-hf-id="hf-ls59">Versión activa: v0.89.0 lista</span>
+                <b data-hf-id="hf-mkio">0 caídas</b>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+        <script>
+          (function () {
+            "use strict";
+
+            var root = document.getElementById("root");
+            var cardA = root.querySelector('[data-focus-card="a"]');
+            var cardB = root.querySelector('[data-focus-card="b"]');
+            var vars =
+              window.__hyperframes && window.__hyperframes.getVariables
+                ? window.__hyperframes.getVariables()
+                : {};
+
+            var targetIsB = vars.focus !== "a";
+            var initialFocused = targetIsB ? cardA : cardB;
+            var targetFocused = targetIsB ? cardB : cardA;
+
+            var rawBlur = Number(vars.blurPx);
+            var blurPx = Number.isFinite(rawBlur) ? Math.max(0, Math.min(20, rawBlur)) : 4;
+            var rawDim = Number(vars.dim);
+            var dim = Number.isFinite(rawDim) ? Math.max(0, Math.min(1, rawDim)) : 0.65;
+            var blurred = "blur(" + blurPx + "px)";
+            var sharp = "blur(0px)";
+
+            var duration = Math.max(0.001, parseFloat(root.dataset.duration || "6.5"));
+            var SWAP_START = Math.min(2.2, duration * 0.35);
+            var SWAP_DURATION = Math.min(0.85, Math.max(0.001, duration - SWAP_START));
+
+            gsap.set(initialFocused, { opacity: 1, scale: 1, filter: sharp });
+            gsap.set(targetFocused, { opacity: dim, scale: 0.94, filter: blurred });
+
+            var tl = gsap.timeline({ paused: true });
+            tl.to(
+              initialFocused,
+              {
+                opacity: dim,
+                scale: 0.94,
+                filter: blurred,
+                duration: SWAP_DURATION,
+                ease: "power2.out",
+              },
+              SWAP_START,
+            );
+            tl.to(
+              targetFocused,
+              {
+                opacity: 1,
+                scale: 1,
+                filter: sharp,
+                duration: SWAP_DURATION,
+                ease: "power2.out",
+              },
+              SWAP_START,
+            );
+
+            tl.seek(0);
+
+            window.__timelines = window.__timelines || {};
+            window.__timelines["focus-swap"] = tl;
+          })();
+        </script>
+      </div>
+    </template>
+  </body>
+</html>

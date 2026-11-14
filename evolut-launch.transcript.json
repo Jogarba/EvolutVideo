@@ -1,0 +1,426 @@
+{
+  "audio": "evolut-launch.mp4",
+  "language": "es",
+  "words": [
+    {
+      "text": "Tu",
+      "start": 0.6,
+      "end": 0.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "equipo",
+      "start": 0.68,
+      "end": 0.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "escribe",
+      "start": 0.96,
+      "end": 1.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "código.",
+      "start": 1.36,
+      "end": 1.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut",
+      "start": 5.64,
+      "end": 5.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 6.02,
+      "end": 6.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "convierte",
+      "start": 6.14,
+      "end": 6.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 6.52,
+      "end": 6.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 6.6,
+      "end": 6.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "aplicación",
+      "start": 6.7,
+      "end": 7.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 7.24,
+      "end": 7.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "producción",
+      "start": 7.36,
+      "end": 7.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 8.16,
+      "end": 8.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "minutos.",
+      "start": 8.26,
+      "end": 8.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Cada",
+      "start": 15.62,
+      "end": 15.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "versión",
+      "start": 15.8,
+      "end": 16.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pasa",
+      "start": 16.16,
+      "end": 16.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "controles",
+      "start": 16.4,
+      "end": 16.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 16.78,
+      "end": 16.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "calidad",
+      "start": 16.92,
+      "end": 17.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 17.34,
+      "end": 17.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "seguridad",
+      "start": 17.46,
+      "end": 17.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "antes",
+      "start": 17.88,
+      "end": 18.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 18.14,
+      "end": 18.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "salir.",
+      "start": 18.26,
+      "end": 18.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Ve",
+      "start": 25.66,
+      "end": 25.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cada",
+      "start": 25.82,
+      "end": 25.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "réplica",
+      "start": 26.02,
+      "end": 26.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 26.38,
+      "end": 26.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cada",
+      "start": 26.48,
+      "end": 26.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "métrica",
+      "start": 26.66,
+      "end": 26.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 27.02,
+      "end": 27.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tiempo",
+      "start": 27.14,
+      "end": 27.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "real",
+      "start": 27.44,
+      "end": 27.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "desde",
+      "start": 28.08,
+      "end": 28.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 28.3,
+      "end": 28.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sola",
+      "start": 28.48,
+      "end": 28.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "consola.",
+      "start": 28.72,
+      "end": 29.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Bases",
+      "start": 35.66,
+      "end": 35.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 35.94,
+      "end": 36.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "datos",
+      "start": 36.04,
+      "end": 36.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 36.34,
+      "end": 36.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 36.46,
+      "end": 36.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clic",
+      "start": 36.6,
+      "end": 36.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 36.9,
+      "end": 36.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "escalado",
+      "start": 36.98,
+      "end": 37.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "automático",
+      "start": 37.34,
+      "end": 37.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 38.36,
+      "end": 38.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "configurar",
+      "start": 38.52,
+      "end": 39,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nada.",
+      "start": 39.04,
+      "end": 39.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Y",
+      "start": 45.52,
+      "end": 45.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 45.66,
+      "end": 45.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "el",
+      "start": 45.8,
+      "end": 45.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "conocimiento",
+      "start": 45.9,
+      "end": 46.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 46.44,
+      "end": 46.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 46.54,
+      "end": 46.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "empresa",
+      "start": 46.62,
+      "end": 47.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "conectado",
+      "start": 47.28,
+      "end": 47.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 47.7,
+      "end": 47.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 47.8,
+      "end": 47.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "grafo",
+      "start": 47.9,
+      "end": 48.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "inteligente.",
+      "start": 48.18,
+      "end": 48.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut,",
+      "start": 52.5,
+      "end": 52.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 53.96,
+      "end": 54.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "plataforma",
+      "start": 54.1,
+      "end": 54.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lista",
+      "start": 55,
+      "end": 55.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "para",
+      "start": 55.3,
+      "end": 55.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "crecer.",
+      "start": 55.48,
+      "end": 55.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Visita",
+      "start": 56.82,
+      "end": 57.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "evolut.cloud.",
+      "start": 57.2,
+      "end": 58.06,
+      "speaker": "speaker_0"
+    }
+  ]
+}

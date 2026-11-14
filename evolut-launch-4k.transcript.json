@@ -1,0 +1,858 @@
+{
+  "audio": "evolut-launch-4k.mp4",
+  "language": "es",
+  "words": [
+    {
+      "text": "¿Y",
+      "start": 0.6,
+      "end": 0.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "si",
+      "start": 0.72,
+      "end": 0.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "publicar",
+      "start": 0.86,
+      "end": 1.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 1.3,
+      "end": 1.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 1.38,
+      "end": 1.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fuera",
+      "start": 1.52,
+      "end": 1.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tan",
+      "start": 1.74,
+      "end": 1.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fácil",
+      "start": 1.94,
+      "end": 2.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "como",
+      "start": 2.24,
+      "end": 2.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mandar",
+      "start": 2.44,
+      "end": 2.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 2.7,
+      "end": 2.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "mensaje?",
+      "start": 2.78,
+      "end": 3.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Con",
+      "start": 5.64,
+      "end": 5.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut",
+      "start": 5.82,
+      "end": 6.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 6.56,
+      "end": 6.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "es.",
+      "start": 6.68,
+      "end": 6.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Le",
+      "start": 7.84,
+      "end": 7.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pones",
+      "start": 8,
+      "end": 8.24,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nombre,",
+      "start": 8.3,
+      "end": 8.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "eliges",
+      "start": 8.98,
+      "end": 9.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 9.4,
+      "end": 9.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 9.52,
+      "end": 9.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "necesitas",
+      "start": 9.64,
+      "end": 10.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 10.6,
+      "end": 10.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "listo.",
+      "start": 10.7,
+      "end": 11.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "En",
+      "start": 12.04,
+      "end": 12.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "minutos,",
+      "start": 12.16,
+      "end": 12.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 12.98,
+      "end": 13.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 13.1,
+      "end": 13.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ya",
+      "start": 13.24,
+      "end": 13.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 13.34,
+      "end": 13.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 13.48,
+      "end": 13.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Internet",
+      "start": 13.58,
+      "end": 14.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lista",
+      "start": 14.46,
+      "end": 14.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "para",
+      "start": 14.76,
+      "end": 14.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 15,
+      "end": 15.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clientes.",
+      "start": 15.24,
+      "end": 15.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Antes",
+      "start": 17.42,
+      "end": 17.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 17.66,
+      "end": 17.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 17.76,
+      "end": 17.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 17.92,
+      "end": 18.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clientes",
+      "start": 18.12,
+      "end": 18.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 18.52,
+      "end": 18.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vean,",
+      "start": 18.66,
+      "end": 18.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 19.3,
+      "end": 19.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "revisamos",
+      "start": 19.44,
+      "end": 19.92,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "por",
+      "start": 19.98,
+      "end": 20.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ti.",
+      "start": 20.18,
+      "end": 20.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Cuando",
+      "start": 21.3,
+      "end": 21.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 21.6,
+      "end": 21.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 21.74,
+      "end": 21.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "bien,",
+      "start": 21.98,
+      "end": 22.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 22.54,
+      "end": 22.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "publicas",
+      "start": 22.7,
+      "end": 23.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "con",
+      "start": 23.12,
+      "end": 23.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 23.26,
+      "end": 23.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clic",
+      "start": 23.4,
+      "end": 23.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 24.7,
+      "end": 24.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "si",
+      "start": 24.8,
+      "end": 24.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "algo",
+      "start": 24.92,
+      "end": 25.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "no",
+      "start": 25.14,
+      "end": 25.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "es",
+      "start": 25.22,
+      "end": 25.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "seguro,",
+      "start": 25.34,
+      "end": 25.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "no",
+      "start": 26.02,
+      "end": 26.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sale.",
+      "start": 26.18,
+      "end": 26.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Y",
+      "start": 28.7,
+      "end": 28.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "una",
+      "start": 28.8,
+      "end": 28.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vez",
+      "start": 28.96,
+      "end": 29.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 29.14,
+      "end": 29.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "línea,",
+      "start": 29.26,
+      "end": 29.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ves",
+      "start": 29.86,
+      "end": 30,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cómo",
+      "start": 30.04,
+      "end": 30.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 30.2,
+      "end": 30.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 30.46,
+      "end": 30.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 30.58,
+      "end": 30.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 30.68,
+      "end": 30.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 30.82,
+      "end": 30.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "momento",
+      "start": 31.02,
+      "end": 31.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 31.8,
+      "end": 31.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vivo,",
+      "start": 31.96,
+      "end": 32.159,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 33.24,
+      "end": 33.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pantallas",
+      "start": 33.44,
+      "end": 33.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "complicadas",
+      "start": 33.92,
+      "end": 34.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 34.56,
+      "end": 34.62,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sin",
+      "start": 34.66,
+      "end": 34.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sorpresas.",
+      "start": 34.86,
+      "end": 35.5,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "¿Necesitas",
+      "start": 35.58,
+      "end": 37.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "guardar",
+      "start": 37.98,
+      "end": 38.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "datos?",
+      "start": 38.36,
+      "end": 38.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Un",
+      "start": 39.76,
+      "end": 39.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clic.",
+      "start": 39.92,
+      "end": 40.28,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Llegan",
+      "start": 41.22,
+      "end": 41.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "muchos",
+      "start": 41.5,
+      "end": 41.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clientes",
+      "start": 41.82,
+      "end": 42.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 42.18,
+      "end": 42.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "golpe.",
+      "start": 42.3,
+      "end": 42.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tu",
+      "start": 43.6,
+      "end": 43.68,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "app",
+      "start": 43.72,
+      "end": 43.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "crece",
+      "start": 43.86,
+      "end": 44.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sola",
+      "start": 44.2,
+      "end": 44.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 44.66,
+      "end": 44.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "se",
+      "start": 44.74,
+      "end": 44.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "calma",
+      "start": 44.9,
+      "end": 45.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cuando",
+      "start": 45.2,
+      "end": 45.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 45.48,
+      "end": 45.66,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "vuelve",
+      "start": 45.7,
+      "end": 45.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 45.92,
+      "end": 45.94,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 45.98,
+      "end": 46.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "normalidad.",
+      "start": 46.1,
+      "end": 46.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Y",
+      "start": 48,
+      "end": 48.06,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 48.12,
+      "end": 48.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lo",
+      "start": 48.26,
+      "end": 48.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "que",
+      "start": 48.36,
+      "end": 48.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "sabe",
+      "start": 48.5,
+      "end": 48.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 48.74,
+      "end": 48.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "empresa,",
+      "start": 48.82,
+      "end": 49.22,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 49.52,
+      "end": 49.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "equipos,",
+      "start": 49.72,
+      "end": 50.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 50.46,
+      "end": 50.6,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "proyectos",
+      "start": 50.64,
+      "end": 51.12,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 51.16,
+      "end": 51.24,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tus",
+      "start": 51.28,
+      "end": 51.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "decisiones",
+      "start": 51.42,
+      "end": 52.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "queda",
+      "start": 52.38,
+      "end": 52.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "conectado",
+      "start": 52.6,
+      "end": 53,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 53.02,
+      "end": 53.08,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 53.12,
+      "end": 53.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "solo",
+      "start": 53.24,
+      "end": 53.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "lugar:",
+      "start": 53.44,
+      "end": 53.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut.",
+      "start": 55.38,
+      "end": 55.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tú",
+      "start": 56.9,
+      "end": 57,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pones",
+      "start": 57.04,
+      "end": 57.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 57.36,
+      "end": 57.42,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "idea,",
+      "start": 57.48,
+      "end": 57.72,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nosotros",
+      "start": 58.1,
+      "end": 58.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hacemos",
+      "start": 58.54,
+      "end": 58.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "el",
+      "start": 58.9,
+      "end": 58.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "resto.",
+      "start": 59.02,
+      "end": 59.34,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Empieza",
+      "start": 60.38,
+      "end": 60.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hoy",
+      "start": 60.8,
+      "end": 60.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 60.94,
+      "end": 61,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "evolut.cloud.",
+      "start": 61.04,
+      "end": 62.06,
+      "speaker": "speaker_0"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "lang": "es",
+  "style": "Español latinoamericano neutro. Comercial cálido y cotidiano, como un amigo que te cuenta algo que le encantó: sonriendo, con energía y ritmo natural, sin sonar técnico ni a locutor de radio. La primera pregunta engancha con curiosidad.",
+  "lines": [
+    {
+      "id": "vo-01",
+      "text": "¿Y si publicar tu app fuera tan fácil como mandar un mensaje?"
+    },
+    {
+      "id": "vo-02",
+      "text": "Con Evolut, lo es. Le pones nombre, eliges lo que necesitas… y listo. En minutos, tu app ya está en internet, lista para tus clientes."
+    },
+    {
+      "id": "vo-03",
+      "text": "Antes de que tus clientes la vean, la revisamos por ti. Cuando todo está bien, la publicas con un clic. Y si algo no es seguro, no sale."
+    },
+    {
+      "id": "vo-04",
+      "text": "Y una vez en línea, ves cómo está tu app en todo momento, en vivo. Sin pantallas complicadas y sin sorpresas."
+    },
+    {
+      "id": "vo-05",
+      "text": "¿Necesitas guardar datos? Un clic. ¿Llegan muchos clientes de golpe? Tu app crece sola, y se calma cuando todo vuelve a la normalidad."
+    },
+    {
+      "id": "vo-06",
+      "text": "Y todo lo que sabe tu empresa, tus equipos, tus proyectos y tus decisiones, queda conectado en un solo lugar."
+    },
+    {
+      "id": "vo-07",
+      "text": "Evolut. Tú pones la idea, nosotros hacemos el resto. Empieza hoy en evolut punto cloud."
+    }
+  ],
+  "bgm": {
+    "mode": "none"
+  },
+  "provider": "gemini",
+  "tts_model": "gemini-3.8-flash-tts",
+  "voice": "Achird"
+}

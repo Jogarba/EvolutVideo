@@ -1,0 +1,126 @@
+{
+  "audio": "assets/voice/fast.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Le",
+      "start": 0.32,
+      "end": 0.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pones",
+      "start": 0.48,
+      "end": 0.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nombre",
+      "start": 0.78,
+      "end": 0.98,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 1,
+      "end": 1.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 1.08,
+      "end": 1.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "negocio,",
+      "start": 1.2,
+      "end": 1.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "presionas",
+      "start": 2.08,
+      "end": 2.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Publicar",
+      "start": 2.56,
+      "end": 3.02,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 3.4,
+      "end": 3.44,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 3.48,
+      "end": 3.54,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "un",
+      "start": 3.58,
+      "end": 3.64,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "momento",
+      "start": 3.68,
+      "end": 4.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 4.16,
+      "end": 4.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tienda",
+      "start": 4.3,
+      "end": 4.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ya",
+      "start": 4.64,
+      "end": 4.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "está",
+      "start": 4.74,
+      "end": 4.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 4.9,
+      "end": 4.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Internet",
+      "start": 5,
+      "end": 5.46,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "recibiendo",
+      "start": 5.7,
+      "end": 6.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pedidos",
+      "start": 6.2,
+      "end": 6.62,
+      "speaker": "speaker_0"
+    }
+  ]
+}

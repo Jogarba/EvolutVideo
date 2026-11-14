@@ -1,0 +1,84 @@
+{
+  "audio": "assets/voice/always.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Tus",
+      "start": 0.34,
+      "end": 0.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "clientes",
+      "start": 0.56,
+      "end": 0.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "compran",
+      "start": 0.96,
+      "end": 1.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "desde",
+      "start": 1.54,
+      "end": 1.8,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cualquier",
+      "start": 1.84,
+      "end": 2.2,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "ciudad",
+      "start": 2.24,
+      "end": 2.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 2.98,
+      "end": 3.1,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cualquier",
+      "start": 3.16,
+      "end": 3.58,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hora.",
+      "start": 3.62,
+      "end": 3.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tu",
+      "start": 4.24,
+      "end": 4.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tienda",
+      "start": 4.42,
+      "end": 4.74,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nunca",
+      "start": 5.08,
+      "end": 5.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "cierra",
+      "start": 5.36,
+      "end": 5.64,
+      "speaker": "speaker_0"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "audio": "assets/voice/cta.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Evolut,",
+      "start": 0.3,
+      "end": 0.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "tu",
+      "start": 1.28,
+      "end": 1.38,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "idea",
+      "start": 1.42,
+      "end": 1.76,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 1.92,
+      "end": 2.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "línea",
+      "start": 2.18,
+      "end": 2.52,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hoy.",
+      "start": 2.6,
+      "end": 2.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Empieza",
+      "start": 3.32,
+      "end": 3.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "en",
+      "start": 3.8,
+      "end": 3.88,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "evolut.cloud",
+      "start": 4,
+      "end": 5.12,
+      "speaker": "speaker_0"
+    }
+  ]
+}

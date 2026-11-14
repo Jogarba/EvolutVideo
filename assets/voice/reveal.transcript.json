@@ -1,0 +1,126 @@
+{
+  "audio": "assets/voice/reveal.wav",
+  "language": "es",
+  "words": [
+    {
+      "text": "Con",
+      "start": 0.24,
+      "end": 0.4,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Evolut",
+      "start": 0.5,
+      "end": 0.9,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "todo",
+      "start": 1.14,
+      "end": 1.48,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "eso",
+      "start": 1.56,
+      "end": 1.7,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "desaparece.",
+      "start": 1.74,
+      "end": 2.32,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "Tú",
+      "start": 2.76,
+      "end": 2.86,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "pones",
+      "start": 2.9,
+      "end": 3.14,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "la",
+      "start": 3.18,
+      "end": 3.26,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "idea",
+      "start": 3.3,
+      "end": 3.82,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 3.88,
+      "end": 3.96,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "nuestra",
+      "start": 4.019,
+      "end": 4.36,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "fábrica",
+      "start": 4.4,
+      "end": 4.78,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "se",
+      "start": 4.82,
+      "end": 4.84,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "encarga",
+      "start": 4.86,
+      "end": 5.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "de",
+      "start": 5.22,
+      "end": 5.3,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "construirla,",
+      "start": 5.34,
+      "end": 6.18,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "protegerla",
+      "start": 6.32,
+      "end": 7.04,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "y",
+      "start": 7.1,
+      "end": 7.16,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "hacerla",
+      "start": 7.22,
+      "end": 7.56,
+      "speaker": "speaker_0"
+    },
+    {
+      "text": "crecer",
+      "start": 7.6,
+      "end": 7.92,
+      "speaker": "speaker_0"
+    }
+  ]
+}
